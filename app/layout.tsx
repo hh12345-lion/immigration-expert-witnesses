@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Immigration Expert Witness UK | Country & Asylum Experts for Immigration Tribunals",
+      "Immigration Expert Witness | Country & Asylum Experts for Immigration Tribunals",
     template: "%s | Immigration Expert Witnesses",
   },
   description:
-    "Find qualified immigration expert witnesses in the UK. Country condition witnesses, persecution analysis, human rights experts, linguistic identity, and oral evidence at FTT and Upper Tribunal. CPR Part 35 compliant. Legal Aid compatible.",
+    "Find qualified immigration expert witnesses for tribunal proceedings. Country condition witnesses, persecution analysis, human rights experts, linguistic identity, and oral evidence at first-tier and upper tribunals. CPR Part 35 compliant. Legal Aid compatible.",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: process.env.BING_SITE_VERIFICATION
@@ -36,8 +36,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     languages: {
-      "en-GB": SITE_URL,
-      "en-US": SITE_URL,
+      en: SITE_URL,
       "x-default": SITE_URL,
     },
   },
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className={`${inter.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full min-w-0 flex-col overflow-x-hidden font-sans antialiased">
         <ConsentDefaultsScript />
         <CookieConsentProvider>

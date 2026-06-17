@@ -4,9 +4,9 @@ import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Immigration Expert Witness Fees UK | Legal Aid & Private Rates",
+  title: "Immigration Expert Witness Fees | Legal Aid & Private Rates",
   description:
-    "Immigration expert witness fee guidance — LAA prior authority, rate expectations, instruction timing, and indicative fees for UK tribunal expert evidence.",
+    "Immigration expert witness fee guidance — LAA prior authority, rate expectations, instruction timing, and indicative fees for tribunal expert evidence.",
   path: "/fees",
 });
 

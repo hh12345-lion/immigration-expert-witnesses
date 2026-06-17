@@ -38,7 +38,7 @@ export default function PrivacyPage() {
       </p>
       <h2 className="mt-8 text-lg font-bold text-[#1A2744]">Your rights</h2>
       <p className="mt-4 text-[#374151] leading-relaxed">
-        Under UK GDPR, you have rights to access, rectify, erase, and restrict processing of your personal data.
+        Under applicable data protection laws, you have rights to access, rectify, erase, and restrict processing of your personal data.
         Contact us at{" "}
         <a href={`mailto:${SITE_EMAIL}`} className="text-[#1A6B78] hover:underline">
           {SITE_EMAIL}

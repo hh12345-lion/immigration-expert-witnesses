@@ -10,7 +10,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "CPR Part 35",
     definition:
-      "Civil Procedure Rules Part 35 governs expert evidence in civil proceedings and is applied by analogy in UK immigration tribunals. Establishes expert independence, report content requirements, and tribunal duty.",
+      "Civil Procedure Rules Part 35 governs expert evidence in civil proceedings and is applied by analogy in immigration tribunals. Establishes expert independence, report content requirements, and tribunal duty.",
     link: "/guides/cpr-part-35-immigration-guide",
   },
   {
@@ -35,7 +35,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Expert Witness (Immigration Tribunal)",
     definition:
-      "An independent expert who provides country condition, persecution, human rights, or linguistic evidence to UK immigration tribunals with a paramount duty to the tribunal under CPR Part 35.",
+      "An independent expert who provides country condition, persecution, human rights, or linguistic evidence to immigration tribunals with a paramount duty to the tribunal under CPR Part 35.",
     link: "/what-is-an-immigration-expert-witness",
   },
   {
@@ -193,7 +193,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "EUAA Country Guidance",
     definition:
-      "European Union Agency for Asylum country guidance increasingly cited in UK appeals — expert witnesses must address EUAA alongside UK CG and CPIN.",
+      "European Union Agency for Asylum country guidance increasingly cited in appeals — expert witnesses must address EUAA alongside Country Guidance and CPIN.",
     link: "/witness-types/cpin-challenge-expert-witness",
   },
   {

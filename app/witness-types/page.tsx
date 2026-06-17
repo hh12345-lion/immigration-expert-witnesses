@@ -7,9 +7,9 @@ import { createMetadata } from "@/lib/metadata";
 import { witnessTypes } from "@/data/witness-types";
 
 export const metadata = createMetadata({
-  title: "Immigration Expert Witness Types UK | Country, Persecution & Human Rights",
+  title: "Immigration Expert Witness Types | Country, Persecution & Human Rights",
   description:
-    "Eight immigration expert witness disciplines for UK tribunals — country condition, persecution analysis, human rights, linguistic identity, internal relocation, CPIN challenge, medical coordination, and oral evidence.",
+    "Eight immigration expert witness disciplines for tribunals — country condition, persecution analysis, human rights, linguistic identity, internal relocation, CPIN challenge, medical coordination, and oral evidence.",
   path: "/witness-types",
 });
 
@@ -89,7 +89,7 @@ export default function WitnessTypesPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} faqs={witnessHubFaqs} />
       <PageShell
-        title="Immigration Expert Witness Types UK"
+        title="Immigration Expert Witness Types"
         subtitle="Eight witness disciplines for asylum appeals, deportation, country guidance challenges, and Upper Tribunal proceedings."
         breadcrumbs={crumbs}
       >
@@ -103,7 +103,7 @@ export default function WitnessTypesPage() {
         <div className="table-scroll mt-6 overflow-x-auto">
           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
             <caption className="mb-3 text-left text-sm text-[#374151]">
-              Immigration expert witness discipline comparison for UK tribunal proceedings
+              Immigration expert witness discipline comparison for tribunal proceedings
             </caption>
             <thead>
               <tr className="border-b border-[#C5D0DC] bg-[#F3F6F9]">

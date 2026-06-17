@@ -33,7 +33,7 @@ export const CORE_LINKS = {
   witnessTypes: { label: "Witness types hub", href: "/witness-types" } satisfies RelatedLink,
   oralEvidence: { label: "Oral evidence at tribunal", href: "/oral-evidence" } satisfies RelatedLink,
   sisterHub: {
-    label: "Immigration expert reports UK",
+    label: "Immigration expert reports",
     href: SISTER_HUB_URL,
   } satisfies RelatedLink,
   choosingGuide: {

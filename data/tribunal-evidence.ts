@@ -5,10 +5,10 @@ export const tribunalEvidence: ContentPage[] = [
   {
     slug: "instructing-expert-witness",
     title: "Instructing an Expert Witness",
-    metaTitle: "Instructing an Immigration Expert Witness UK | Solicitor's Guide",
+    metaTitle: "Instructing an Immigration Expert Witness | Solicitor's Guide",
     metaDescription:
       "How to instruct an immigration expert witness — letter of instruction, documents, expert selection, timing, fee estimates, Legal Aid prior authority, and network routing.",
-    h1: "Instructing an Immigration Expert Witness UK | Solicitor's Guide",
+    h1: "Instructing an Immigration Expert Witness | Solicitor's Guide",
     content: [
       "Instructing an immigration expert witness requires a clear letter of instruction, complete document bundle, realistic timeline, and — for Legal Aid cases — prior authority from the Legal Aid Agency. The letter should set out the specific issues for expert analysis, identify assumed facts, state the tribunal deadline, and confirm funding arrangements.",
       "Provide all relevant documents: witness statements, Home Office refusal letter, CPIN, previous determinations, country guidance decisions, and any prior expert evidence. The expert must distinguish between assumed facts and independent analysis — a requirement reinforced by the Adam Pipe October 2025 guidance.",
@@ -36,10 +36,10 @@ export const tribunalEvidence: ContentPage[] = [
   {
     slug: "expert-report-submission-deadlines",
     title: "Expert Report Submission Deadlines",
-    metaTitle: "Expert Report Deadlines UK Immigration Tribunal | Exchange Requirements",
+    metaTitle: "Expert Report Deadlines Immigration Tribunal | Exchange Requirements",
     metaDescription:
       "Immigration tribunal expert report exchange deadlines — Practice Direction 2024 requirements, late evidence rules, and timing for FTT and Upper Tribunal proceedings.",
-    h1: "Expert Report Submission Deadlines UK Immigration Tribunal",
+    h1: "Expert Report Submission Deadlines Immigration Tribunal",
     content: [
       "The Immigration Tribunal Practice Direction 2024 sets mandatory exchange requirements for expert reports in asylum and immigration appeals. Tribunals issue directions specifying deadlines for expert report exchange, witness statements, and bundle submission — non-compliance risks refusal of evidence or adverse costs consequences.",
       "Expert reports submitted after the directed deadline may be refused unless the tribunal grants permission for late evidence. Permission requires explanation of the delay and demonstration that the opposing party can fairly respond. Late expert evidence is a common ground for reduced weight at hearing.",
@@ -67,10 +67,10 @@ export const tribunalEvidence: ContentPage[] = [
   {
     slug: "oral-evidence-hearing",
     title: "Oral Evidence at Hearing",
-    metaTitle: "Oral Evidence at Immigration Tribunal UK | Expert Witness Guide",
+    metaTitle: "Oral Evidence at Immigration Tribunal | Expert Witness Guide",
     metaDescription:
       "When tribunals direct oral expert evidence, hearing procedure, expert role in oral testimony, consistency requirements, and supplementary evidence at FTT and UT hearings.",
-    h1: "Oral Evidence at Immigration Tribunal UK | Expert Witness Guide",
+    h1: "Oral Evidence at Immigration Tribunal | Expert Witness Guide",
     content: [
       "The tribunal may direct an expert witness to attend the FTT or UT hearing to give oral evidence. This typically occurs where the expert's credibility, methodology, or specific findings are in dispute, or where cross-examination of the expert report is necessary for fair determination of the appeal.",
       "At hearing, the expert confirms their report, may give supplementary oral evidence within the scope of their expertise, and faces cross-examination from the opposing party's representative. The expert must remain independent and objective throughout — not advocate for the instructing party.",
@@ -98,10 +98,10 @@ export const tribunalEvidence: ContentPage[] = [
   {
     slug: "cross-examination-preparation",
     title: "Cross-Examination Preparation",
-    metaTitle: "Expert Witness Cross-Examination UK Immigration Tribunal",
+    metaTitle: "Expert Witness Cross-Examination Immigration Tribunal",
     metaDescription:
       "Preparing immigration expert witnesses for tribunal cross-examination — methodology defence, source selection, consistency with written reports, and composure under questioning.",
-    h1: "Expert Witness Cross-Examination Preparation UK Immigration Tribunal",
+    h1: "Expert Witness Cross-Examination Preparation Immigration Tribunal",
     content: [
       "Cross-examination of expert witnesses at immigration tribunal hearings tests the expert's methodology, source selection, independence, and consistency between written and oral evidence. Effective preparation reduces the risk of concessions that undermine the expert's credibility and the client's case.",
       "Experts should thoroughly review their report, letter of instruction, source materials, and any joint statements before hearing. They must be prepared to explain why specific sources were selected, how assumptions affect conclusions, and what limitations apply to their analysis.",
@@ -129,10 +129,10 @@ export const tribunalEvidence: ContentPage[] = [
   {
     slug: "joint-statement-meetings",
     title: "Joint Statement & Expert Meetings",
-    metaTitle: "Joint Expert Meetings UK Immigration Tribunal | Single Joint Expert",
+    metaTitle: "Joint Expert Meetings Immigration Tribunal | Single Joint Expert",
     metaDescription:
-      "Joint expert meetings and statements in UK immigration tribunals — single joint expert direction, areas of agreement and disagreement, and Practice Direction 2024 requirements.",
-    h1: "Joint Expert Meetings & Statements UK Immigration Tribunal",
+      "Joint expert meetings and statements in immigration tribunals — single joint expert direction, areas of agreement and disagreement, and Practice Direction 2024 requirements.",
+    h1: "Joint Expert Meetings & Statements Immigration Tribunal",
     content: [
       "The Immigration Tribunal Practice Direction 2024 expresses preference for single joint experts where appropriate. Where multiple experts are instructed, tribunals may direct joint expert meetings to identify areas of agreement and disagreement, reducing hearing time and focusing cross-examination on genuinely disputed issues.",
       "Joint expert meetings should produce a joint statement setting out: agreed facts and methodology, areas of disagreement with reasons, and any matters requiring tribunal determination. The joint statement is exchanged alongside individual expert reports.",
@@ -160,10 +160,10 @@ export const tribunalEvidence: ContentPage[] = [
   {
     slug: "legal-aid-expert-witness-rates",
     title: "Legal Aid Expert Witness Rates",
-    metaTitle: "Legal Aid Expert Witness Fees UK | LAA Prior Authority",
+    metaTitle: "Legal Aid Expert Witness Fees | LAA Prior Authority",
     metaDescription:
       "Legal Aid Agency prior authority for immigration expert witness fees — rate expectations, instruction timing, and LAA-compatible expert witness instruction for tribunal cases.",
-    h1: "Legal Aid Expert Witness Rates & LAA Prior Authority UK",
+    h1: "Legal Aid Expert Witness Rates & LAA Prior Authority",
     content: [
       "Legal Aid practitioners must obtain prior authority from the Legal Aid Agency (LAA) before instructing expert witnesses in legally aided immigration cases. The LAA assesses whether expert evidence is necessary, whether the proposed fee is reasonable, and whether the instruction timing allows fair proceedings.",
       "Prior authority applications should include: the specific issues requiring expert analysis, the expert's qualifications, an indicative fee estimate, the tribunal deadline, and explanation of why expert evidence is necessary rather than reliance on CPIN or Country Guidance alone.",

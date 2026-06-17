@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 import { guides } from "@/data/guides";
 
 export const metadata = createMetadata({
-  title: "Immigration Expert Witness Guides UK | Solicitor Resources",
+  title: "Immigration Expert Witness Guides | Solicitor Resources",
   description:
     "Solicitor guides for instructing immigration expert witnesses — CPR Part 35, oral evidence, Legal Aid, witness selection, and witness vs report differentiation.",
   path: "/guides",
@@ -20,7 +20,7 @@ export default function GuidesPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="Immigration Expert Witness Guides"
-        subtitle="Practical guides for UK immigration solicitors instructing expert witnesses."
+        subtitle="Practical guides for immigration solicitors instructing expert witnesses."
         breadcrumbs={crumbs}
       >
         <CardGrid

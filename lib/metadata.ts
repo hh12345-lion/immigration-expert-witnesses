@@ -3,7 +3,7 @@ import { SITE_URL } from "./constants";
 import { isProductionSite } from "./seo/is-production";
 
 const OG_IMAGE_ALT =
-  "Immigration Expert Witnesses - UK Immigration Tribunal Expert Evidence";
+  "Immigration Expert Witnesses - Immigration Tribunal Expert Evidence";
 
 export const OPEN_GRAPH_IMAGE = {
   url: `${SITE_URL}/opengraph-image`,
@@ -36,7 +36,7 @@ export function createMetadata({
       description,
       url,
       siteName: "Immigration Expert Witnesses",
-      locale: "en_GB",
+      locale: "en",
       type: "website",
       images: [OPEN_GRAPH_IMAGE],
     },

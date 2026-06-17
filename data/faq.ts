@@ -4,7 +4,7 @@ export const siteFaqs: FAQ[] = [
   {
     question: "What is an immigration expert witness?",
     answer:
-      "An immigration expert witness provides independent country condition, persecution, human rights, or linguistic identity evidence for UK immigration tribunals. Unlike advocates, expert witnesses owe a paramount duty to the tribunal — not the instructing party — under CPR Part 35 and Ikarian Reefer principles.",
+      "An immigration expert witness provides independent country condition, persecution, human rights, or linguistic identity evidence for immigration tribunals. Unlike advocates, expert witnesses owe a paramount duty to the tribunal — not the instructing party — under CPR Part 35 and Ikarian Reefer principles.",
   },
   {
     question: "What is CPR Part 35 in immigration appeals?",

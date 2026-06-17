@@ -7,9 +7,9 @@ import { networkSites } from "@/data/network-sites";
 import { SISTER_HUB_URL } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Immigration Expert Witness Network | Country & Thematic Expert Witness Directory UK",
+  title: "Immigration Expert Witness Network | Country & Thematic Expert Witness Directory",
   description:
-    "Complete directory of immigration expert witness sites — Somalia, Nigeria, Pakistan, Africa, Albania, South Asia, persecution, and human rights expert witnesses for UK asylum and deportation cases.",
+    "Complete directory of immigration expert witness sites — Somalia, Nigeria, Pakistan, Africa, Albania, South Asia, persecution, and human rights expert witnesses for asylum and deportation cases.",
   path: "/network",
 });
 
@@ -23,7 +23,7 @@ export default function NetworkPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
-        title="Immigration Expert Witness Network Directory UK"
+        title="Immigration Expert Witness Network Directory"
         subtitle="Country-specific and thematic expert witness sites — the master hub connecting solicitors to specialist witnesses."
         breadcrumbs={crumbs}
       >

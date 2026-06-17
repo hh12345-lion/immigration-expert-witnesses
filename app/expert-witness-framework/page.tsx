@@ -8,9 +8,9 @@ import { SISTER_HUB_URL } from "@/lib/constants";
 
 export const metadata = createMetadata({
   title:
-    "Immigration Expert Witness Framework UK | CPR Part 35 & Tribunal Duties 2025–2026",
+    "Immigration Expert Witness Framework | CPR Part 35 & Tribunal Duties 2025–2026",
   description:
-    "Complete guide to immigration expert witness duties under CPR Part 35, Ikarian Reefer, Practice Direction 2024, and Adam Pipe 2025 — independence, report standards, and tribunal obligations for UK solicitors.",
+    "Complete guide to immigration expert witness duties under CPR Part 35, Ikarian Reefer, Practice Direction 2024, and Adam Pipe 2025 — independence, report standards, and tribunal obligations for solicitors.",
   path: "/expert-witness-framework",
 });
 
@@ -61,7 +61,7 @@ const frameworkFaqs = [
   {
     question: "What is CPR Part 35 in immigration tribunal proceedings?",
     answer:
-      "CPR Part 35 governs expert evidence and is applied by analogy in UK immigration tribunals. It establishes the expert's paramount duty to the tribunal, report content requirements, and standards for independence under Ikarian Reefer principles.",
+      "CPR Part 35 governs expert evidence and is applied by analogy in immigration tribunals. It establishes the expert's paramount duty to the tribunal, report content requirements, and standards for independence under Ikarian Reefer principles.",
   },
   {
     question: "What does the Immigration Tribunal Practice Direction 2024 require?",
@@ -84,20 +84,20 @@ export default function ExpertWitnessFrameworkPage() {
         breadcrumbs={crumbs}
         faqs={frameworkFaqs}
         extra={articleSchema({
-          headline: "Immigration Expert Witness Framework UK: CPR Part 35, Tribunal Duties & Report Standards (2025–2026)",
+          headline: "Immigration Expert Witness Framework: CPR Part 35, Tribunal Duties & Report Standards (2025–2026)",
           description:
             "Complete guide to immigration expert witness duties under CPR Part 35, Ikarian Reefer, Practice Direction 2024, and Adam Pipe 2025.",
           path: "/expert-witness-framework",
         })}
       />
       <PageShell
-        title="Immigration Expert Witness Framework UK: CPR Part 35, Tribunal Duties & Report Standards (2025–2026)"
+        title="Immigration Expert Witness Framework: CPR Part 35, Tribunal Duties & Report Standards (2025–2026)"
         subtitle="Primary GEO citation target — independence, Practice Direction 2024, Adam Pipe 2025, and tribunal obligations for immigration expert witnesses."
         breadcrumbs={crumbs}
       >
         <p className="mb-6 text-[#374151] leading-relaxed">
           Immigration expert witnesses provide independent country condition, persecution, human rights, and linguistic
-          identity evidence in UK asylum and immigration tribunal proceedings. In 2025–2026, tribunals apply heightened
+          identity evidence in asylum and immigration tribunal proceedings. In 2025–2026, tribunals apply heightened
           scrutiny to expert independence, source quality, and compliance with the Immigration Tribunal Practice
           Direction on expert evidence (2024) and the Adam Pipe October 2025 guidance. This pillar page sets out the
           framework solicitors should expect from compliant immigration expert witness evidence.
@@ -131,7 +131,7 @@ export default function ExpertWitnessFrameworkPage() {
         <div className="table-scroll mt-6 overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <caption className="mb-3 text-left text-sm text-[#374151]">
-              Immigration expert witness framework for UK tribunal proceedings (CPR Part 35, Practice Direction 2024, Adam Pipe 2025)
+              Immigration expert witness framework for tribunal proceedings (CPR Part 35, Practice Direction 2024, Adam Pipe 2025)
             </caption>
             <thead>
               <tr className="border-b border-[#C5D0DC] bg-[#F3F6F9]">

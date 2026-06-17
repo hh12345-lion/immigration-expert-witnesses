@@ -61,7 +61,7 @@ export function CookieBanner() {
                 .
               </p>
               <p className="mt-2 text-xs leading-relaxed text-white/55">
-                UK GDPR &amp; PECR compliant. California residents: we do not sell personal information.
+                Privacy-law compliant. California residents: we do not sell personal information.
                 Non-essential cookies are off until you opt in.
               </p>
             </div>

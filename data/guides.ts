@@ -7,10 +7,10 @@ export const guides: ContentPage[] = [
     title: "CPR Part 35 Immigration Guide",
     metaTitle: "CPR Part 35 for Immigration Expert Witnesses: Complete Guide",
     metaDescription:
-      "CPR Part 35 rules applied to immigration expert witnesses — Ikarian Reefer independence, tribunal duties, report requirements, and expert obligations in UK asylum appeals.",
+      "CPR Part 35 rules applied to immigration expert witnesses — Ikarian Reefer independence, tribunal duties, report requirements, and expert obligations in asylum appeals.",
     h1: "CPR Part 35 for Immigration Expert Witnesses: Complete Guide",
     content: [
-      "CPR Part 35 governs expert evidence in civil proceedings and is applied by analogy in UK immigration tribunal proceedings. The rules establish the expert's paramount duty to the tribunal, requirements for expert reports, and procedures for joint experts and oral evidence.",
+      "CPR Part 35 governs expert evidence in civil proceedings and is applied by analogy in immigration tribunal proceedings. The rules establish the expert's paramount duty to the tribunal, requirements for expert reports, and procedures for joint experts and oral evidence.",
       "The foundational principle from Ikarian Reefer [1993] 2 Lloyd's Rep 68 requires experts to provide independent, objective evidence regardless of who instructs or pays them. Immigration tribunal experts owe the same duty — their overriding obligation is to assist the tribunal, not to advance the instructing party's case.",
       "CPR Part 35.3 requires experts to state the substance of all material instructions, identify assumptions, distinguish fact from opinion, and state the range of opinion where there is a range. The Immigration Tribunal Practice Direction 2024 and Adam Pipe October 2025 guidance reinforce these requirements for immigration appeals.",
       "Solicitors instructing experts should understand CPR Part 35 obligations to avoid improper influence on report content. Letters of instruction should ask questions, not suggest answers. Experts who cannot support the instructed position must say so clearly.",
@@ -100,7 +100,7 @@ export const guides: ContentPage[] = [
     title: "Choosing the Right Expert Witness",
     metaTitle: "Choosing the Right Immigration Expert Witness for Your Case",
     metaDescription:
-      "How to select the right immigration expert witness — country vs persecution vs human rights, network directory use, and witness type matching for UK tribunal cases.",
+      "How to select the right immigration expert witness — country vs persecution vs human rights, network directory use, and witness type matching for tribunal cases.",
     h1: "Choosing the Right Immigration Expert Witness for Your Case",
     content: [
       "Selecting the correct expert witness discipline is the first critical decision. Country condition witnesses assess conditions on the ground. Persecution witnesses apply Refugee Convention methodology. Human rights witnesses apply ECHR and treaty standards. Linguistic identity witnesses address nationality and clan disputes.",
@@ -129,7 +129,7 @@ export const guides: ContentPage[] = [
   {
     slug: "legal-aid-expert-witness-guide",
     title: "Legal Aid Expert Witness Guide",
-    metaTitle: "Legal Aid Expert Witness Instruction Guide UK",
+    metaTitle: "Legal Aid Expert Witness Instruction Guide",
     metaDescription:
       "Legal Aid Agency prior authority for immigration expert witnesses — rates, timing, instruction bundles, and LAA-compatible expert evidence for tribunal cases.",
     h1: "Legal Aid Expert Witness Instruction Guide",

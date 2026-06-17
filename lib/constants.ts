@@ -2,7 +2,7 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
   "https://www.immigrationexpertwitnesses.com";
 export const SITE_NAME = "Immigration Expert Witnesses";
-export const SITE_EMAIL = "info@immigrationexpertwitnesses.com";
+export const SITE_EMAIL = "cases@immigrationexpertwitnesses.com";
 export const SISTER_HUB_URL = "https://www.immigrationexpertreports.com";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/immigrationexpertwitnesses";

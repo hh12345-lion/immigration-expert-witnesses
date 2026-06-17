@@ -26,7 +26,7 @@ export default function NotFound() {
           <h1 className="mt-4 text-3xl font-bold text-white sm:text-4xl">Page not found</h1>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/80">
             The page you requested does not exist or may have moved. Use the links below to find immigration expert
-            witness guidance for UK asylum and immigration tribunals.
+            witness guidance for asylum and immigration tribunals.
           </p>
 
           <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">

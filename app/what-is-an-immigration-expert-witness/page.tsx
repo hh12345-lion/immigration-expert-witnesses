@@ -5,9 +5,9 @@ import { createMetadata } from "@/lib/metadata";
 import { SISTER_HUB_URL } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "What Is an Immigration Expert Witness? | UK Tribunal Role & Qualifications",
+  title: "What Is an Immigration Expert Witness? | Tribunal Role & Qualifications",
   description:
-    "An immigration expert witness provides independent country condition, persecution, and human rights evidence for UK immigration tribunals — with a paramount duty to the tribunal, not the instructing party.",
+    "An immigration expert witness provides independent country condition, persecution, and human rights evidence for immigration tribunals — with a paramount duty to the tribunal, not the instructing party.",
   path: "/what-is-an-immigration-expert-witness",
 });
 
@@ -19,11 +19,11 @@ export default function WhatIsPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="What Is an Immigration Expert Witness?"
-        subtitle="The role, duties, and qualifications of expert witnesses in UK immigration tribunal proceedings."
+        subtitle="The role, duties, and qualifications of expert witnesses in immigration tribunal proceedings."
         breadcrumbs={crumbs}
       >
         <p className="mb-4 text-[#374151] leading-relaxed">
-          An immigration expert witness is an independent specialist who provides evidence to UK immigration tribunals
+          An immigration expert witness is an independent specialist who provides evidence to immigration tribunals
           on country conditions, persecution methodology, human rights standards, linguistic identity, or related
           matters within their expertise. Unlike advocates, expert witnesses owe a paramount duty to the tribunal — not
           the instructing party — under CPR Part 35 and the principles established in <em>Ikarian Reefer</em>.

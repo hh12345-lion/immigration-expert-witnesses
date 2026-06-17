@@ -265,10 +265,10 @@ export function verifySeoArchitecture(): ArchIssue[] {
   }
 
   const layoutSource = readFileSync(join(process.cwd(), "app", "layout.tsx"), "utf-8");
-  if (!layoutSource.includes('lang="en-GB"')) {
-    issues.push({ level: "error", message: 'Root layout missing lang="en-GB"' });
+  if (!layoutSource.includes('lang="en"')) {
+    issues.push({ level: "error", message: 'Root layout missing lang="en"' });
   }
-  if (!layoutSource.includes('"en-GB"') || !layoutSource.includes("x-default")) {
+  if (!layoutSource.includes('"en"') || !layoutSource.includes("x-default")) {
     issues.push({ level: "warn", message: "Root layout missing hreflang alternates" });
   }
 

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Immigration Expert Witnesses - UK Immigration Tribunal Expert Evidence";
+export const alt = "Immigration Expert Witnesses - Immigration Tribunal Expert Evidence";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -41,7 +41,7 @@ export default function OpenGraphImage() {
             lineHeight: 1.3,
           }}
         >
-          UK Immigration Tribunal Expert Evidence
+          Immigration Tribunal Expert Evidence
         </p>
       </div>
     ),

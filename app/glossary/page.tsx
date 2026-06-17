@@ -6,7 +6,7 @@ import { glossaryTerms } from "@/data/glossary";
 import { glossaryAnchorId } from "@/lib/glossary";
 
 export const metadata = createMetadata({
-  title: "Immigration Expert Witness Glossary UK | Tribunal Terms",
+  title: "Immigration Expert Witness Glossary | Tribunal Terms",
   description:
     "Glossary of immigration expert witness terms — CPR Part 35, Ikarian Reefer, Practice Direction 2024, Country Guidance, CPIN, oral evidence, and tribunal procedures.",
   path: "/glossary",
@@ -20,7 +20,7 @@ export default function GlossaryPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="Immigration Expert Witness Glossary"
-        subtitle="Key terms for UK immigration tribunal expert witness evidence."
+        subtitle="Key terms for immigration tribunal expert witness evidence."
         breadcrumbs={crumbs}
       >
         <dl className="space-y-6">

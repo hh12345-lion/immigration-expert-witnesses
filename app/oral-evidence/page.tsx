@@ -7,7 +7,7 @@ import { articleSchema } from "@/lib/schema";
 import { SISTER_HUB_URL } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Oral Evidence by Immigration Expert Witnesses | UK Tribunal Guide",
+  title: "Oral Evidence by Immigration Expert Witnesses | Tribunal Guide",
   description:
     "Complete guide to oral evidence by immigration expert witnesses at FTT and UT hearings — when directed, preparation, cross-examination, joint expert meetings, and supplementary testimony.",
   path: "/oral-evidence",
@@ -49,14 +49,14 @@ export default function OralEvidencePage() {
         breadcrumbs={crumbs}
         faqs={oralEvidenceFaqs}
         extra={articleSchema({
-          headline: "Oral Evidence by Immigration Expert Witnesses: Complete UK Tribunal Guide",
+          headline: "Oral Evidence by Immigration Expert Witnesses: Complete Tribunal Guide",
           description:
             "Complete guide to oral evidence by immigration expert witnesses at FTT and UT hearings.",
           path: "/oral-evidence",
         })}
       />
       <PageShell
-        title="Oral Evidence by Immigration Expert Witnesses: Complete UK Tribunal Guide"
+        title="Oral Evidence by Immigration Expert Witnesses: Complete Tribunal Guide"
         subtitle="Unique witness-site content — oral testimony, cross-examination, and hearing procedure at immigration tribunals."
         breadcrumbs={crumbs}
       >

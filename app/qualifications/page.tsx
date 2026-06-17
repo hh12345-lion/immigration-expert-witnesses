@@ -4,7 +4,7 @@ import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Immigration Expert Witness Qualifications UK | Credentials & Standards",
+  title: "Immigration Expert Witness Qualifications | Credentials & Standards",
   description:
     "Immigration expert witness qualifications — field research, tribunal acceptance, language proficiency, academic credentials, CPR Part 35 compliance, and continuing professional development.",
   path: "/qualifications",
@@ -28,7 +28,7 @@ export default function QualificationsPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="Immigration Expert Witness Qualifications"
-        subtitle="The credentials and standards expected of immigration expert witnesses in UK tribunal proceedings."
+        subtitle="The credentials and standards expected of immigration expert witnesses in tribunal proceedings."
         breadcrumbs={crumbs}
       >
         <p className="mb-6 text-[#374151] leading-relaxed">

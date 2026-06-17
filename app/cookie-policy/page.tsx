@@ -8,7 +8,7 @@ import { SITE_EMAIL } from "@/lib/constants";
 export const metadata = createMetadata({
   title: "Cookie Policy | Immigration Expert Witnesses",
   description:
-    "How ImmigrationExpertWitnesses.com uses cookies and similar technologies, your choices under UK GDPR and ePrivacy, and how to manage preferences.",
+    "How ImmigrationExpertWitnesses.com uses cookies and similar technologies, your choices under applicable data protection laws and ePrivacy, and how to manage preferences.",
   path: "/cookie-policy",
   noindex: true,
   follow: true,
@@ -28,7 +28,7 @@ export default function CookiePolicyPage() {
           <Link href="/privacy" className="font-semibold text-[#1A6B78] hover:underline">
             Privacy Policy
           </Link>
-          . We comply with the UK GDPR, the Privacy and Electronic Communications Regulations (PECR),
+          . We comply with applicable data protection and electronic communications laws,
           and apply CCPA-aligned transparency for California visitors.
         </p>
 
@@ -75,7 +75,7 @@ export default function CookiePolicyPage() {
           <li>Hotjar (analytics and experience insights)</li>
         </ul>
         <p className="mt-4 text-sm text-[#374151]">
-          These providers may process data outside the UK. We do not load non-essential scripts until you
+          These providers may process data outside your jurisdiction. We do not load non-essential scripts until you
           opt in via our cookie banner.
         </p>
 

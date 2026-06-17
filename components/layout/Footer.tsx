@@ -80,7 +80,7 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-10 border-t border-white/20 pt-6 text-center text-xs text-white/60">
-          Immigration Expert Witnesses is the network master hub for expert witnesses in UK immigration tribunal
+          Immigration Expert Witnesses is the network master hub for expert witnesses in immigration tribunal
           proceedings — qualifications, oral evidence, CPR Part 35 duties, and tribunal appearance. Report standards
           are maintained at{" "}
           <a href={SISTER_HUB_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">

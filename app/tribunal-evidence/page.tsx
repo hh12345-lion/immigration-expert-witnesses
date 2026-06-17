@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 import { tribunalEvidence } from "@/data/tribunal-evidence";
 
 export const metadata = createMetadata({
-  title: "Immigration Tribunal Expert Evidence UK | Witness Guide",
+  title: "Immigration Tribunal Expert Evidence | Witness Guide",
   description:
     "Tribunal expert evidence guidance — instructing witnesses, exchange deadlines, oral evidence, cross-examination, joint meetings, and Legal Aid rates.",
   path: "/tribunal-evidence",

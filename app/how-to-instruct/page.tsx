@@ -4,7 +4,7 @@ import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "How to Instruct an Immigration Expert Witness UK | Solicitor Guide",
+  title: "How to Instruct an Immigration Expert Witness | Solicitor Guide",
   description:
     "How to instruct an immigration expert witness — letter of instruction, documents, timing, fee estimates, Legal Aid prior authority, and network routing to specialist witnesses.",
   path: "/how-to-instruct",
@@ -18,7 +18,7 @@ export default function HowToInstructPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="How to Instruct an Immigration Expert Witness"
-        subtitle="Step-by-step guidance for UK immigration solicitors instructing expert witnesses."
+        subtitle="Step-by-step guidance for immigration solicitors instructing expert witnesses."
         breadcrumbs={crumbs}
       >
         <h2 className="text-xl font-bold text-[#1A2744]">1. Identify the Right Witness Type</h2>

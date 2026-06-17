@@ -5,19 +5,19 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "country-condition-expert-witness",
     title: "Country Condition Expert Witness",
-    metaTitle: "Country Condition Expert Witness UK | Immigration Tribunal Evidence",
+    metaTitle: "Country Condition Expert Witness | Immigration Tribunal Evidence",
     metaDescription:
-      "Independent country condition expert witnesses for UK immigration tribunals — security, human rights, state protection, and profile-specific risks beyond Home Office CPINs.",
-    h1: "Country Condition Expert Witness UK | Immigration Tribunal Evidence",
+      "Independent country condition expert witnesses for immigration tribunals — security, human rights, state protection, and profile-specific risks beyond Home Office CPINs.",
+    h1: "Country Condition Expert Witness | Immigration Tribunal Evidence",
     content: [
       "A country condition expert witness provides independent evidence on conditions in the appellant's country of origin — security, human rights, state protection, internal relocation viability, and profile-specific risks. Unlike generic Home Office Country Policy Information Notes (CPINs), country condition witnesses address the individual appellant's circumstances, region, and claimed fear with dated primary sources and field expertise.",
-      "UK immigration tribunals increasingly scrutinise whether country evidence reflects current conditions. Following CPIN updates across major jurisdictions in 2025 — including Somalia (July 2025), Nigeria SOGIESC (June 2025), Pakistan, and Afghanistan — independent expert witnesses are essential to challenge generic CPIN analysis with profile-specific, regionally nuanced evidence.",
+      "immigration tribunals increasingly scrutinise whether country evidence reflects current conditions. Following CPIN updates across major jurisdictions in 2025 — including Somalia (July 2025), Nigeria SOGIESC (June 2025), Pakistan, and Afghanistan — independent expert witnesses are essential to challenge generic CPIN analysis with profile-specific, regionally nuanced evidence.",
       "Country-specific expert witnesses are available through our network sites covering Somalia, Nigeria, Pakistan, Afghanistan, Africa, Albania, and South Asia. Each network site provides witnesses with jurisdiction-specific expertise, including clan analysis, regional security assessment, and leading Country Guidance case application.",
       "Country condition witnesses work alongside persecution and human rights experts where Convention nexus or ECHR Article 3 standards require separate methodological analysis. Early instruction is critical given tribunal exchange deadlines and the research time required for compliant expert reports under the Immigration Tribunal Practice Direction 2024.",
     ],
     faqs: [
       {
-        question: "What does a country condition expert witness do in UK immigration?",
+        question: "What does a country condition expert witness do in immigration?",
         answer:
           "A country condition expert witness provides independent evidence on conditions in the appellant's country of origin — security, human rights, state protection, internal relocation, and profile-specific risks. Unlike generic Home Office CPINs, country condition witnesses address the individual appellant's circumstances, region, and claimed fear with dated primary sources and field expertise.",
       },
@@ -51,13 +51,13 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "persecution-expert-witness",
     title: "Persecution Expert Witness",
-    metaTitle: "Persecution Expert Witness UK | Refugee Convention Asylum Evidence",
+    metaTitle: "Persecution Expert Witness | Refugee Convention Asylum Evidence",
     metaDescription:
-      "Persecution expert witnesses for UK asylum appeals — Refugee Convention grounds, nexus assessment, HJ/RT standards, state protection, and non-state actor persecution.",
-    h1: "Persecution Expert Witness UK | Refugee Convention Asylum Evidence",
+      "Persecution expert witnesses for asylum appeals — Refugee Convention grounds, nexus assessment, HJ/RT standards, state protection, and non-state actor persecution.",
+    h1: "Persecution Expert Witness | Refugee Convention Asylum Evidence",
     content: [
       "A persecution expert witness analyses whether the appellant faces a well-founded fear of persecution for a Refugee Convention reason. This includes assessing nexus between the feared harm and a Convention ground, state protection availability, non-state actor persecution, and internal relocation viability in the context of country conditions.",
-      "Leading authorities including HJ (Iran) [2010] UKSC 31 and RT (Zimbabwe) [2012] UKSC 38 establish the methodological framework for persecution analysis in UK asylum appeals. Persecution witnesses apply these standards alongside jurisdiction-specific Country Guidance — MOJ (Somalia) [2014], AAA (Somalia) [2011], DD (Afghanistan), and others as applicable.",
+      "Leading authorities including HJ (Iran) [2010] UKSC 31 and RT (Zimbabwe) [2012] UKSC 38 establish the methodological framework for persecution analysis in asylum appeals. Persecution witnesses apply these standards alongside jurisdiction-specific Country Guidance — MOJ (Somalia) [2014], AAA (Somalia) [2011], DD (Afghanistan), and others as applicable.",
       "Persecution analysis differs from country condition evidence: while country witnesses assess conditions on the ground, persecution witnesses apply Refugee Convention methodology to determine whether those conditions amount to persecution for a Convention reason in the appellant's specific circumstances.",
       "Specialist persecution expert witnesses are available through persecutionexpert.com in our network. Many complex asylum cases require both country condition and persecution expertise — instruct early to meet tribunal exchange deadlines.",
     ],
@@ -97,10 +97,10 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "human-rights-expert-witness",
     title: "Human Rights Expert Witness",
-    metaTitle: "Human Rights Expert Witness UK | ECHR Article 3 Deportation Evidence",
+    metaTitle: "Human Rights Expert Witness | ECHR Article 3 Deportation Evidence",
     metaDescription:
-      "Human rights expert witnesses for UK deportation and removal cases — ECHR Article 3, ICCPR, CAT, CEDAW standards, torture survivors, and human rights defenders.",
-    h1: "Human Rights Expert Witness UK | ECHR Article 3 Deportation Evidence",
+      "Human rights expert witnesses for deportation and removal cases — ECHR Article 3, ICCPR, CAT, CEDAW standards, torture survivors, and human rights defenders.",
+    h1: "Human Rights Expert Witness | ECHR Article 3 Deportation Evidence",
     content: [
       "Human rights expert witnesses apply international human rights treaty standards and ECHR jurisprudence to immigration tribunal proceedings. They are particularly critical in deportation and removal cases engaging ECHR Article 3 (prohibition of torture, inhuman or degrading treatment), Article 8 (family and private life), and complementary treaty frameworks including ICCPR, CAT, and CEDAW.",
       "Human rights witnesses assess whether return would expose the appellant to treatment contrary to Article 3 — including torture survivors, human rights defenders facing arbitrary detention or extrajudicial killing, and victims of gender-based violence where CEDAW standards apply.",
@@ -143,10 +143,10 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "linguistic-identity-expert-witness",
     title: "Linguistic & Identity Expert Witness",
-    metaTitle: "Linguistic & Identity Expert Witness UK | Immigration Tribunal",
+    metaTitle: "Linguistic & Identity Expert Witness | Immigration Tribunal",
     metaDescription:
-      "Linguistic and identity expert witnesses for UK asylum appeals — dialect analysis, clan membership, cultural knowledge, nationality claims, and credibility assessment.",
-    h1: "Linguistic & Identity Expert Witness UK | Immigration Tribunal",
+      "Linguistic and identity expert witnesses for asylum appeals — dialect analysis, clan membership, cultural knowledge, nationality claims, and credibility assessment.",
+    h1: "Linguistic & Identity Expert Witness | Immigration Tribunal",
     content: [
       "Linguistic and identity expert witnesses assess whether the appellant's claimed nationality, clan membership, dialect, and cultural knowledge are consistent with their account. This evidence is critical in clan-based asylum jurisdictions where identity determines protection — including Somalia (MOJ framework), Afghanistan (ethnicity and Hazara claims), and parts of Africa and South Asia.",
       "The Home Office frequently challenges appellant nationality, clan membership, or dialect in asylum cases. Linguistic experts provide independent analysis of language proficiency, accent, dialect features, and cultural knowledge that tribunals weigh alongside credibility findings.",
@@ -189,10 +189,10 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "internal-relocation-expert-witness",
     title: "Internal Relocation Expert Witness",
-    metaTitle: "Internal Relocation Expert Witness UK | Asylum Tribunal",
+    metaTitle: "Internal Relocation Expert Witness | Asylum Tribunal",
     metaDescription:
-      "Internal relocation expert witnesses for UK asylum tribunals — viability assessment, Reasonableness test, unduly harsh analysis, and regional security differences.",
-    h1: "Internal Relocation Expert Witness UK | Asylum Tribunal",
+      "Internal relocation expert witnesses for asylum tribunals — viability assessment, Reasonableness test, unduly harsh analysis, and regional security differences.",
+    h1: "Internal Relocation Expert Witness | Asylum Tribunal",
     content: [
       "An internal relocation expert witness assesses whether the appellant could reasonably relocate within their country of origin to avoid the feared persecution. This involves evaluating regional security conditions, clan or family connections at the proposed relocation destination, economic viability, and whether relocation would be unduly harsh.",
       "The Reasonableness test requires tribunals to consider whether internal relocation is a practical, safe, and reasonable option — not merely theoretically possible. Expert witnesses provide the country-specific evidence tribunals need to apply this test, particularly where the Home Office relies on generic CPIN internal relocation analysis.",
@@ -235,14 +235,14 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "cpin-challenge-expert-witness",
     title: "CPIN Challenge Expert Witness",
-    metaTitle: "CPIN Challenge Expert Witness UK | Immigration Tribunal",
+    metaTitle: "CPIN Challenge Expert Witness | Immigration Tribunal",
     metaDescription:
-      "Expert witnesses challenging Home Office CPINs with dated primary sources, addressing leading Country Guidance cases and EUAA guidance in UK immigration appeals.",
-    h1: "CPIN Challenge Expert Witness UK | Immigration Tribunal",
+      "Expert witnesses challenging Home Office CPINs with dated primary sources, addressing leading Country Guidance cases and EUAA guidance in immigration appeals.",
+    h1: "CPIN Challenge Expert Witness | Immigration Tribunal",
     content: [
       "CPIN and country guidance expert witnesses provide independent analysis that challenges, supplements, or contextualises Home Office Country Policy Information Notes. CPINs provide generic country policy; expert witnesses address the appellant's specific profile, region, and claimed fear with dated primary sources that may post-date or contradict CPIN findings.",
       "Leading Country Guidance cases must be addressed in expert evidence where applicable — including MOJ and Others (Somalia) [2014] UKUT 00442, HJ (Iran) [2010] UKSC 31, RT (Zimbabwe) [2012] UKSC 38, AAA (Somalia) [2011] UKUT 00444, and DD (Afghanistan) [2020] UKUT 00230. Upper Tribunal country guidance challenges remain high-value proceedings requiring expert witnesses familiar with CG precedent.",
-      "EUAA Country Guidance is increasingly cited in UK appeals. Expert witnesses must address EUAA guidance alongside UK CG and CPIN analysis, identifying where EUAA conclusions align with or diverge from UK tribunal authority.",
+      "EUAA Country Guidance is increasingly cited in appeals. Expert witnesses must address EUAA guidance alongside Country Guidance and CPIN analysis, identifying where EUAA conclusions align with or diverge from immigration tribunal authority.",
       "CPIN challenge evidence requires strict source dating under the Immigration Tribunal Practice Direction 2024 and Adam Pipe October 2025 guidance. Tribunals expect genuine expert independence with dated primary sources — not AI-generated country research or undated secondary summaries.",
     ],
     faqs: [
@@ -264,7 +264,7 @@ export const witnessTypes: ContentPage[] = [
       {
         question: "Should expert witnesses address EUAA Country Guidance?",
         answer:
-          "Increasingly yes — EUAA guidance is cited in UK appeals. Expert witnesses should address EUAA conclusions alongside UK CG and CPIN analysis where relevant to the jurisdiction.",
+          "Increasingly yes — EUAA guidance is cited in appeals. Expert witnesses should address EUAA conclusions alongside Country Guidance and CPIN analysis where relevant to the jurisdiction.",
       },
       {
         question: "Are CPIN challenge witnesses needed for Upper Tribunal appeals?",
@@ -281,13 +281,13 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "medical-psychiatric-expert-witness",
     title: "Medical & Psychiatric Expert Witness",
-    metaTitle: "Medical & Psychiatric Expert Witness UK | Immigration Tribunals",
+    metaTitle: "Medical & Psychiatric Expert Witness | Immigration Tribunals",
     metaDescription:
       "Coordinating medical and psychiatric expert evidence with country condition witnesses — torture survivors, Istanbul Protocol, PTSD, scarring, and mental health on return.",
-    h1: "Medical & Psychiatric Expert Witness UK | Immigration Tribunals",
+    h1: "Medical & Psychiatric Expert Witness | Immigration Tribunals",
     content: [
       "Complex immigration appeals often require coordinated expert evidence from medical, psychiatric, and country condition witnesses. Medical experts assess physical injuries, scarring, and torture documentation; psychiatric experts assess PTSD, depression, and mental health prognosis; country witnesses assess return risk — all three may be required in Article 3 cases.",
-      "The Istanbul Protocol provides internationally recognised standards for documenting torture. Medical expert evidence following Istanbul Protocol methodology is accepted in UK immigration tribunals and supports credibility findings alongside the appellant's account.",
+      "The Istanbul Protocol provides internationally recognised standards for documenting torture. Medical expert evidence following Istanbul Protocol methodology is accepted in immigration tribunals and supports credibility findings alongside the appellant's account.",
       "Coordination between expert disciplines is essential: medical evidence of torture must be consistent with country condition analysis of return risk; psychiatric evidence of mental health deterioration on return supports Article 3 claims; scarring evidence may corroborate persecution accounts.",
       "We coordinate multi-disciplinary expert witness teams for complex cases involving torture survivors, victims of sexual violence, and appellants with significant psychiatric injury. Early instruction allows experts to align methodology and avoid contradictory conclusions under cross-examination.",
     ],
@@ -300,7 +300,7 @@ export const witnessTypes: ContentPage[] = [
       {
         question: "What is the Istanbul Protocol relevance?",
         answer:
-          "The Istanbul Protocol provides internationally recognised standards for documenting torture — medical expert evidence following Istanbul Protocol methodology is accepted in UK immigration tribunals.",
+          "The Istanbul Protocol provides internationally recognised standards for documenting torture — medical expert evidence following Istanbul Protocol methodology is accepted in immigration tribunals.",
       },
       {
         question: "Who coordinates medical and country condition witnesses?",
@@ -327,10 +327,10 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "oral-evidence-witness",
     title: "Oral Evidence Expert Witness",
-    metaTitle: "Oral Evidence Expert Witness UK | Immigration Tribunal Hearings",
+    metaTitle: "Oral Evidence Expert Witness | Immigration Tribunal Hearings",
     metaDescription:
       "Expert witnesses giving oral evidence at FTT and Upper Tribunal hearings — cross-examination preparation, consistency with written reports, and joint expert meetings.",
-    h1: "Oral Evidence Expert Witness UK | Immigration Tribunal Hearings",
+    h1: "Oral Evidence Expert Witness | Immigration Tribunal Hearings",
     content: [
       "Expert witnesses may be required to attend First-tier Tribunal (FTT) or Upper Tribunal (UT) hearings to give oral evidence and face cross-examination. The tribunal may direct oral evidence where the expert's credibility, methodology, or specific findings are in dispute.",
       "Oral evidence requires preparation beyond the written report: experts must review their report, letter of instruction, and all source materials; ensure consistency between written and oral testimony; and be prepared to defend methodology and source selection under questioning from the opposing party's representative.",

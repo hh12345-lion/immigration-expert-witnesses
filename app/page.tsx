@@ -11,9 +11,9 @@ import { SISTER_HUB_URL } from "@/lib/constants";
 
 export const metadata = createMetadata({
   title:
-    "Immigration Expert Witness UK | Country & Asylum Experts for Immigration Tribunals",
+    "Immigration Expert Witness | Country & Asylum Experts for Immigration Tribunals",
   description:
-    "Find qualified immigration expert witnesses in the UK. Country condition witnesses, persecution analysis, human rights experts, linguistic identity, and oral evidence at FTT and Upper Tribunal. CPR Part 35 compliant. Legal Aid compatible.",
+    "Find qualified immigration expert witnesses for tribunal proceedings. Country condition witnesses, persecution analysis, human rights experts, linguistic identity, and oral evidence at FTT and Upper Tribunal. CPR Part 35 compliant. Legal Aid compatible.",
   path: "/",
 });
 
@@ -31,13 +31,13 @@ export default function HomePage() {
       <section className="bg-[#1A2744] py-14 md:py-20">
         <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-medium uppercase tracking-wide text-[#B8943E] sm:text-sm">
-            UK Immigration & Asylum Tribunals
+            Immigration & Asylum Tribunals
           </p>
           <h1 className="mt-4 max-w-4xl break-words text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            Immigration Expert Witness UK: Tribunal Evidence for Solicitors
+            Immigration Expert Witness: Tribunal Evidence for Solicitors
           </h1>
           <p className="mt-6 max-w-2xl text-base text-white/80 sm:text-lg">
-            The network master hub for immigration expert witnesses. We connect UK immigration solicitors,
+            The network master hub for immigration expert witnesses. We connect immigration solicitors,
             law firms, and Legal Aid practitioners with qualified expert witnesses for asylum appeals, deportation
             proceedings, country guidance challenges, and Upper Tribunal cases — with CPR Part 35 independence and
             oral evidence capability.
@@ -65,7 +65,7 @@ export default function HomePage() {
             Why Immigration Expert Witnesses Matter
           </h2>
           <p className="mt-4 max-w-3xl text-[#374151] leading-relaxed">
-            UK immigration tribunals rely on independent expert witnesses whose paramount duty is to the tribunal —
+            immigration tribunals rely on independent expert witnesses whose paramount duty is to the tribunal —
             not the instructing party. Expert witness evidence is governed by CPR Part 35, Ikarian Reefer independence
             principles, and the Immigration Tribunal Practice Direction on expert evidence (2024), with additional
             guidance from the Adam Pipe October 2025 expert report guide.

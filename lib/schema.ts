@@ -37,8 +37,6 @@ export function organizationSchema() {
     name: "Immigration Expert Witnesses",
     url: SITE_URL,
     email: SITE_EMAIL,
-    address: { "@type": "PostalAddress", addressCountry: "GB" },
-    areaServed: ["United Kingdom"],
     sameAs: [LINKEDIN_URL],
   };
 }
@@ -61,7 +59,6 @@ export function professionalServiceSchema() {
     url: SITE_URL,
     serviceType: "Immigration Expert Witness",
     provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: "United Kingdom",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Immigration Expert Witness Services",
@@ -87,7 +84,7 @@ export function websiteSchema() {
     "@id": `${SITE_URL}/#website`,
     name: "Immigration Expert Witnesses",
     url: SITE_URL,
-    inLanguage: "en-GB",
+    inLanguage: "en",
     publisher: { "@id": `${SITE_URL}/#organization` },
     potentialAction: {
       "@type": "SearchAction",

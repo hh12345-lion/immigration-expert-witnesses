@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 import { caseTypes } from "@/data/case-types";
 
 export const metadata = createMetadata({
-  title: "Immigration Case Types & Expert Witnesses UK | Tribunal Guide",
+  title: "Immigration Case Types & Expert Witnesses | Tribunal Guide",
   description:
     "Expert witnesses for FTT asylum appeals, Upper Tribunal, deportation, fresh claims, human rights, country guidance challenges, judicial review, and administrative review.",
   path: "/case-types",
@@ -20,7 +20,7 @@ export default function CaseTypesPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="Immigration Case Types & Expert Witnesses"
-        subtitle="Which expert witnesses are needed for each type of UK immigration proceeding."
+        subtitle="Which expert witnesses are needed for each type of immigration proceeding."
         breadcrumbs={crumbs}
       >
         <CardGrid

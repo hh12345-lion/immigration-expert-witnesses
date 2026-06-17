@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 import { services } from "@/data/services";
 
 export const metadata = createMetadata({
-  title: "Immigration Expert Witness Services UK | Tribunal Evidence",
+  title: "Immigration Expert Witness Services | Tribunal Evidence",
   description:
     "Immigration expert witness services — country condition, persecution analysis, human rights, linguistic identity, oral evidence, joint meetings, CPIN challenge, and expedited instruction.",
   path: "/services",
@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="Immigration Expert Witness Services"
-        subtitle="Eight core witness services for UK immigration solicitors, law firms, and Legal Aid practitioners."
+        subtitle="Eight core witness services for immigration solicitors, law firms, and Legal Aid practitioners."
         breadcrumbs={crumbs}
       >
         <CardGrid items={services} />

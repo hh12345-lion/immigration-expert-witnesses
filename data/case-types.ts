@@ -5,12 +5,12 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "ftt-asylum-appeal",
     title: "FTT Asylum Appeal",
-    metaTitle: "Expert Witnesses for FTT Asylum Appeals UK | First-tier Tribunal",
+    metaTitle: "Expert Witnesses for FTT Asylum Appeals | First-tier Tribunal",
     metaDescription:
       "Qualified immigration expert witnesses for First-tier Tribunal asylum appeals — country condition, persecution, human rights, and linguistic identity evidence with CPR Part 35 compliance.",
-    h1: "Expert Witnesses for FTT Asylum Appeals UK",
+    h1: "Expert Witnesses for FTT Asylum Appeals",
     content: [
-      "First-tier Tribunal (FTT) asylum appeals are the primary forum for refugee protection claims in the UK. Expert witness evidence on country conditions, persecution methodology, human rights standards, and linguistic identity is frequently decisive — particularly where the Home Office relies on generic CPIN analysis.",
+      "First-tier Tribunal (FTT) asylum appeals are the primary forum for refugee protection claims. Expert witness evidence on country conditions, persecution methodology, human rights standards, and linguistic identity is frequently decisive — particularly where the Home Office relies on generic CPIN analysis.",
       "FTT proceedings require strict compliance with tribunal directions on expert evidence exchange. The Immigration Tribunal Practice Direction 2024 sets default report length limits, independence standards, and exchange deadlines. Early witness instruction is critical given increased FTT asylum volumes and backlog in 2025–2026.",
       "Country condition witnesses address profile-specific risks beyond CPIN generalisations. Persecution witnesses apply Refugee Convention methodology including HJ (Iran) and RT (Zimbabwe) standards. Linguistic identity witnesses support credibility findings where nationality or clan is disputed.",
       "Legal Aid practitioners must obtain prior authority for expert witness fees before instruction. Our network routes cases to jurisdiction-specific witnesses while maintaining CPR Part 35 independence standards across all FTT proceedings.",
@@ -36,10 +36,10 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "upper-tribunal-appeal",
     title: "Upper Tribunal Appeal",
-    metaTitle: "Expert Witnesses for Upper Tribunal Appeals UK | UT Immigration",
+    metaTitle: "Expert Witnesses for Upper Tribunal Appeals | UT Immigration",
     metaDescription:
       "Immigration expert witnesses for Upper Tribunal permission and substantive appeals — country guidance challenges, error of law cases, and complex multi-jurisdictional evidence.",
-    h1: "Expert Witnesses for Upper Tribunal Appeals UK",
+    h1: "Expert Witnesses for Upper Tribunal Appeals",
     content: [
       "Upper Tribunal (UT) immigration appeals involve permission applications and substantive hearings on errors of law identified by the First-tier Tribunal. Expert witness evidence at UT level often addresses complex country guidance questions, methodological challenges to FTT findings, and fresh expert analysis where the FTT failed to engage with relevant evidence.",
       "Country guidance challenges at the Upper Tribunal remain high-value proceedings. Expert witnesses must address leading CG cases — MOJ (Somalia), HJ (Iran), RT (Zimbabwe), AAA (Somalia), DD (Afghanistan) — and demonstrate how current country conditions affect the appellant's specific profile.",
@@ -67,10 +67,10 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "deportation-removal",
     title: "Deportation & Removal",
-    metaTitle: "Expert Witnesses for Deportation & Removal UK | Article 3 Evidence",
+    metaTitle: "Expert Witnesses for Deportation & Removal | Article 3 Evidence",
     metaDescription:
-      "Immigration expert witnesses for UK deportation and removal proceedings — ECHR Article 3, human rights on return, torture survivors, and medical-psychiatric coordination.",
-    h1: "Expert Witnesses for Deportation & Removal Proceedings UK",
+      "Immigration expert witnesses for deportation and removal proceedings — ECHR Article 3, human rights on return, torture survivors, and medical-psychiatric coordination.",
+    h1: "Expert Witnesses for Deportation & Removal Proceedings",
     content: [
       "Deportation and removal proceedings engage ECHR Article 3 where return would expose the appellant to torture, inhuman or degrading treatment. Human rights expert witnesses apply treaty and ECHR standards alongside country condition evidence on return risk.",
       "Foreign national offenders and long-resident migrants facing deportation often require multi-disciplinary expert evidence: country condition witnesses on return risk, human rights witnesses on Article 3 standards, and medical or psychiatric experts where torture history or mental health deterioration on return is claimed.",
@@ -98,10 +98,10 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "fresh-claims",
     title: "Fresh Claims",
-    metaTitle: "Expert Witnesses for Fresh Claims UK | New Asylum Evidence",
+    metaTitle: "Expert Witnesses for Fresh Claims | New Asylum Evidence",
     metaDescription:
       "Immigration expert witnesses for fresh asylum claims — new country evidence, changed conditions, and supplementary expert analysis for Home Office fresh claim assessments.",
-    h1: "Expert Witnesses for Fresh Claims UK",
+    h1: "Expert Witnesses for Fresh Claims",
     content: [
       "Fresh claims arise where new evidence — not previously considered — would create a realistic prospect of success. Expert witness evidence frequently forms the basis of fresh claims, particularly where country conditions have deteriorated since the original refusal or where new expert analysis addresses profile-specific risks not covered by the original CPIN.",
       "Country condition witnesses providing evidence of changed circumstances since the original determination are central to many fresh claims. Security deterioration in Somalia, Afghanistan, Nigeria, and other jurisdictions in 2025–2026 has generated fresh claims supported by updated expert analysis.",
@@ -129,12 +129,12 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "human-rights-claims",
     title: "Human Rights Claims",
-    metaTitle: "Expert Witnesses for Human Rights Claims UK | ECHR Immigration",
+    metaTitle: "Expert Witnesses for Human Rights Claims | ECHR Immigration",
     metaDescription:
-      "Expert witnesses for UK immigration human rights claims — ECHR Articles 3 and 8, ICCPR, CAT, CEDAW, and treaty standards in tribunal proceedings.",
-    h1: "Expert Witnesses for Human Rights Claims UK",
+      "Expert witnesses for immigration human rights claims — ECHR Articles 3 and 8, ICCPR, CAT, CEDAW, and treaty standards in tribunal proceedings.",
+    h1: "Expert Witnesses for Human Rights Claims",
     content: [
-      "Human rights claims in UK immigration proceedings engage ECHR Articles 3 and 8, and may invoke complementary treaty frameworks including ICCPR, CAT, and CEDAW. Human rights expert witnesses apply these standards to assess whether return or removal would breach the appellant's protected rights.",
+      "Human rights claims before immigration tribunals engage ECHR Articles 3 and 8, and may invoke complementary treaty frameworks including ICCPR, CAT, and CEDAW. Human rights expert witnesses apply these standards to assess whether return or removal would breach the appellant's protected rights.",
       "Article 3 claims require evidence that return would expose the appellant to torture, inhuman or degrading treatment. Human rights witnesses assess this against international standards, while country condition witnesses provide factual evidence on conditions in the country of return.",
       "Article 8 claims engage family and private life proportionality. While primarily legal questions, country condition evidence may support factual findings on integration barriers, family circumstances abroad, and hardship on return.",
       "Gender-based persecution and FGM cases may engage CEDAW standards alongside Refugee Convention analysis. Human rights witnesses with gender expertise coordinate with country condition witnesses on jurisdiction-specific risk profiles.",
@@ -160,15 +160,15 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "country-guidance-challenges",
     title: "Country Guidance Challenges",
-    metaTitle: "Expert Witnesses for Country Guidance Challenges UK | Upper Tribunal",
+    metaTitle: "Expert Witnesses for Country Guidance Challenges | Upper Tribunal",
     metaDescription:
       "Expert witnesses for Upper Tribunal country guidance challenges — MOJ Somalia, HJ Iran, RT Zimbabwe, AAA Somalia, DD Afghanistan, and CG precedent analysis.",
-    h1: "Expert Witnesses for Country Guidance Challenges UK",
+    h1: "Expert Witnesses for Country Guidance Challenges",
     content: [
       "Country guidance (CG) challenges at the Upper Tribunal seek to establish or modify tribunal-wide guidance on country conditions. Expert witness evidence is central to CG proceedings — tribunals rely on independent expert analysis to determine whether conditions in a country meet the threshold for CG designation.",
       "Leading CG cases that expert witnesses must address include MOJ and Others (Somalia) [2014] UKUT 00442, HJ (Iran) [2010] UKSC 31, RT (Zimbabwe) [2012] UKSC 38, AAA (Somalia) [2011] UKUT 00444, and DD (Afghanistan) [2020] UKUT 00230. Experts must demonstrate how current conditions affect the CG framework.",
       "CG challenge expert evidence requires the highest methodological standards: dated primary sources, field expertise, identification of assumptions and limitations, and explicit engagement with existing CG authority. Tribunals apply heightened scrutiny to expert independence in CG proceedings.",
-      "EUAA Country Guidance is increasingly cited alongside UK CG. Expert witnesses must address EUAA conclusions where relevant, identifying alignment or divergence with UK tribunal authority.",
+      "EUAA Country Guidance is increasingly cited alongside Country Guidance. Expert witnesses must address EUAA conclusions where relevant, identifying alignment or divergence with immigration tribunal authority.",
     ],
     faqs: [
       {
@@ -191,10 +191,10 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "judicial-review",
     title: "Judicial Review",
-    metaTitle: "Expert Witnesses for Immigration Judicial Review UK",
+    metaTitle: "Expert Witnesses for Immigration Judicial Review",
     metaDescription:
       "Immigration expert witnesses for judicial review proceedings — fresh evidence, CPIN challenge, and supplementary expert analysis for High Court immigration JR.",
-    h1: "Expert Witnesses for Immigration Judicial Review UK",
+    h1: "Expert Witnesses for Immigration Judicial Review",
     content: [
       "Judicial review of immigration decisions may be supported by expert witness evidence where fresh material demonstrates unlawfulness — for example, where the decision-maker failed to engage with relevant country evidence, applied outdated CPIN analysis, or ignored expert evidence in the bundle.",
       "Expert evidence in judicial review must be genuinely fresh or demonstrate a material error in the decision-maker's treatment of existing evidence. Courts apply strict rules on new evidence in JR — expert reports should address why the evidence could not have been obtained earlier and how it affects the lawfulness of the decision.",
@@ -222,10 +222,10 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "administrative-review",
     title: "Administrative Review",
-    metaTitle: "Expert Witnesses for Administrative Review UK | Immigration",
+    metaTitle: "Expert Witnesses for Administrative Review | Immigration",
     metaDescription:
-      "Expert witness evidence for UK immigration administrative review — supplementary country analysis and fresh evidence for in-country administrative review applications.",
-    h1: "Expert Witnesses for Administrative Review UK",
+      "Expert witness evidence for immigration administrative review — supplementary country analysis and fresh evidence for in-country administrative review applications.",
+    h1: "Expert Witnesses for Administrative Review",
     content: [
       "Administrative review (AR) is an internal Home Office review mechanism for eligible immigration decisions. While AR has limited scope compared to tribunal appeals, expert evidence may support AR applications where the decision involved a caseworking error in applying country evidence or CPIN analysis.",
       "Expert witness reports for AR should be focused and concise, addressing the specific alleged error. Country condition witnesses may demonstrate that the refusal failed to consider profile-specific risks or relied on outdated country information.",
