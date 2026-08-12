@@ -48,12 +48,26 @@ export function buildLeadWebhookPayload(input: SubmitLeadInput) {
 }
 
 export function getLeadWebhookUrl(): string | undefined {
-  const url =
+  const raw =
     process.env.Lead_notification_url?.trim() ||
     process.env.LEAD_NOTIFICATION_URL?.trim() ||
     process.env.lead_notification_url?.trim() ||
     "";
-  return url || undefined;
+
+  if (!raw) return undefined;
+
+  // Ignore placeholder / empty-looking values
+  if (/your[_-]?webhook|example\.com|changeme|localhost:\d+\/hook/i.test(raw)) {
+    return undefined;
+  }
+
+  try {
+    const url = new URL(raw);
+    if (url.protocol !== "http:" && url.protocol !== "https:") return undefined;
+    return url.toString();
+  } catch {
+    return undefined;
+  }
 }
 
 /**

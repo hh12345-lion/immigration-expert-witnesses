@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Lead storage not configured. Set Google Sheets env vars and/or Lead_notification_url in Netlify.",
+          "Lead storage not configured. Set Google Sheets env vars and/or Lead_notification_url in Netlify (runtime), then redeploy.",
       },
       { status: 503 }
     );
@@ -75,68 +75,80 @@ export async function POST(request: Request) {
     LEAD_BRAND_NAME,
   ];
 
-  // Run Sheets + webhook in parallel so a slow/broken Sheets call cannot block the lead webhook
-  const tasks: Promise<"sheets" | "webhook">[] = [];
+  let sheetsOk = false;
+  let webhookOk = false;
+  const errors: string[] = [];
 
-  if (sheetsConfigured) {
-    tasks.push(
-      withTimeout(appendRow(row), 8_000, "Google Sheets")
-        .then(() => "sheets" as const)
-        .catch((error: unknown) => {
-          const err = error as { message?: string; code?: number; response?: { status?: number } };
-          console.error("Google Sheets error:", {
-            message: err?.message,
-            code: err?.code,
-            status: err?.response?.status,
-            spreadsheetId: process.env.GOOGLE_SHEET_ID?.slice(0, 8) + "...",
-            timestamp: new Date().toISOString(),
-          });
-          throw error;
-        })
-    );
-  }
-
+  // Webhook first — primary lead notification path
   if (webhookUrl) {
-    const outbound = buildLeadWebhookPayload({ fullName, email, phone });
-    tasks.push(
-      withTimeout(
+    try {
+      const outbound = buildLeadWebhookPayload({ fullName, email, phone });
+      const res = await withTimeout(
         fetch(webhookUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(outbound),
-        }).then(async (res) => {
-          if (!res.ok) {
-            throw new Error(`Lead webhook HTTP ${res.status}`);
-          }
-          return "webhook" as const;
         }),
-        10_000,
+        12_000,
         "Lead webhook"
-      ).catch((error: unknown) => {
-        console.error("Lead webhook request failed:", {
-          message: error instanceof Error ? error.message : "Unknown error",
-          timestamp: new Date().toISOString(),
-        });
-        throw error;
-      })
-    );
+      );
+      if (!res.ok) {
+        const bodyText = await res.text().catch(() => "");
+        throw new Error(
+          `Lead webhook HTTP ${res.status}${bodyText ? `: ${bodyText.slice(0, 160)}` : ""}`
+        );
+      }
+      webhookOk = true;
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : "Lead webhook failed";
+      errors.push(message);
+      console.error("Lead webhook request failed:", {
+        message,
+        timestamp: new Date().toISOString(),
+      });
+    }
   }
 
-  const results = await Promise.allSettled(tasks);
-  const succeeded = results.some((r) => r.status === "fulfilled");
+  if (sheetsConfigured) {
+    try {
+      const result = await withTimeout(appendRow(row), 12_000, "Google Sheets");
+      if (!result.success || result.updatedCells < 1) {
+        throw new Error("Google Sheets append did not write any cells");
+      }
+      sheetsOk = true;
+      console.info("Google Sheets write ok:", {
+        updatedRange: result.updatedRange,
+        updatedCells: result.updatedCells,
+      });
+    } catch (error: unknown) {
+      const err = error as { message?: string; code?: number; response?: { status?: number } };
+      const message = err?.message || "Google Sheets write failed";
+      errors.push(message);
+      console.error("Google Sheets error:", {
+        message,
+        code: err?.code,
+        status: err?.response?.status,
+        spreadsheetId: process.env.GOOGLE_SHEET_ID?.slice(0, 8) + "...",
+        tab: process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1",
+        timestamp: new Date().toISOString(),
+      });
+    }
+  }
 
-  if (!succeeded) {
-    const messages = results
-      .filter((r): r is PromiseRejectedResult => r.status === "rejected")
-      .map((r) => (r.reason instanceof Error ? r.reason.message : "Unknown error"));
+  // Fail closed: never show thank-you unless at least one channel actually delivered
+  if (!sheetsOk && !webhookOk) {
     return NextResponse.json(
       {
         error: "Failed to save submission",
-        detail: messages[0] ?? "Both Google Sheets and lead webhook failed",
+        detail: errors[0] ?? "Google Sheets and lead webhook both failed",
+        delivered: { sheets: false, webhook: false },
       },
       { status: 502 }
     );
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({
+    ok: true,
+    delivered: { sheets: sheetsOk, webhook: webhookOk },
+  });
 }

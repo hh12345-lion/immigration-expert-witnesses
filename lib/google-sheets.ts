@@ -3,26 +3,37 @@ import { google, sheets_v4 } from "googleapis";
 // ─── Auth ────────────────────────────────────────────────────────────────────
 
 export function isGoogleSheetsConfigured(): boolean {
-  return Boolean(
-    process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim() &&
-      process.env.GOOGLE_PRIVATE_KEY?.trim() &&
-      process.env.GOOGLE_SHEET_ID?.trim()
-  );
+  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim() ?? "";
+  const key = process.env.GOOGLE_PRIVATE_KEY?.trim() ?? "";
+  const sheetId = process.env.GOOGLE_SHEET_ID?.trim() ?? "";
+
+  if (!email || !key || !sheetId) return false;
+
+  // Ignore .env.example placeholders so we don't "succeed" against fake config
+  const placeholder =
+    /your-project|your_spreadsheet|example\.iam|changeme|\.\.\./i.test(email) ||
+    /your_spreadsheet|changeme|example/i.test(sheetId) ||
+    key.includes("...");
+
+  return !placeholder;
+}
+
+function normalizePrivateKey(raw: string): string {
+  let key = raw.trim();
+  if (
+    (key.startsWith('"') && key.endsWith('"')) ||
+    (key.startsWith("'") && key.endsWith("'"))
+  ) {
+    key = key.slice(1, -1);
+  }
+  return key.replace(/\\n/g, "\n");
 }
 
 function getAuthClient() {
-  const rawKey = process.env.GOOGLE_PRIVATE_KEY?.trim() ?? "";
-  // Netlify / dashboards sometimes wrap the key in quotes
-  const unquoted =
-    (rawKey.startsWith('"') && rawKey.endsWith('"')) ||
-    (rawKey.startsWith("'") && rawKey.endsWith("'"))
-      ? rawKey.slice(1, -1)
-      : rawKey;
-
   return new google.auth.GoogleAuth({
     credentials: {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim(),
-      private_key: unquoted.replace(/\\n/g, "\n"),
+      private_key: normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY ?? ""),
     },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
@@ -44,11 +55,17 @@ interface SheetTarget {
 interface AppendResult {
   success: boolean;
   updatedRange: string | null | undefined;
+  updatedCells: number;
 }
 
 interface ReadResult {
   success: boolean;
   rows: CellValue[][];
+}
+
+function quoteSheetName(name: string): string {
+  if (/^[A-Za-z0-9_]+$/.test(name)) return name;
+  return `'${name.replace(/'/g, "''")}'`;
 }
 
 // ─── Write Operations ────────────────────────────────────────────────────────
@@ -71,7 +88,7 @@ export async function appendRow(
 
   const response = await sheets.spreadsheets.values.append({
     spreadsheetId,
-    range: `${sheetName}!A:A`,
+    range: `${quoteSheetName(sheetName)}!A:A`,
     valueInputOption: "USER_ENTERED",
     insertDataOption: "INSERT_ROWS",
     requestBody: {
@@ -79,9 +96,15 @@ export async function appendRow(
     },
   });
 
+  const updatedCells = response.data.updates?.updatedCells ?? 0;
+  if (updatedCells < 1) {
+    throw new Error("Google Sheets append returned no updated cells");
+  }
+
   return {
     success: true,
     updatedRange: response.data.updates?.updatedRange,
+    updatedCells,
   };
 }
 
@@ -103,7 +126,7 @@ export async function appendRows(
 
   const response = await sheets.spreadsheets.values.append({
     spreadsheetId,
-    range: `${sheetName}!A:A`,
+    range: `${quoteSheetName(sheetName)}!A:A`,
     valueInputOption: "USER_ENTERED",
     insertDataOption: "INSERT_ROWS",
     requestBody: {
@@ -114,6 +137,7 @@ export async function appendRows(
   return {
     success: true,
     updatedRange: response.data.updates?.updatedRange,
+    updatedCells: response.data.updates?.updatedCells ?? 0,
   };
 }
 
