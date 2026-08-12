@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
-import { appendRow, isGoogleSheetsConfigured } from "@/lib/google-sheets";
+import {
+  appendRow,
+  getSheetsConfigStatus,
+} from "@/lib/google-sheets";
 import {
   getLeadWebhookUrl,
   buildLeadWebhookPayload,
@@ -12,6 +15,34 @@ export const dynamic = "force-dynamic";
 
 function sanitize(str: string): string {
   return str.replace(/<[^>]*>/g, "").trim();
+}
+
+function sheetsErrorMessage(error: unknown): string {
+  const err = error as {
+    message?: string;
+    code?: number | string;
+    errors?: Array<{ message?: string }>;
+    response?: { status?: number; data?: { error?: { message?: string } } };
+  };
+
+  const apiMessage =
+    err?.response?.data?.error?.message ||
+    err?.errors?.[0]?.message ||
+    err?.message ||
+    "Google Sheets write failed";
+
+  // Common Netlify / permissions hints
+  if (/permission|forbidden|403/i.test(apiMessage)) {
+    return `${apiMessage} — share the spreadsheet with the service account email as Editor.`;
+  }
+  if (/DECODER|PEM|private key|invalid_grant/i.test(apiMessage)) {
+    return `${apiMessage} — fix GOOGLE_PRIVATE_KEY (use \\n escapes, or set GOOGLE_PRIVATE_KEY_B64).`;
+  }
+  if (/not found|404|Unable to parse range/i.test(apiMessage)) {
+    return `${apiMessage} — check GOOGLE_SHEET_ID and GOOGLE_SHEET_TAB_NAME (exact tab name).`;
+  }
+
+  return apiMessage;
 }
 
 async function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
@@ -30,13 +61,28 @@ async function withTimeout<T>(promise: Promise<T>, ms: number, label: string): P
 
 export async function POST(request: Request) {
   const webhookUrl = getLeadWebhookUrl();
-  const sheetsConfigured = isGoogleSheetsConfigured();
+  const sheetsStatus = getSheetsConfigStatus();
+  const sheetsConfigured = sheetsStatus.configured;
+
+  // If Sheet ID is set but email/key missing, fail loudly (don't silently skip Sheets)
+  if (sheetsStatus.sheetIdSet && !sheetsConfigured) {
+    return NextResponse.json(
+      {
+        error: "Google Sheets is partially configured",
+        detail: `Missing: ${sheetsStatus.missing.join(", ")}. Set these in Netlify → Environment variables (Runtime), then redeploy.`,
+        delivered: { sheets: false, webhook: false },
+      },
+      { status: 503 }
+    );
+  }
 
   if (!sheetsConfigured && !webhookUrl) {
     return NextResponse.json(
       {
-        error:
-          "Lead storage not configured. Set Google Sheets env vars and/or Lead_notification_url in Netlify (runtime), then redeploy.",
+        error: "Lead storage not configured",
+        detail:
+          "Set GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, GOOGLE_SHEET_ID and/or Lead_notification_url in Netlify (Runtime), then redeploy.",
+        delivered: { sheets: false, webhook: false },
       },
       { status: 503 }
     );
@@ -77,9 +123,31 @@ export async function POST(request: Request) {
 
   let sheetsOk = false;
   let webhookOk = false;
-  const errors: string[] = [];
+  let sheetsError: string | null = null;
+  let webhookError: string | null = null;
 
-  // Webhook first — primary lead notification path
+  if (sheetsConfigured) {
+    try {
+      const result = await withTimeout(appendRow(row), 15_000, "Google Sheets");
+      if (!result.success || result.updatedCells < 1) {
+        throw new Error("Google Sheets append did not write any cells");
+      }
+      sheetsOk = true;
+      console.info("Google Sheets write ok:", {
+        updatedRange: result.updatedRange,
+        updatedCells: result.updatedCells,
+      });
+    } catch (error: unknown) {
+      sheetsError = sheetsErrorMessage(error);
+      console.error("Google Sheets error:", {
+        message: sheetsError,
+        spreadsheetId: process.env.GOOGLE_SHEET_ID?.slice(0, 8) + "...",
+        tab: process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1",
+        timestamp: new Date().toISOString(),
+      });
+    }
+  }
+
   if (webhookUrl) {
     try {
       const outbound = buildLeadWebhookPayload({ fullName, email, phone });
@@ -100,47 +168,31 @@ export async function POST(request: Request) {
       }
       webhookOk = true;
     } catch (error: unknown) {
-      const message = error instanceof Error ? error.message : "Lead webhook failed";
-      errors.push(message);
+      webhookError = error instanceof Error ? error.message : "Lead webhook failed";
       console.error("Lead webhook request failed:", {
-        message,
+        message: webhookError,
         timestamp: new Date().toISOString(),
       });
     }
   }
 
-  if (sheetsConfigured) {
-    try {
-      const result = await withTimeout(appendRow(row), 12_000, "Google Sheets");
-      if (!result.success || result.updatedCells < 1) {
-        throw new Error("Google Sheets append did not write any cells");
-      }
-      sheetsOk = true;
-      console.info("Google Sheets write ok:", {
-        updatedRange: result.updatedRange,
-        updatedCells: result.updatedCells,
-      });
-    } catch (error: unknown) {
-      const err = error as { message?: string; code?: number; response?: { status?: number } };
-      const message = err?.message || "Google Sheets write failed";
-      errors.push(message);
-      console.error("Google Sheets error:", {
-        message,
-        code: err?.code,
-        status: err?.response?.status,
-        spreadsheetId: process.env.GOOGLE_SHEET_ID?.slice(0, 8) + "...",
-        tab: process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1",
-        timestamp: new Date().toISOString(),
-      });
-    }
+  // If Sheets is configured, it MUST succeed — webhook success must not hide a Sheets failure
+  if (sheetsConfigured && !sheetsOk) {
+    return NextResponse.json(
+      {
+        error: "Failed to write to Google Sheet",
+        detail: sheetsError ?? "Google Sheets write failed",
+        delivered: { sheets: false, webhook: webhookOk },
+      },
+      { status: 502 }
+    );
   }
 
-  // Fail closed: never show thank-you unless at least one channel actually delivered
   if (!sheetsOk && !webhookOk) {
     return NextResponse.json(
       {
         error: "Failed to save submission",
-        detail: errors[0] ?? "Google Sheets and lead webhook both failed",
+        detail: sheetsError || webhookError || "No delivery channel succeeded",
         delivered: { sheets: false, webhook: false },
       },
       { status: 502 }

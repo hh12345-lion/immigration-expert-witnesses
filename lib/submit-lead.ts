@@ -103,7 +103,11 @@ export async function postSubmitLead(
 
     let message = "Something went wrong. Please try again or email us directly.";
     try {
-      const data = (await res.json()) as { error?: string; detail?: string };
+      const data = (await res.json()) as {
+        error?: string;
+        detail?: string;
+        delivered?: { sheets?: boolean; webhook?: boolean };
+      };
       if (data.detail) message = data.detail;
       else if (data.error) message = data.error;
     } catch {

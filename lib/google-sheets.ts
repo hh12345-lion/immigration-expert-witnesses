@@ -2,38 +2,90 @@ import { google, sheets_v4 } from "googleapis";
 
 // ─── Auth ────────────────────────────────────────────────────────────────────
 
-export function isGoogleSheetsConfigured(): boolean {
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim() ?? "";
-  const key = process.env.GOOGLE_PRIVATE_KEY?.trim() ?? "";
-  const sheetId = process.env.GOOGLE_SHEET_ID?.trim() ?? "";
-
-  if (!email || !key || !sheetId) return false;
-
-  // Ignore .env.example placeholders so we don't "succeed" against fake config
-  const placeholder =
-    /your-project|your_spreadsheet|example\.iam|changeme|\.\.\./i.test(email) ||
-    /your_spreadsheet|changeme|example/i.test(sheetId) ||
-    key.includes("...");
-
-  return !placeholder;
-}
-
-function normalizePrivateKey(raw: string): string {
+/** Normalize private key from .env / Netlify (quoted, literal \\n, or real newlines). */
+export function normalizePrivateKey(raw: string | undefined): string | undefined {
+  if (!raw?.trim()) return undefined;
   let key = raw.trim();
+
+  // Strip wrapping quotes that some hosts / paste flows add
   if (
     (key.startsWith('"') && key.endsWith('"')) ||
     (key.startsWith("'") && key.endsWith("'"))
   ) {
     key = key.slice(1, -1);
   }
-  return key.replace(/\\n/g, "\n");
+
+  // If the whole value was JSON-stringified, parse it
+  if (key.startsWith("-----BEGIN") === false && key.includes("BEGIN PRIVATE KEY")) {
+    try {
+      key = JSON.parse(`"${key.replace(/^"/, "").replace(/"$/, "")}"`);
+    } catch {
+      /* keep as-is */
+    }
+  }
+
+  key = key.replace(/\\n/g, "\n");
+
+  // Netlify sometimes collapses PEM into one line with spaces
+  if (key.includes("-----BEGIN") && !key.includes("\n") && key.includes(" ")) {
+    key = key
+      .replace("-----BEGIN PRIVATE KEY----- ", "-----BEGIN PRIVATE KEY-----\n")
+      .replace(" -----END PRIVATE KEY-----", "\n-----END PRIVATE KEY-----")
+      .replace(/ -----END/, "\n-----END");
+  }
+
+  return key;
+}
+
+/** Prefer base64 env (bulletproof on Netlify); fall back to GOOGLE_PRIVATE_KEY. */
+export function getPrivateKey(): string | undefined {
+  const b64 = process.env.GOOGLE_PRIVATE_KEY_B64?.trim();
+  if (b64) {
+    try {
+      const decoded = Buffer.from(b64, "base64").toString("utf8").trim();
+      if (decoded.includes("BEGIN")) return decoded;
+    } catch {
+      /* fall through */
+    }
+  }
+  return normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY);
+}
+
+export function getSheetsConfigStatus(): {
+  configured: boolean;
+  missing: string[];
+  sheetIdSet: boolean;
+} {
+  const missing: string[] = [];
+  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim() ?? "";
+  const key = getPrivateKey();
+  const sheetId = process.env.GOOGLE_SHEET_ID?.trim() ?? "";
+
+  if (!email) missing.push("GOOGLE_SERVICE_ACCOUNT_EMAIL");
+  if (!key) missing.push("GOOGLE_PRIVATE_KEY (or GOOGLE_PRIVATE_KEY_B64)");
+  if (!sheetId) missing.push("GOOGLE_SHEET_ID");
+
+  return {
+    configured: missing.length === 0,
+    missing,
+    sheetIdSet: Boolean(sheetId),
+  };
+}
+
+export function isGoogleSheetsConfigured(): boolean {
+  return getSheetsConfigStatus().configured;
 }
 
 function getAuthClient() {
+  const privateKey = getPrivateKey();
+  if (!privateKey) {
+    throw new Error("GOOGLE_PRIVATE_KEY is missing or could not be parsed");
+  }
+
   return new google.auth.GoogleAuth({
     credentials: {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim(),
-      private_key: normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY ?? ""),
+      private_key: privateKey,
     },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
@@ -41,6 +93,12 @@ function getAuthClient() {
 
 function getSheetsClient(): sheets_v4.Sheets {
   return google.sheets({ version: "v4", auth: getAuthClient() });
+}
+
+/** Quote sheet tab names so spaces / special chars work in A1 ranges. */
+function sheetA1(sheetName: string, a1 = "A:A"): string {
+  const escaped = sheetName.replace(/'/g, "''");
+  return `'${escaped}'!${a1}`;
 }
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -63,11 +121,6 @@ interface ReadResult {
   rows: CellValue[][];
 }
 
-function quoteSheetName(name: string): string {
-  if (/^[A-Za-z0-9_]+$/.test(name)) return name;
-  return `'${name.replace(/'/g, "''")}'`;
-}
-
 // ─── Write Operations ────────────────────────────────────────────────────────
 
 /**
@@ -87,8 +140,8 @@ export async function appendRow(
   }
 
   const response = await sheets.spreadsheets.values.append({
-    spreadsheetId,
-    range: `${quoteSheetName(sheetName)}!A:A`,
+    spreadsheetId: spreadsheetId.trim(),
+    range: sheetA1(sheetName.trim()),
     valueInputOption: "USER_ENTERED",
     insertDataOption: "INSERT_ROWS",
     requestBody: {
@@ -125,8 +178,8 @@ export async function appendRows(
   }
 
   const response = await sheets.spreadsheets.values.append({
-    spreadsheetId,
-    range: `${quoteSheetName(sheetName)}!A:A`,
+    spreadsheetId: spreadsheetId.trim(),
+    range: sheetA1(sheetName.trim()),
     valueInputOption: "USER_ENTERED",
     insertDataOption: "INSERT_ROWS",
     requestBody: {
@@ -200,10 +253,6 @@ export async function appendRowWithRetry(
 
 // ─── Read Operations ─────────────────────────────────────────────────────────
 
-/**
- * Read all rows from a sheet (or a specific range).
- * Returns an array of arrays — each inner array is one row.
- */
 export async function readRows(
   range?: string,
   target?: SheetTarget
@@ -218,7 +267,7 @@ export async function readRows(
 
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: range || sheetName,
+    range: range || sheetA1(sheetName, "A:Z"),
   });
 
   return {
@@ -227,20 +276,11 @@ export async function readRows(
   };
 }
 
-/**
- * Get the number of rows with data in a sheet.
- * Useful for pagination or knowing where to write next.
- */
 export async function getRowCount(target?: SheetTarget): Promise<number> {
   const result = await readRows(undefined, target);
   return result.rows.length;
 }
 
-// ─── Delete Operations ───────────────────────────────────────────────────────
-
-/**
- * Clear the contents of a specific range (keeps formatting).
- */
 export async function clearRange(
   range: string,
   target?: SheetTarget
@@ -260,12 +300,6 @@ export async function clearRange(
   return { success: true };
 }
 
-// ─── Sheet Metadata ──────────────────────────────────────────────────────────
-
-/**
- * Get information about the spreadsheet (sheet names, row counts, etc.).
- * Useful for dynamically discovering available tabs.
- */
 export async function getSpreadsheetInfo(spreadsheetId?: string) {
   const sheets = getSheetsClient();
   const id = spreadsheetId || process.env.GOOGLE_SHEET_ID;
