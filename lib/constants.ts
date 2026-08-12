@@ -8,12 +8,18 @@ export const LINKEDIN_URL =
   "https://www.linkedin.com/company/immigrationexpertwitnesses";
 
 export const COLORS = {
-  primary: "#1A2744",
-  accent: "#1A6B78",
-  gold: "#B8943E",
-  background: "#FFFFFF",
-  sectionAlt: "#F3F6F9",
-  border: "#C5D0DC",
-  heading: "#1A2744",
-  body: "#374151",
+  primary: "#121614",
+  accent: "#3a5244",
+  gold: "#6e2433",
+  background: "#e6e8e4",
+  sectionAlt: "#e6e8e4",
+  border: "#c3c7c0",
+  heading: "#121614",
+  body: "#3d443f",
+  ink: "#121614",
+  paper: "#e6e8e4",
+  chalk: "#f2f3f0",
+  oxblood: "#6e2433",
+  moss: "#3a5244",
+  brass: "#7a6b52",
 } as const;

@@ -3,21 +3,32 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export type NavDropdownItem = { label: string; href: string };
+export type NavDropdownItem = {
+  label: string;
+  href: string;
+  blurb?: string;
+};
 
 type NavDropdownProps = {
   label: string;
   href: string;
   items: NavDropdownItem[];
   scrollable?: boolean;
+  columns?: 1 | 2;
 };
 
-export function NavDropdown({ label, href, items, scrollable }: NavDropdownProps) {
+export function NavDropdown({
+  label,
+  href,
+  items,
+  scrollable,
+  columns = 1,
+}: NavDropdownProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <div
-      className="relative"
+      className={`relative ${open ? "nav-folio-open" : ""}`}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       onFocus={() => setOpen(true)}
@@ -29,41 +40,67 @@ export function NavDropdown({ label, href, items, scrollable }: NavDropdownProps
     >
       <Link
         href={href}
-        className={`inline-flex min-h-[44px] items-center gap-1 rounded-[4px] px-2 py-2 text-sm hover:bg-[#F3F6F9] hover:text-[#1A2744] ${open ? "bg-[#F3F6F9] text-[#1A2744]" : "text-[#374151]"}`}
+        className={`inline-flex min-h-[44px] items-center gap-2 px-2.5 py-2 text-[13px] tracking-wide transition-colors ${
+          open ? "text-oxblood" : "text-ink/80 hover:text-ink"
+        }`}
         aria-expanded={open}
         aria-haspopup="true"
       >
+        <span className="nav-trigger-mark shrink-0" aria-hidden />
         {label}
-        <svg
-          className={`h-4 w-4 opacity-60 transition-transform duration-150 ${open ? "rotate-180" : ""}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
       </Link>
 
       <div
-        className={`absolute left-0 top-full z-[60] pt-2 ${scrollable ? "min-w-[280px]" : "min-w-[240px]"} ${open ? "pointer-events-auto visible opacity-100" : "pointer-events-none invisible opacity-0"} transition-opacity duration-150`}
+        className={`nav-folio absolute left-1/2 top-full z-[70] w-[min(92vw,28rem)] -translate-x-1/2 pt-3 ${
+          columns === 2 ? "lg:w-[min(92vw,36rem)]" : ""
+        }`}
       >
-        <ul
-          className={`rounded-[4px] border border-[#C5D0DC] bg-white py-2 shadow-[0_4px_16px_rgba(0,0,0,0.1)] ${scrollable ? "max-h-[min(70vh,22rem)] overflow-y-auto" : ""}`}
-          role="menu"
-        >
-          {items.map((item) => (
-            <li key={item.href} role="none">
-              <Link
-                href={item.href}
-                role="menuitem"
-                className="block px-4 py-2.5 text-sm text-[#374151] hover:bg-[#F3F6F9] hover:text-[#1A2744] focus:bg-[#F3F6F9] focus:text-[#1A2744] focus:outline-none"
+        <div className="border border-rule bg-chalk shadow-[0_18px_40px_rgba(18,22,20,0.12)]">
+          <div className="flex items-stretch">
+            <div className="w-1.5 shrink-0 bg-oxblood" aria-hidden />
+            <div className="min-w-0 flex-1">
+              <div className="flex items-baseline justify-between gap-4 border-b border-rule px-4 py-3">
+                <p className="font-display text-sm text-ink">{label}</p>
+                <Link
+                  href={href}
+                  className="text-[11px] font-semibold uppercase tracking-[0.14em] text-moss hover:text-oxblood"
+                >
+                  View all
+                </Link>
+              </div>
+              <ul
+                className={`grid gap-0 p-2 ${columns === 2 ? "sm:grid-cols-2" : "grid-cols-1"} ${
+                  scrollable ? "max-h-[min(70vh,22rem)] overflow-y-auto" : ""
+                }`}
+                role="menu"
               >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                {items.map((item, i) => (
+                  <li key={item.href} role="none">
+                    <Link
+                      href={item.href}
+                      role="menuitem"
+                      className="group flex gap-3 px-3 py-2.5 hover:bg-paper focus:bg-paper focus:outline-none"
+                    >
+                      <span className="mt-0.5 w-5 shrink-0 font-display text-[11px] text-brass tabular-nums">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-sm text-ink group-hover:text-oxblood">
+                          {item.label}
+                        </span>
+                        {item.blurb && (
+                          <span className="mt-0.5 block text-[11px] leading-snug text-body/80">
+                            {item.blurb}
+                          </span>
+                        )}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

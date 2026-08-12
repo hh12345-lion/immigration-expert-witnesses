@@ -21,28 +21,30 @@ export default function ContactPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
-        title="Instruct an Immigration Expert Witness"
-        subtitle="Submit your case details for confidential routing to the right specialist witness. Response within one business day."
+        title="Instruct"
+        subtitle="Four fields. We route confidentially to the right witness within one business day."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#374151] leading-relaxed">
-          Complete the form below or email{" "}
-          <a href={`mailto:${SITE_EMAIL}`} className="text-[#1A6B78] hover:underline">
-            {SITE_EMAIL}
-          </a>
-          . For urgent tribunal deadlines, include your hearing date in the case description.
-        </p>
-        <ContactForm />
-        <p className="mt-8 text-sm text-[#374151]">
-          See also:{" "}
-          <Link href="/how-to-instruct" className="text-[#1A6B78] hover:underline">
-            How to instruct
-          </Link>
-          {" · "}
-          <Link href="/network" className="text-[#1A6B78] hover:underline">
-            Network directory
-          </Link>
-        </p>
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_14rem]">
+          <ContactForm />
+          <aside className="space-y-4 border-t border-rule pt-6 text-sm text-body lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brass">Or email</p>
+            <a href={`mailto:${SITE_EMAIL}`} className="block break-all font-medium text-moss hover:text-oxblood">
+              {SITE_EMAIL}
+            </a>
+            <p className="leading-relaxed">
+              Include hearing date if urgent. See{" "}
+              <Link href="/how-to-instruct" className="text-moss underline underline-offset-2 hover:text-oxblood">
+                how to instruct
+              </Link>{" "}
+              and the{" "}
+              <Link href="/network" className="text-moss underline underline-offset-2 hover:text-oxblood">
+                network directory
+              </Link>
+              .
+            </p>
+          </aside>
+        </div>
       </PageShell>
     </>
   );

@@ -31,13 +31,13 @@ export default function TribunalEvidenceHubPage() {
           }))}
         />
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/network" className="font-semibold text-[#1A6B78] hover:underline">
+          <Link href="/network" className="font-semibold text-[#3a5244] hover:underline">
             Network directory
           </Link>
-          <Link href="/oral-evidence" className="font-semibold text-[#1A6B78] hover:underline">
+          <Link href="/oral-evidence" className="font-semibold text-[#3a5244] hover:underline">
             Oral evidence guide
           </Link>
-          <Link href="/expert-witness-framework" className="font-semibold text-[#B8943E] hover:underline">
+          <Link href="/expert-witness-framework" className="font-semibold text-[#6e2433] hover:underline">
             Expert witness framework
           </Link>
         </div>

@@ -1,8 +1,13 @@
 /**
- * Netlify Function: receives POST JSON from the site, forwards to webhook.
+ * Netlify Function: receives POST JSON from the site, forwards to Lead_notification_url.
  * Update BRAND_NAME when copying to another brand site.
- * Production: @netlify/plugin-nextjs handles POST via app/api/submit-lead/route.ts.
- * Use this function with `netlify dev` when the redirect below is enabled.
+ *
+ * Outbound JSON keys (only):
+ *   Full Name | Email | Phone Number | Brand name
+ *
+ * Production with @netlify/plugin-nextjs: prefer app/api/submit-lead/route.ts
+ * (Sheets + webhook). Enable the netlify.toml redirect to use this function
+ * (e.g. netlify dev / webhook-only deploys).
  */
 const BRAND_NAME = "Immigration Expert Witnesses";
 
@@ -10,6 +15,7 @@ function getLeadNotificationUrl() {
   return (
     process.env.Lead_notification_url?.trim() ||
     process.env.LEAD_NOTIFICATION_URL?.trim() ||
+    process.env.lead_notification_url?.trim() ||
     ""
   );
 }
@@ -18,14 +24,12 @@ function parseBody(json) {
   if (!json || typeof json !== "object" || Array.isArray(json)) {
     return { error: "Invalid JSON body", status: 400 };
   }
-  const { fullName, email, phone } = json;
-  if (
-    typeof fullName !== "string" ||
-    typeof email !== "string" ||
-    typeof phone !== "string"
-  ) {
-    return { error: "fullName, email, and phone must be strings", status: 400 };
-  }
+
+  const fullName = typeof json.fullName === "string" ? json.fullName : "";
+  const email = typeof json.email === "string" ? json.email : "";
+  // Phone may be omitted; always coerce to string (empty allowed)
+  const phone = typeof json.phone === "string" ? json.phone : "";
+
   if (!fullName.trim() || !email.trim()) {
     return { error: "fullName and email are required", status: 400 };
   }

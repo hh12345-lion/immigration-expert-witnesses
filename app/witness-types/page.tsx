@@ -93,34 +93,34 @@ export default function WitnessTypesPage() {
         subtitle="Eight witness disciplines for asylum appeals, deportation, country guidance challenges, and Upper Tribunal proceedings."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#374151] leading-relaxed">
+        <p className="mb-8 text-[#3d443f] leading-relaxed">
           An immigration expert witness provides independent tribunal evidence within a defined discipline — country
           conditions, persecution methodology, human rights standards, linguistic identity, or oral testimony. Use the
           comparison matrix below to select the right witness discipline for your case type.
         </p>
 
-        <h2 className="text-lg font-bold text-[#1A2744]">Witness Discipline Comparison Matrix</h2>
+        <h2 className="text-lg font-bold text-[#121614]">Witness Discipline Comparison Matrix</h2>
         <div className="table-scroll mt-6 overflow-x-auto">
           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
-            <caption className="mb-3 text-left text-sm text-[#374151]">
+            <caption className="mb-3 text-left text-sm text-[#3d443f]">
               Immigration expert witness discipline comparison for tribunal proceedings
             </caption>
             <thead>
-              <tr className="border-b border-[#C5D0DC] bg-[#F3F6F9]">
-                <th className="p-3 font-semibold text-[#1A2744]">Discipline</th>
-                <th className="p-3 font-semibold text-[#1A2744]">Primary focus</th>
-                <th className="p-3 font-semibold text-[#1A2744]">Typical case type</th>
-                <th className="p-3 font-semibold text-[#1A2744]">Detail page</th>
+              <tr className="border-b border-[#c3c7c0] bg-[#e6e8e4]">
+                <th className="p-3 font-semibold text-[#121614]">Discipline</th>
+                <th className="p-3 font-semibold text-[#121614]">Primary focus</th>
+                <th className="p-3 font-semibold text-[#121614]">Typical case type</th>
+                <th className="p-3 font-semibold text-[#121614]">Detail page</th>
               </tr>
             </thead>
             <tbody>
               {witnessComparison.map((row) => (
-                <tr key={row.discipline} className="border-b border-[#C5D0DC]">
-                  <td className="p-3 font-medium text-[#1A2744]">{row.discipline}</td>
-                  <td className="p-3 text-[#374151]">{row.focus}</td>
-                  <td className="p-3 text-[#374151]">{row.typicalCase}</td>
+                <tr key={row.discipline} className="border-b border-[#c3c7c0]">
+                  <td className="p-3 font-medium text-[#121614]">{row.discipline}</td>
+                  <td className="p-3 text-[#3d443f]">{row.focus}</td>
+                  <td className="p-3 text-[#3d443f]">{row.typicalCase}</td>
                   <td className="p-3">
-                    <Link href={row.href} className="text-[#1A6B78] hover:underline">
+                    <Link href={row.href} className="text-[#3a5244] hover:underline">
                       View discipline →
                     </Link>
                   </td>
@@ -143,13 +143,13 @@ export default function WitnessTypesPage() {
         <FAQSection faqs={witnessHubFaqs} title="Witness Types — FAQs" />
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/network" className="font-semibold text-[#1A6B78] hover:underline">
+          <Link href="/network" className="font-semibold text-[#3a5244] hover:underline">
             Network directory
           </Link>
-          <Link href="/expert-witness-framework" className="font-semibold text-[#B8943E] hover:underline">
+          <Link href="/expert-witness-framework" className="font-semibold text-[#6e2433] hover:underline">
             Expert witness framework
           </Link>
-          <Link href="/qualifications" className="font-semibold text-[#B8943E] hover:underline">
+          <Link href="/qualifications" className="font-semibold text-[#6e2433] hover:underline">
             Qualifications
           </Link>
         </div>

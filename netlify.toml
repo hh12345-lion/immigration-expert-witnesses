@@ -5,8 +5,15 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Production: POST /api/submit-lead is handled by Next.js app/api/submit-lead/route.ts.
-# Uncomment for netlify dev when testing the function directly:
+[functions]
+  directory = "netlify/functions"
+
+# Lead notification (Lead_notification_setup.md)
+# Production: POST /api/submit-lead → Next.js app/api/submit-lead/route.ts
+#   which writes Google Sheets (if configured) and POSTs to Lead_notification_url
+#   with keys: Full Name | Email | Phone Number | Brand name
+#
+# Uncomment to force the Netlify function instead (webhook only; skips Sheets):
 # [[redirects]]
 #   from = "/api/submit-lead"
 #   to = "/.netlify/functions/submit-lead"

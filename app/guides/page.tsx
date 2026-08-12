@@ -31,13 +31,13 @@ export default function GuidesPage() {
           }))}
         />
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/network" className="font-semibold text-[#1A6B78] hover:underline">
+          <Link href="/network" className="font-semibold text-[#3a5244] hover:underline">
             Network directory
           </Link>
-          <Link href="/expert-witness-framework" className="font-semibold text-[#B8943E] hover:underline">
+          <Link href="/expert-witness-framework" className="font-semibold text-[#6e2433] hover:underline">
             Expert witness framework
           </Link>
-          <Link href="/how-to-instruct" className="font-semibold text-[#B8943E] hover:underline">
+          <Link href="/how-to-instruct" className="font-semibold text-[#6e2433] hover:underline">
             How to instruct an expert witness
           </Link>
         </div>

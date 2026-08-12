@@ -22,16 +22,18 @@ export function WitnessTypePageView({
     <>
       <PageJsonLd breadcrumbs={breadcrumbs} faqs={page.faqs.length ? page.faqs : undefined} />
       <PageShell title={page.h1} breadcrumbs={breadcrumbs}>
-        {page.content.map((p, i) => (
-          <p key={i} className="mb-4 text-[#374151] leading-relaxed">
-            {p}
-          </p>
-        ))}
+        <div className="max-w-3xl">
+          {page.content.map((p, i) => (
+            <p key={i} className="mb-5 text-base leading-relaxed text-body sm:text-[1.05rem]">
+              {p}
+            </p>
+          ))}
+        </div>
 
         {relatedLinks.length > 0 && (
           <>
-            <h2 className="mt-8 text-xl font-bold text-[#1A2744]">Related Resources</h2>
-            <ul className="mt-4 space-y-2">
+            <h2 className="mt-10 font-display text-2xl tracking-tight text-ink">Related resources</h2>
+            <ul className="mt-4 divide-y divide-rule border-y border-rule">
               {relatedLinks.map((link) => (
                 <li key={link.href}>
                   {link.href.startsWith("http") ? (
@@ -39,12 +41,15 @@ export function WitnessTypePageView({
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#1A6B78] hover:underline"
+                      className="index-row flex min-h-[44px] items-center py-3 text-moss hover:text-oxblood"
                     >
                       {link.label}
                     </a>
                   ) : (
-                    <Link href={link.href} className="text-[#1A6B78] hover:underline">
+                    <Link
+                      href={link.href}
+                      className="index-row flex min-h-[44px] items-center py-3 text-moss hover:text-oxblood"
+                    >
                       {link.label}
                     </Link>
                   )}
@@ -57,7 +62,7 @@ export function WitnessTypePageView({
         {page.faqs.length > 0 && (
           <section
             id="witness-type-faqs"
-            className="scroll-mt-24 mt-12 rounded-[8px] border border-[#C5D0DC] bg-[#F3F6F9] p-5 sm:p-8"
+            className="scroll-mt-24 mt-12 border border-rule bg-paper/80 p-5 sm:p-8"
             aria-labelledby="witness-type-faqs-heading"
           >
             <FAQSection
@@ -69,14 +74,14 @@ export function WitnessTypePageView({
         )}
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
-          <Link href="/witness-types" className="font-semibold text-[#B8943E] hover:underline">
+          <Link href="/witness-types" className="font-semibold text-oxblood hover:underline">
             ← Back to Witness Types
           </Link>
           <Link
             href="/contact"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-[4px] bg-[#B8943E] px-5 py-2 text-sm font-semibold text-white hover:bg-[#a68335] sm:w-auto"
+            className="inline-flex min-h-[44px] items-center justify-center bg-oxblood px-5 py-2 text-sm font-semibold text-chalk hover:bg-oxblood-deep sm:w-auto"
           >
-            Contact Us
+            Instruct
           </Link>
         </div>
       </PageShell>
