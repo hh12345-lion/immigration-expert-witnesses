@@ -28,15 +28,15 @@ export default function GlossaryPage() {
             <div
               key={item.term}
               id={glossaryAnchorId(item)}
-              className="scroll-mt-24 rounded-[8px] border border-[#c3c7c0] bg-white p-6 shadow-sm"
+              className="scroll-mt-24 rounded-[8px] border border-[#e2e8f0] bg-white p-6 shadow-sm"
             >
-              <dt className="text-lg font-semibold text-[#121614]">{item.term}</dt>
-              <dd className="mt-2 text-[#3d443f] leading-relaxed">
+              <dt className="text-lg font-semibold text-[#18181b]">{item.term}</dt>
+              <dd className="mt-2 text-[#3f4654] leading-relaxed">
                 {item.definition}
                 {item.link && (
                   <>
                     {" "}
-                    <Link href={item.link} className="text-[#3a5244] hover:underline">
+                    <Link href={item.link} className="text-[#0284c7] hover:underline">
                       Learn more →
                     </Link>
                   </>

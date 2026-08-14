@@ -22,27 +22,27 @@ export default function WhatIsPage() {
         subtitle="The role, duties, and qualifications of expert witnesses in immigration tribunal proceedings."
         breadcrumbs={crumbs}
       >
-        <p className="mb-4 text-[#3d443f] leading-relaxed">
+        <p className="mb-4 text-[#3f4654] leading-relaxed">
           An immigration expert witness is an independent specialist who provides evidence to immigration tribunals
           on country conditions, persecution methodology, human rights standards, linguistic identity, or related
           matters within their expertise. Unlike advocates, expert witnesses owe a paramount duty to the tribunal — not
           the instructing party — under CPR Part 35 and the principles established in <em>Ikarian Reefer</em>.
         </p>
-        <p className="mb-4 text-[#3d443f] leading-relaxed">
+        <p className="mb-4 text-[#3f4654] leading-relaxed">
           Expert witnesses may produce written reports and give oral evidence at tribunal hearings. The witness role
           encompasses tribunal appearance, cross-examination preparedness, joint expert meetings, and ongoing
           credibility under scrutiny — capabilities beyond report production alone.
         </p>
-        <p className="mb-4 text-[#3d443f] leading-relaxed">
+        <p className="mb-4 text-[#3f4654] leading-relaxed">
           immigrationexpertwitnesses.com is the network master hub for expert witnesses. Our sister site{" "}
-          <a href={SISTER_HUB_URL} target="_blank" rel="noopener noreferrer" className="text-[#3a5244] hover:underline">
+          <a href={SISTER_HUB_URL} target="_blank" rel="noopener noreferrer" className="text-[#0284c7] hover:underline">
             immigrationexpertreports.com
           </a>{" "}
           maintains report standards, report types, and CPIN framework guidance.
         </p>
 
-        <h2 className="mt-8 text-xl font-bold text-[#121614]">Key Witness Disciplines</h2>
-        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#3d443f]">
+        <h2 className="mt-8 text-xl font-bold text-[#18181b]">Key Witness Disciplines</h2>
+        <ul className="mt-4 list-disc space-y-2 pl-6 text-[#3f4654]">
           <li>Country condition expert witnesses — security, human rights, state protection, profile-specific risks</li>
           <li>Persecution expert witnesses — Refugee Convention grounds, nexus, HJ/RT standards</li>
           <li>Human rights expert witnesses — ECHR Article 3, ICCPR, CAT, CEDAW</li>
@@ -54,13 +54,13 @@ export default function WhatIsPage() {
         </ul>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/witness-types" className="font-semibold text-[#3a5244] hover:underline">
+          <Link href="/witness-types" className="font-semibold text-[#0284c7] hover:underline">
             All witness types
           </Link>
-          <Link href="/expert-witness-framework" className="font-semibold text-[#6e2433] hover:underline">
+          <Link href="/expert-witness-framework" className="font-semibold text-[#0284c7] hover:underline">
             Expert witness framework
           </Link>
-          <Link href="/qualifications" className="font-semibold text-[#6e2433] hover:underline">
+          <Link href="/qualifications" className="font-semibold text-[#0284c7] hover:underline">
             Qualifications
           </Link>
         </div>

@@ -33,7 +33,7 @@ export function ContentPageView({
         {relatedLinks.length > 0 && (
           <>
             <h2 className="mt-10 font-display text-2xl tracking-tight text-ink">Related resources</h2>
-            <ul className="mt-4 divide-y divide-rule border-y border-rule">
+            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {relatedLinks.map((link) => (
                 <li key={link.href}>
                   {link.href.startsWith("http") ? (
@@ -41,14 +41,14 @@ export function ContentPageView({
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="index-row flex min-h-[44px] items-center py-3 text-moss hover:text-oxblood"
+                      className="tile-card flex min-h-[44px] items-center px-4 py-3 text-sky hover:text-sky-deep"
                     >
                       {link.label}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="index-row flex min-h-[44px] items-center py-3 text-moss hover:text-oxblood"
+                      className="tile-card flex min-h-[44px] items-center px-4 py-3 text-sky hover:text-sky-deep"
                     >
                       {link.label}
                     </Link>
@@ -62,7 +62,7 @@ export function ContentPageView({
         {page.faqs.length > 0 && <FAQSection faqs={page.faqs} />}
 
         <div className="mt-10">
-          <Link href={hubHref} className="font-semibold text-oxblood hover:underline">
+          <Link href={hubHref} className="font-semibold text-sky hover:underline">
             ← Back to {hubLabel}
           </Link>
         </div>

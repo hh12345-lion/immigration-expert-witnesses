@@ -6,7 +6,7 @@ import { SITE_EMAIL } from "@/lib/constants";
 import { postSubmitLead } from "@/lib/submit-lead";
 import { WITNESS_TYPES } from "@/data/contact-options";
 
-const labelClass = "mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-brass";
+const labelClass = "mb-1.5 block text-sm font-semibold text-ink";
 
 export function ContactForm() {
   const router = useRouter();
@@ -108,7 +108,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="border border-oxblood/30 bg-oxblood/5 px-4 py-3 text-sm text-oxblood" role="alert">
+        <p className="rounded-xl border border-sky/30 bg-sky/5 px-4 py-3 text-sm text-ink" role="alert">
           {errorMessage ?? "Something went wrong."}{" "}
           <a href={`mailto:${SITE_EMAIL}`} className="font-medium underline">
             {SITE_EMAIL}
@@ -119,9 +119,9 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex min-h-[48px] w-full items-center justify-center bg-oxblood px-6 text-sm font-semibold tracking-wide text-chalk transition-colors hover:bg-oxblood-deep disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-sky px-6 text-sm font-semibold text-white transition-colors hover:bg-sky-deep disabled:opacity-60 sm:w-auto"
       >
-        {status === "submitting" ? "Sending…" : "Send instruction"}
+        {status === "submitting" ? "Sending…" : "Send request"}
       </button>
     </form>
   );

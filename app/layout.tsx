@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree, Fraunces } from "next/font/google";
+import { Karla, Syne } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsentProvider, ConsentDefaultsScript } from "@/components/cookies";
@@ -7,15 +7,15 @@ import { SITE_URL } from "@/lib/constants";
 import { isProductionSite } from "@/lib/seo/is-production";
 import "./globals.css";
 
-const figtree = Figtree({
+const karla = Karla({
   subsets: ["latin"],
-  variable: "--font-figtree",
+  variable: "--font-karla",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-syne",
   display: "swap",
 });
 
@@ -51,12 +51,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${figtree.variable} ${fraunces.variable} h-full`}>
+    <html lang="en" className={`${karla.variable} ${syne.variable} h-full`}>
       <body className="flex min-h-full min-w-0 flex-col overflow-x-hidden font-sans antialiased">
         <ConsentDefaultsScript />
         <CookieConsentProvider>
           <Header />
-          <div className="flex-1 pt-[4.75rem] lg:pt-[5.25rem]">{children}</div>
+          <div className="flex-1">{children}</div>
           <Footer />
         </CookieConsentProvider>
       </body>
