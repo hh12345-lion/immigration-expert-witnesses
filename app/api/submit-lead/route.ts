@@ -150,7 +150,15 @@ export async function POST(request: Request) {
 
   if (webhookUrl) {
     try {
-      const outbound = buildLeadWebhookPayload({ fullName, email, phone });
+      const outbound = buildLeadWebhookPayload({
+        fullName,
+        email,
+        phone,
+        message: sanitize(
+          (typeof body.message === "string" ? body.message : "") ||
+            (typeof body.summary === "string" ? body.summary : "")
+        ),
+      });
       const res = await withTimeout(
         fetch(webhookUrl, {
           method: "POST",
