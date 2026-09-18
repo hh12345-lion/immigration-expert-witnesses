@@ -32,6 +32,8 @@ export type SubmitLeadInput = {
   fullName: string;
   email: string;
   phone: string;
+  /** Free-text enquiry body — always sent to n8n as `message`. */
+  message?: string;
 };
 
 export type SubmitLeadPayload = SubmitLeadInput & {
@@ -44,7 +46,7 @@ export type SubmitLeadPayload = SubmitLeadInput & {
 };
 
 /**
- * Outbound JSON for Lead_notification_url / n8n — only these four keys.
+ * Outbound JSON for Lead_notification_url / n8n.
  * @see Lead_notification_setup.md
  */
 export function buildLeadWebhookPayload(input: SubmitLeadInput) {
@@ -54,6 +56,7 @@ export function buildLeadWebhookPayload(input: SubmitLeadInput) {
     "Phone Number": (input.phone ?? "").trim(),
     "Brand name": LEAD_BRAND_NAME,
     domain: getSiteDomain(),
+    message: input.message ?? "",
   };
 }
 
@@ -106,6 +109,7 @@ export async function postSubmitLead(
         caseType: payload.caseType ?? "",
         funding: payload.funding ?? "",
         summary: payload.summary ?? "",
+        message: payload.message ?? payload.summary ?? "",
       }),
     });
 

@@ -38,6 +38,7 @@ function parseBody(json) {
   const email = typeof json.email === "string" ? json.email : "";
   // Phone may be omitted; always coerce to string (empty allowed)
   const phone = typeof json.phone === "string" ? json.phone : "";
+  const message = resolveLeadMessage(body);
 
   if (!fullName.trim() || !email.trim()) {
     return { error: "fullName and email are required", status: 400 };
@@ -46,6 +47,32 @@ function parseBody(json) {
     return { error: "Invalid email address", status: 400 };
   }
   return { ok: { fullName, email, phone } };
+}
+
+/** Map site-specific free-text field names to universal `message`. */
+function resolveLeadMessage(body) {
+  if (!body || typeof body !== "object") return "";
+  const keys = [
+    "message",
+    "Message",
+    "description",
+    "enquiry",
+    "details",
+    "summary",
+    "notes",
+    "matter",
+    "caseSummary",
+    "additionalInfo",
+    "additional_info",
+    "caseDetails",
+    "enquiryDetails",
+  ];
+  for (const key of keys) {
+    if (body[key] != null && String(body[key]).trim()) {
+      return String(body[key]).trim();
+    }
+  }
+  return "";
 }
 
 exports.handler = async (event) => {
@@ -88,6 +115,7 @@ exports.handler = async (event) => {
     "Phone Number": parsed.ok.phone.trim(),
     "Brand name": BRAND_NAME,
     domain: getSiteDomain(),
+    message,
   };
 
   const ac = new AbortController();
