@@ -38,7 +38,6 @@ function parseBody(json) {
   const email = typeof json.email === "string" ? json.email : "";
   // Phone may be omitted; always coerce to string (empty allowed)
   const phone = typeof json.phone === "string" ? json.phone : "";
-  const message = resolveLeadMessage(body);
 
   if (!fullName.trim() || !email.trim()) {
     return { error: "fullName and email are required", status: 400 };
@@ -46,7 +45,7 @@ function parseBody(json) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
     return { error: "Invalid email address", status: 400 };
   }
-  return { ok: { fullName, email, phone } };
+  return { ok: { fullName, email, phone, message: resolveLeadMessage(json) } };
 }
 
 /** Map site-specific free-text field names to universal `message`. */
@@ -115,7 +114,7 @@ exports.handler = async (event) => {
     "Phone Number": parsed.ok.phone.trim(),
     "Brand name": BRAND_NAME,
     domain: getSiteDomain(),
-    message,
+    message: parsed.ok.message ?? "",
   };
 
   const ac = new AbortController();
