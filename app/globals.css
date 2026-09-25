@@ -177,3 +177,54 @@ section {
   border-color: #0284c7;
   box-shadow: 0 12px 32px rgba(24, 24, 27, 0.08);
 }
+
+.prose-content h2 {
+  color: #18181b;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose-content h3 {
+  color: #18181b;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-content p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: #3f3f46;
+}
+
+.prose-content ul,
+.prose-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: #3f3f46;
+}
+
+.prose-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.prose-content a {
+  color: #0284c7;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-content a:hover {
+  color: #0369a1;
+}
+
+.prose-content strong {
+  color: #18181b;
+  font-weight: 600;
+}

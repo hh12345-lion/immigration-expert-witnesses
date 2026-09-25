@@ -23,6 +23,9 @@ export function Footer() {
           <Link href="/faq" className="inline-flex min-h-[44px] items-center hover:text-ink">
             FAQ
           </Link>
+          <Link href="/blog" className="inline-flex min-h-[44px] items-center hover:text-ink">
+            Blog
+          </Link>
           <Link href="/services" className="inline-flex min-h-[44px] items-center hover:text-ink">
             Services
           </Link>

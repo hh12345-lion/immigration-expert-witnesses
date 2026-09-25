@@ -61,6 +61,11 @@ export const resourcesNavLinks: NavLink[] = [
     blurb: "Common instruction and tribunal questions.",
   },
   {
+    label: "Blog",
+    href: "/blog",
+    blurb: "Country evidence notes for instructing solicitors.",
+  },
+  {
     label: "Qualifications",
     href: "/qualifications",
     blurb: "What tribunals expect to see.",

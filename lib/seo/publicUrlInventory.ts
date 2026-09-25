@@ -1,4 +1,5 @@
 import { SITE_URL } from "../constants";
+import { getBlogSlugs } from "../blog";
 import { witnessTypes } from "../../data/witness-types";
 import { tribunalEvidence } from "../../data/tribunal-evidence";
 import { caseTypes } from "../../data/case-types";
@@ -25,6 +26,7 @@ export const APP_STATIC_PATHS: PublicUrlEntry[] = [
   { path: "/fees", priority: 0.87, changefreq: "monthly" },
   { path: "/faq", priority: 0.87, changefreq: "monthly" },
   { path: "/guides", priority: 0.87, changefreq: "monthly" },
+  { path: "/blog", priority: 0.87, changefreq: "weekly" },
   { path: "/glossary", priority: 0.75, changefreq: "monthly" },
 ];
 
@@ -65,6 +67,11 @@ function dynamicEntries(): PublicUrlEntry[] {
       path: `/guides/${g.slug}`,
       priority: 0.82,
       changefreq: "monthly" as const,
+    })),
+    ...getBlogSlugs().map((slug) => ({
+      path: `/blog/${slug}`,
+      priority: 0.82,
+      changefreq: "weekly" as const,
     })),
   ];
 }
