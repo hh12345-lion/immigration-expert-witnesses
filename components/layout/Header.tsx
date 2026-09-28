@@ -77,6 +77,12 @@ export function Header() {
           />
           <NavDropdown label="Resources" href="/guides" items={resourcesNavLinks} scrollable />
           <Link
+            href="/blog"
+            className="inline-flex min-h-[44px] items-center px-2.5 py-2 text-sm text-ink hover:text-sky"
+          >
+            Blog
+          </Link>
+          <Link
             href="/contact"
             className="ml-3 inline-flex min-h-[44px] items-center rounded-xl bg-sky px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-deep"
           >

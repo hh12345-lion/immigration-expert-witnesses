@@ -95,6 +95,7 @@ export const mobileNavGroups: { title: string; links: NavLink[] }[] = [
     title: "Quick Links",
     links: [
       { label: "Services", href: "/services" },
+      { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
       { label: "What is an expert witness?", href: "/what-is-an-immigration-expert-witness" },
     ],

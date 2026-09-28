@@ -14,19 +14,19 @@
 #   with keys: Full Name | Email | Phone Number | Brand name
 #
 # Uncomment to force the Netlify function instead (webhook only; skips Sheets):
-# # AHREFS_WWW_APEX_REDIRECT — flatten https://www → apex (reduces Ahrefs redirect-chain)
+# [[redirects]]
+#   from = "/api/submit-lead"
+#   to = "/.netlify/functions/submit-lead"
+#   status = 200
+#   force = true
+
+# AHREFS_WWW_APEX_REDIRECT — flatten https://www → apex (reduces Ahrefs redirect-chain)
 [[redirects]]
   from = "/*"
   to = "https://immigrationexpertwitnesses.com/:splat"
   status = 301
   force = true
   conditions = {Host = ["www.immigrationexpertwitnesses.com"]}
-
-[[redirects]]
-#   from = "/api/submit-lead"
-#   to = "/.netlify/functions/submit-lead"
-#   status = 200
-#   force = true
 
 [[headers]]
   for = "/sitemap.xml"
