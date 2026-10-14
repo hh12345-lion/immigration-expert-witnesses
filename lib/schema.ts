@@ -38,6 +38,13 @@ export function organizationSchema() {
     url: SITE_URL,
     email: SITE_EMAIL,
     sameAs: [LINKEDIN_URL],
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/brand/icon-512.png`,
+      width: 512,
+      height: 512,
+    },
+    image: `${SITE_URL}/brand/og.png`,
   };
 }
 

@@ -8,7 +8,7 @@ export const services: ServiceCard[] = [
   {
     title: "Country Condition Expert Witnesses",
     description:
-      "Independent evidence on security, human rights, state protection, and profile-specific risks beyond Home Office CPINs — routed to jurisdiction-specific network witnesses.",
+      "Independent evidence on security, human rights, state protection, and profile-specific risks beyond Home Office CPINs, routed to jurisdiction-specific network witnesses.",
     href: "/witness-types/country-condition-expert-witness",
   },
   {
@@ -38,7 +38,7 @@ export const services: ServiceCard[] = [
   {
     title: "Joint Expert Meetings",
     description:
-      "Coordinated joint expert statements identifying areas of agreement and disagreement — reducing hearing time and focusing cross-examination.",
+      "Coordinated joint expert statements identifying areas of agreement and disagreement, reducing hearing time and focusing cross-examination.",
     href: "/tribunal-evidence/joint-statement-meetings",
   },
   {
@@ -50,7 +50,7 @@ export const services: ServiceCard[] = [
   {
     title: "Expedited Expert Witness Instruction",
     description:
-      "Urgent expert witness instruction for listed hearings and approaching tribunal exchange deadlines — availability and timeline coordination.",
+      "Urgent expert witness instruction for listed hearings and approaching tribunal exchange deadlines, availability and timeline coordination.",
     href: "/contact",
   },
 ];

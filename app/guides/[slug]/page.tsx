@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
-import { guides, getGuide } from "@/data/guides";
+import { getGuide } from "@/data/guides";
 import { ContentPageView } from "@/components/content/ContentPageView";
-
-export function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

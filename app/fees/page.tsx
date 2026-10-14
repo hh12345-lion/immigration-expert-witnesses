@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
+import { sectionPhotos } from "@/lib/page-photos";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Expert Witness Fees | Legal Aid & Private",
   description:
-    "Immigration expert witness fee guidance — LAA prior authority, rate expectations, and indicative fees for tribunal evidence.",
+    "Immigration expert witness fee guidance: LAA prior authority, rate expectations, and indicative fees for tribunal evidence.",
   path: "/fees",
 });
 
@@ -16,40 +17,40 @@ export default function FeesPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.fees}
         title="Immigration Expert Witness Fees"
         subtitle="Fee guidance for Legal Aid and privately funded immigration expert witness instruction."
         breadcrumbs={crumbs}
       >
-        <p className="mb-4 text-[#3f4654] leading-relaxed">
+        <p className="mb-4 text-[#474843] leading-relaxed">
           Expert witness fees vary by discipline, jurisdiction complexity, report length, and urgency. Country
           condition reports for major jurisdictions with deteriorating security conditions require more research time
           than straightforward cases. Oral evidence attendance attracts additional hearing fees.
         </p>
 
-        <h2 className="mt-8 text-xl font-bold text-[#18181b]">Legal Aid Cases</h2>
-        <p className="mt-4 text-[#3f4654] leading-relaxed">
+        <h2 className="mt-8 text-xl font-bold text-[#141a16]">Legal Aid Cases</h2>
+        <p className="mt-4 text-[#474843] leading-relaxed">
           Legal Aid practitioners must obtain LAA prior authority before instructing experts. Submit indicative fee
           estimates with the expert&apos;s qualifications and explanation of necessity. Do not instruct the expert to
           begin work until authority is granted. See our{" "}
-          <Link href="/guides/legal-aid-expert-witness-guide" className="text-[#0284c7] hover:underline">
+          <Link href="/guides/legal-aid-expert-witness-guide" className="text-[#725865] hover:underline">
             Legal Aid guide
           </Link>{" "}
           and{" "}
-          <Link href="/tribunal-evidence/legal-aid-expert-witness-rates" className="text-[#0284c7] hover:underline">
+          <Link href="/tribunal-evidence/legal-aid-expert-witness-rates" className="text-[#725865] hover:underline">
             LAA rates guide
           </Link>
           .
         </p>
 
-        <h2 className="mt-8 text-xl font-bold text-[#18181b]">Private Instruction</h2>
-        <p className="mt-4 text-[#3f4654] leading-relaxed">
+        <h2 className="mt-8 text-xl font-bold text-[#141a16]">Private Instruction</h2>
+        <p className="mt-4 text-[#474843] leading-relaxed">
           For private cases, contact us with case details for an indicative fee estimate. Expedited instruction for
-          listed hearings may attract additional costs — instruct as early as possible to avoid urgency premiums.
+          listed hearings may attract additional costs, instruct as early as possible to avoid urgency premiums.
         </p>
 
         <div className="mt-10">
-          <Link href="/contact" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/contact" className="font-semibold text-[#725865] hover:underline">
             Request a fee estimate
           </Link>
         </div>

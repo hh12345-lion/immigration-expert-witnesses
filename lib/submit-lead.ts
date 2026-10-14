@@ -11,7 +11,7 @@ function getSiteDomain(): string {
 export const LEAD_BRAND_NAME = "Immigration Expert Witnesses";
 
 /**
- * Row 1 column headers for the Google Sheet — must match append order in
+ * Row 1 column headers for the Google Sheet, must match append order in
  * `/api/submit-lead`. Put these exact labels in row 1 of the target tab.
  */
 export const LEAD_SHEET_COLUMNS = [
@@ -32,7 +32,7 @@ export type SubmitLeadInput = {
   fullName: string;
   email: string;
   phone: string;
-  /** Free-text enquiry body — always sent to n8n as `message`. */
+  /** Free-text enquiry body: always sent to n8n as `message`. */
   message?: string;
 };
 

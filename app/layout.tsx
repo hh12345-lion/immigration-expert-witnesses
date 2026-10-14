@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Karla, Syne } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsentProvider, ConsentDefaultsScript } from "@/components/cookies";
@@ -7,19 +7,27 @@ import { SITE_URL } from "@/lib/constants";
 import { isProductionSite } from "@/lib/seo/is-production";
 import "./globals.css";
 
-const karla = Karla({
-  subsets: ["latin"],
+// Self-hosted latin subsets of the brand typefaces: Syne for headings, Karla for body text.
+const karla = localFont({
+  src: [
+    { path: "./fonts/karla.woff2", weight: "200 800", style: "normal" },
+    { path: "./fonts/karla-italic.woff2", weight: "200 800", style: "italic" },
+  ],
   variable: "--font-karla",
   display: "swap",
 });
 
-const syne = Syne({
-  subsets: ["latin"],
+const syne = localFont({
+  src: [{ path: "./fonts/syne.woff2", weight: "400 800", style: "normal" }],
   variable: "--font-syne",
   display: "swap",
 });
 
+// Every page is rendered on the server for each request.
+export const dynamic = "force-dynamic";
+
 export const viewport = {
+  themeColor: "#2C3F31",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -32,7 +40,7 @@ export const metadata: Metadata = {
     template: "%s | Immigration Expert Witnesses",
   },
   description:
-    "Find qualified immigration expert witnesses for tribunal proceedings — country conditions, persecution, human rights, and oral evidence. CPR Part 35.",
+    "Find qualified immigration expert witnesses for tribunal proceedings: country conditions, persecution, human rights, and oral evidence. CPR Part 35.",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: process.env.BING_SITE_VERIFICATION
@@ -52,9 +60,18 @@ export const metadata: Metadata = {
     url: SITE_URL,
     locale: "en_GB",
     type: "website",
+    images: [{ url: "/brand/og.png", width: 1200, height: 630, alt: "Immigration Expert Witnesses" }],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/brand/og.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
   },
   robots: isProductionSite() ? { index: true, follow: true } : { index: false, follow: false },
 };

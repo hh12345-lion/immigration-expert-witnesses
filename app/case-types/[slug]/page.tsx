@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
-import { caseTypes, getCaseType } from "@/data/case-types";
+import { getCaseType } from "@/data/case-types";
 import { ContentPageView } from "@/components/content/ContentPageView";
-
-export function generateStaticParams() {
-  return caseTypes.map((c) => ({ slug: c.slug }));
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

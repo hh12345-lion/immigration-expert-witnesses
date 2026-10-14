@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
-import { witnessTypes, getWitnessType } from "@/data/witness-types";
+import { getWitnessType } from "@/data/witness-types";
 import { WitnessTypePageView } from "@/components/content/WitnessTypePageView";
-
-export function generateStaticParams() {
-  return witnessTypes.map((w) => ({ slug: w.slug }));
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

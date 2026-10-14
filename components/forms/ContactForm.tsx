@@ -127,7 +127,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="rounded-xl border border-sky/30 bg-sky/5 px-4 py-3 text-sm text-ink" role="alert">
+        <p className="rounded-xl border border-mauve/30 bg-mauve-soft px-4 py-3 text-sm text-ink" role="alert">
           {errorMessage ?? "Something went wrong."}{" "}
           <a href={`mailto:${SITE_EMAIL}`} className="font-medium underline">
             {SITE_EMAIL}
@@ -138,7 +138,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-sky px-6 text-sm font-semibold text-white transition-colors hover:bg-sky-deep disabled:opacity-60 sm:w-auto"
+        className="tile-cut-sm inline-flex min-h-[50px] w-full items-center justify-center bg-mauve px-8 text-sm font-bold text-cream transition-colors hover:bg-oxblood-deep disabled:opacity-60 sm:w-auto"
       >
         {status === "submitting" ? "Sending…" : "Send request"}
       </button>

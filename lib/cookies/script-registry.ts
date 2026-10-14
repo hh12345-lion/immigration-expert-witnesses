@@ -182,7 +182,7 @@ export function createScriptRegistry(): TrackingScriptConfig[] {
   ];
 }
 
-/** Apply load/unload based on current consent — called on every preference change */
+/** Apply load/unload based on current consent: called on every preference change */
 export function syncTrackingScripts(
   choices: CategoryConsent,
   registry: TrackingScriptConfig[]

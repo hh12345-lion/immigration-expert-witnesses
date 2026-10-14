@@ -1,6 +1,6 @@
 const DEFAULT_SITE_URL = "https://immigrationexpertwitnesses.com";
 
-/** Canonical origin for SEO — strips www; ignores localhost/netlify preview env. */
+/** Canonical origin for SEO: strips www; ignores localhost/netlify preview env. */
 export function getPublicSiteUrl(): string {
   const fallback = DEFAULT_SITE_URL;
   const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -29,16 +29,16 @@ export const LINKEDIN_URL =
   "https://www.linkedin.com/company/immigrationexpertwitnesses";
 
 export const COLORS = {
-  primary: "#18181b",
-  accent: "#0284c7",
-  gold: "#0284c7",
-  background: "#f4f6f8",
-  sectionAlt: "#eef2f6",
-  border: "#e2e8f0",
-  heading: "#18181b",
-  body: "#3f4654",
-  ink: "#18181b",
-  paper: "#f4f6f8",
+  primary: "#141a16",
+  accent: "#725865",
+  gold: "#725865",
+  background: "#f9f6f1",
+  sectionAlt: "#f1ede5",
+  border: "#e3ddd2",
+  heading: "#141a16",
+  body: "#474843",
+  ink: "#141a16",
+  paper: "#f9f6f1",
   surface: "#ffffff",
-  sky: "#0284c7",
+  sky: "#725865",
 } as const;

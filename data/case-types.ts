@@ -6,10 +6,10 @@ export const caseTypes: ContentPage[] = [
     slug: "ftt-asylum-appeal",
     title: "FTT Asylum Appeal",
     metaTitle: "Expert Witnesses for FTT Asylum Appeals | First-tier Trib...",
-    metaDescription: "Qualified immigration expert witnesses for First-tier Tribunal asylum appeals — country condition, persecution, human rights, and linguistic identity ev...",
+    metaDescription: "Qualified immigration expert witnesses for First-tier Tribunal asylum appeals, country condition, persecution, human rights, and linguistic identity ev...",
     h1: "Expert Witnesses for FTT Asylum Appeals",
     content: [
-      "First-tier Tribunal (FTT) asylum appeals are the primary forum for refugee protection claims. Expert witness evidence on country conditions, persecution methodology, human rights standards, and linguistic identity is frequently decisive — particularly where the Home Office relies on generic CPIN analysis.",
+      "First-tier Tribunal (FTT) asylum appeals are the primary forum for refugee protection claims. Expert witness evidence on country conditions, persecution methodology, human rights standards, and linguistic identity is frequently decisive, particularly where the Home Office relies on generic CPIN analysis.",
       "FTT proceedings require strict compliance with tribunal directions on expert evidence exchange. The Immigration Tribunal Practice Direction 2024 sets default report length limits, independence standards, and exchange deadlines. Early witness instruction is critical given increased FTT asylum volumes and backlog in 2025–2026.",
       "Country condition witnesses address profile-specific risks beyond CPIN generalisations. Persecution witnesses apply Refugee Convention methodology including HJ (Iran) and RT (Zimbabwe) standards. Linguistic identity witnesses support credibility findings where nationality or clan is disputed.",
       "Legal Aid practitioners must obtain prior authority for expert witness fees before instruction. Our network routes cases to jurisdiction-specific witnesses while maintaining CPR Part 35 independence standards across all FTT proceedings.",
@@ -36,11 +36,11 @@ export const caseTypes: ContentPage[] = [
     slug: "upper-tribunal-appeal",
     title: "Upper Tribunal Appeal",
     metaTitle: "Expert Witnesses for Upper Tribunal Appeals | UT Immigration",
-    metaDescription: "Immigration expert witnesses for Upper Tribunal permission and substantive appeals — country guidance challenges, error of law cases, and complex multi-...",
+    metaDescription: "Immigration expert witnesses for Upper Tribunal permission and substantive appeals, country guidance challenges, error of law cases, and complex multi-...",
     h1: "Expert Witnesses for Upper Tribunal Appeals",
     content: [
       "Upper Tribunal (UT) immigration appeals involve permission applications and substantive hearings on errors of law identified by the First-tier Tribunal. Expert witness evidence at UT level often addresses complex country guidance questions, methodological challenges to FTT findings, and fresh expert analysis where the FTT failed to engage with relevant evidence.",
-      "Country guidance challenges at the Upper Tribunal remain high-value proceedings. Expert witnesses must address leading CG cases — MOJ (Somalia), HJ (Iran), RT (Zimbabwe), AAA (Somalia), DD (Afghanistan) — and demonstrate how current country conditions affect the appellant's specific profile.",
+      "Country guidance challenges at the Upper Tribunal remain high-value proceedings. Expert witnesses must address leading CG cases, MOJ (Somalia), HJ (Iran), RT (Zimbabwe), AAA (Somalia), DD (Afghanistan): and demonstrate how current country conditions affect the appellant's specific profile.",
       "UT appeals may require supplementary expert reports addressing the specific error of law. Experts giving oral evidence at UT hearings face rigorous cross-examination on methodology, source selection, and consistency with their written analysis.",
       "Coordinate UT expert instruction with any FTT expert evidence already in the bundle. Joint expert meetings may be directed where the Home Office instructs a responding expert. Early UT instruction supports permission applications where expert evidence demonstrates the FTT's failure to apply relevant country guidance.",
     ],
@@ -48,12 +48,12 @@ export const caseTypes: ContentPage[] = [
       {
         question: "Do Upper Tribunal appeals need new expert evidence?",
         answer:
-          "Not always — existing FTT expert evidence may suffice if it addresses the error of law. However, UT appeals on country guidance or CPIN challenge often require supplementary expert analysis addressing the specific legal error identified.",
+          "Not always: existing FTT expert evidence may suffice if it addresses the error of law. However, UT appeals on country guidance or CPIN challenge often require supplementary expert analysis addressing the specific legal error identified.",
       },
       {
         question: "Can FTT experts give oral evidence at the UT?",
         answer:
-          "Yes — the UT may direct oral evidence from experts who gave written evidence at FTT level, or from newly instructed experts. Experts should be prepared for UT cross-examination on methodology and CG application.",
+          "Yes, the UT may direct oral evidence from experts who gave written evidence at FTT level, or from newly instructed experts. Experts should be prepared for UT cross-examination on methodology and CG application.",
       },
     ],
     relatedLinks: [
@@ -66,7 +66,7 @@ export const caseTypes: ContentPage[] = [
     slug: "deportation-removal",
     title: "Deportation & Removal",
     metaTitle: "Expert Witnesses for Deportation & Removal | Article 3 Ev...",
-    metaDescription: "Immigration expert witnesses for deportation and removal proceedings — ECHR Article 3, human rights on return, torture survivors, and medical-psychiatri...",
+    metaDescription: "Immigration expert witnesses for deportation and removal proceedings, ECHR Article 3, human rights on return, torture survivors, and medical-psychiatri...",
     h1: "Expert Witnesses for Deportation & Removal Proceedings",
     content: [
       "Deportation and removal proceedings engage ECHR Article 3 where return would expose the appellant to torture, inhuman or degrading treatment. Human rights expert witnesses apply treaty and ECHR standards alongside country condition evidence on return risk.",
@@ -83,7 +83,7 @@ export const caseTypes: ContentPage[] = [
       {
         question: "Can expert witnesses address Article 8 as well as Article 3?",
         answer:
-          "Country condition and human rights witnesses can address conditions relevant to both articles. However, Article 8 proportionality is primarily a legal question — expert evidence supports factual findings on return conditions and integration barriers.",
+          "Country condition and human rights witnesses can address conditions relevant to both articles. However, Article 8 proportionality is primarily a legal question, expert evidence supports factual findings on return conditions and integration barriers.",
       },
     ],
     relatedLinks: [
@@ -96,19 +96,19 @@ export const caseTypes: ContentPage[] = [
     slug: "fresh-claims",
     title: "Fresh Claims",
     metaTitle: "Expert Witnesses for Fresh Claims | New Asylum Evidence",
-    metaDescription: "Immigration expert witnesses for fresh asylum claims — new country evidence, changed conditions, and supplementary expert analysis for Home Office fresh...",
+    metaDescription: "Immigration expert witnesses for fresh asylum claims, new country evidence, changed conditions, and supplementary expert analysis for Home Office fresh...",
     h1: "Expert Witnesses for Fresh Claims",
     content: [
-      "Fresh claims arise where new evidence — not previously considered — would create a realistic prospect of success. Expert witness evidence frequently forms the basis of fresh claims, particularly where country conditions have deteriorated since the original refusal or where new expert analysis addresses profile-specific risks not covered by the original CPIN.",
+      "Fresh claims arise where new evidence: not previously considered, would create a realistic prospect of success. Expert witness evidence frequently forms the basis of fresh claims, particularly where country conditions have deteriorated since the original refusal or where new expert analysis addresses profile-specific risks not covered by the original CPIN.",
       "Country condition witnesses providing evidence of changed circumstances since the original determination are central to many fresh claims. Security deterioration in Somalia, Afghanistan, Nigeria, and other jurisdictions in 2025–2026 has generated fresh claims supported by updated expert analysis.",
-      "Fresh claim expert evidence must be genuinely new — not merely a rehash of arguments considered in the original refusal. Experts should identify what has changed, cite dated sources post-dating the original decision, and address why the new evidence creates a realistic prospect of success.",
+      "Fresh claim expert evidence must be genuinely new, not merely a rehash of arguments considered in the original refusal. Experts should identify what has changed, cite dated sources post-dating the original decision, and address why the new evidence creates a realistic prospect of success.",
       "Instruct experts as soon as fresh claim material is identified. Expert reports supporting fresh claims should be exchanged promptly to support the Home Office fresh claim assessment and any subsequent judicial review.",
     ],
     faqs: [
       {
         question: "Can expert evidence support a fresh claim?",
         answer:
-          "Yes — where expert evidence addresses genuinely new material not previously considered, such as changed country conditions, new profile-specific risk analysis, or expert evidence not available at the original refusal stage.",
+          "Yes, where expert evidence addresses genuinely new material not previously considered, such as changed country conditions, new profile-specific risk analysis, or expert evidence not available at the original refusal stage.",
       },
       {
         question: "What makes expert evidence 'new' for fresh claim purposes?",
@@ -126,7 +126,7 @@ export const caseTypes: ContentPage[] = [
     slug: "human-rights-claims",
     title: "Human Rights Claims",
     metaTitle: "Expert Witnesses for Human Rights Claims | ECHR Immigration",
-    metaDescription: "Expert witnesses for immigration human rights claims — ECHR Articles 3 and 8, ICCPR, CAT, CEDAW, and treaty standards in tribunal proceedings.",
+    metaDescription: "Expert witnesses for immigration human rights claims, ECHR Articles 3 and 8, ICCPR, CAT, CEDAW, and treaty standards in tribunal proceedings.",
     h1: "Expert Witnesses for Human Rights Claims",
     content: [
       "Human rights claims before immigration tribunals engage ECHR Articles 3 and 8, and may invoke complementary treaty frameworks including ICCPR, CAT, and CEDAW. Human rights expert witnesses apply these standards to assess whether return or removal would breach the appellant's protected rights.",
@@ -138,12 +138,12 @@ export const caseTypes: ContentPage[] = [
       {
         question: "What is the difference between human rights and asylum expert evidence?",
         answer:
-          "Asylum evidence applies Refugee Convention persecution methodology. Human rights evidence applies ECHR and treaty standards. Many cases engage both — instruct witnesses with appropriate disciplinary expertise for each standard.",
+          "Asylum evidence applies Refugee Convention persecution methodology. Human rights evidence applies ECHR and treaty standards. Many cases engage both: instruct witnesses with appropriate disciplinary expertise for each standard.",
       },
       {
         question: "When is a human rights expert needed instead of a persecution expert?",
         answer:
-          "When the claim is framed under ECHR Article 3 or 8 rather than Refugee Convention protection — common in deportation cases, humanitarian protection claims, and cases where Convention nexus is not established but return risk under Article 3 is argued.",
+          "When the claim is framed under ECHR Article 3 or 8 rather than Refugee Convention protection, common in deportation cases, humanitarian protection claims, and cases where Convention nexus is not established but return risk under Article 3 is argued.",
       },
     ],
     relatedLinks: [
@@ -156,10 +156,10 @@ export const caseTypes: ContentPage[] = [
     slug: "country-guidance-challenges",
     title: "Country Guidance Challenges",
     metaTitle: "Expert Witnesses for Country Guidance Challenges | Upper...",
-    metaDescription: "Expert witnesses for Upper Tribunal country guidance challenges — MOJ Somalia, HJ Iran, RT Zimbabwe, AAA Somalia, DD Afghanistan, and CG precedent analy...",
+    metaDescription: "Expert witnesses for Upper Tribunal country guidance challenges, MOJ Somalia, HJ Iran, RT Zimbabwe, AAA Somalia, DD Afghanistan, and CG precedent analy...",
     h1: "Expert Witnesses for Country Guidance Challenges",
     content: [
-      "Country guidance (CG) challenges at the Upper Tribunal seek to establish or modify tribunal-wide guidance on country conditions. Expert witness evidence is central to CG proceedings — tribunals rely on independent expert analysis to determine whether conditions in a country meet the threshold for CG designation.",
+      "Country guidance (CG) challenges at the Upper Tribunal seek to establish or modify tribunal-wide guidance on country conditions. Expert witness evidence is central to CG proceedings, tribunals rely on independent expert analysis to determine whether conditions in a country meet the threshold for CG designation.",
       "Leading CG cases that expert witnesses must address include MOJ and Others (Somalia) [2014] UKUT 00442, HJ (Iran) [2010] UKSC 31, RT (Zimbabwe) [2012] UKSC 38, AAA (Somalia) [2011] UKUT 00444, and DD (Afghanistan) [2020] UKUT 00230. Experts must demonstrate how current conditions affect the CG framework.",
       "CG challenge expert evidence requires the highest methodological standards: dated primary sources, field expertise, identification of assumptions and limitations, and explicit engagement with existing CG authority. Tribunals apply heightened scrutiny to expert independence in CG proceedings.",
       "EUAA Country Guidance is increasingly cited alongside Country Guidance. Expert witnesses must address EUAA conclusions where relevant, identifying alignment or divergence with immigration tribunal authority.",
@@ -173,7 +173,7 @@ export const caseTypes: ContentPage[] = [
       {
         question: "Can the same expert give evidence in CG and individual appeals?",
         answer:
-          "Yes — experts frequently give evidence in both CG challenges and individual appeals. However, CG evidence must address tribunal-wide issues, not only the individual appellant's circumstances.",
+          "Yes, experts frequently give evidence in both CG challenges and individual appeals. However, CG evidence must address tribunal-wide issues, not only the individual appellant's circumstances.",
       },
     ],
     relatedLinks: [
@@ -186,11 +186,11 @@ export const caseTypes: ContentPage[] = [
     slug: "judicial-review",
     title: "Judicial Review",
     metaTitle: "Expert Witnesses for Immigration Judicial Review",
-    metaDescription: "Immigration expert witnesses for judicial review proceedings — fresh evidence, CPIN challenge, and supplementary expert analysis for High Court immigrat...",
+    metaDescription: "Immigration expert witnesses for judicial review proceedings, fresh evidence, CPIN challenge, and supplementary expert analysis for High Court immigrat...",
     h1: "Expert Witnesses for Immigration Judicial Review",
     content: [
-      "Judicial review of immigration decisions may be supported by expert witness evidence where fresh material demonstrates unlawfulness — for example, where the decision-maker failed to engage with relevant country evidence, applied outdated CPIN analysis, or ignored expert evidence in the bundle.",
-      "Expert evidence in judicial review must be genuinely fresh or demonstrate a material error in the decision-maker's treatment of existing evidence. Courts apply strict rules on new evidence in JR — expert reports should address why the evidence could not have been obtained earlier and how it affects the lawfulness of the decision.",
+      "Judicial review of immigration decisions may be supported by expert witness evidence where fresh material demonstrates unlawfulness, for example, where the decision-maker failed to engage with relevant country evidence, applied outdated CPIN analysis, or ignored expert evidence in the bundle.",
+      "Expert evidence in judicial review must be genuinely fresh or demonstrate a material error in the decision-maker's treatment of existing evidence. Courts apply strict rules on new evidence in JR, expert reports should address why the evidence could not have been obtained earlier and how it affects the lawfulness of the decision.",
       "Country condition witnesses may provide supplementary analysis demonstrating that the Home Office failed to consider changed conditions or profile-specific risks. CPIN challenge expert evidence may show the decision relied on generic CPIN analysis inconsistent with dated primary sources.",
       "Coordinate JR expert instruction with any tribunal expert evidence. Expert reports for JR should be concise, focused on the specific ground of challenge, and compliant with CPR Part 35 independence standards.",
     ],
@@ -198,7 +198,7 @@ export const caseTypes: ContentPage[] = [
       {
         question: "Can new expert evidence be filed in judicial review?",
         answer:
-          "Courts may permit fresh expert evidence in JR where it demonstrates unlawfulness and could not reasonably have been obtained earlier. The evidential threshold is strict — expert reports must address why the evidence is fresh and material to the ground of challenge.",
+          "Courts may permit fresh expert evidence in JR where it demonstrates unlawfulness and could not reasonably have been obtained earlier. The evidential threshold is strict: expert reports must address why the evidence is fresh and material to the ground of challenge.",
       },
       {
         question: "What expert evidence supports a CPIN challenge in JR?",
@@ -216,24 +216,24 @@ export const caseTypes: ContentPage[] = [
     slug: "administrative-review",
     title: "Administrative Review",
     metaTitle: "Expert Witnesses for Administrative Review | Immigration",
-    metaDescription: "Expert witness evidence for immigration administrative review — supplementary country analysis and fresh evidence for in-country administrative review a...",
+    metaDescription: "Expert witness evidence for immigration administrative review, supplementary country analysis and fresh evidence for in-country administrative review a...",
     h1: "Expert Witnesses for Administrative Review",
     content: [
       "Administrative review (AR) is an internal Home Office review mechanism for eligible immigration decisions. While AR has limited scope compared to tribunal appeals, expert evidence may support AR applications where the decision involved a caseworking error in applying country evidence or CPIN analysis.",
       "Expert witness reports for AR should be focused and concise, addressing the specific alleged error. Country condition witnesses may demonstrate that the refusal failed to consider profile-specific risks or relied on outdated country information.",
-      "AR is typically a precursor to further challenge — expert evidence obtained for AR may form the basis of a subsequent appeal or judicial review if AR is unsuccessful. Instruct experts early to preserve evidence for downstream proceedings.",
+      "AR is typically a precursor to further challenge, expert evidence obtained for AR may form the basis of a subsequent appeal or judicial review if AR is unsuccessful. Instruct experts early to preserve evidence for downstream proceedings.",
       "Legal Aid coverage for AR expert evidence is limited. Private or pro bono instruction may be necessary. Our network provides indicative fee estimates for AR-stage expert analysis.",
     ],
     faqs: [
       {
         question: "Is expert evidence admissible in administrative review?",
         answer:
-          "AR applicants may submit additional evidence including expert reports where it addresses a caseworking error in the original decision. The scope is narrower than tribunal appeals — evidence must relate to the specific review ground.",
+          "AR applicants may submit additional evidence including expert reports where it addresses a caseworking error in the original decision. The scope is narrower than tribunal appeals, evidence must relate to the specific review ground.",
       },
       {
         question: "Should I instruct an expert before or after AR?",
         answer:
-          "Before AR if expert evidence directly addresses the review ground. If AR fails, the same expert evidence may support a subsequent appeal — early instruction preserves evidence and meets downstream deadlines.",
+          "Before AR if expert evidence directly addresses the review ground. If AR fails, the same expert evidence may support a subsequent appeal, early instruction preserves evidence and meets downstream deadlines.",
       },
     ],
     relatedLinks: [

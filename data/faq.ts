@@ -4,7 +4,7 @@ export const siteFaqs: FAQ[] = [
   {
     question: "What is an immigration expert witness?",
     answer:
-      "An immigration expert witness provides independent country condition, persecution, human rights, or linguistic identity evidence for immigration tribunals. Unlike advocates, expert witnesses owe a paramount duty to the tribunal — not the instructing party — under CPR Part 35 and Ikarian Reefer principles.",
+      "An immigration expert witness provides independent country condition, persecution, human rights, or linguistic identity evidence for immigration tribunals. Unlike advocates, expert witnesses owe a paramount duty to the tribunal, not the instructing party, under CPR Part 35 and Ikarian Reefer principles.",
   },
   {
     question: "What is CPR Part 35 in immigration appeals?",
@@ -14,7 +14,7 @@ export const siteFaqs: FAQ[] = [
   {
     question: "What is the expert's duty to the tribunal?",
     answer:
-      "Under Ikarian Reefer and CPR Part 35, an expert witness owes a paramount duty to the tribunal to provide independent, objective evidence — regardless of who instructs or pays them. The expert must assist the tribunal, not advocate for the instructing party.",
+      "Under Ikarian Reefer and CPR Part 35, an expert witness owes a paramount duty to the tribunal to provide independent, objective evidence, regardless of who instructs or pays them. The expert must assist the tribunal, not advocate for the instructing party.",
   },
   {
     question: "How does Practice Direction 2024 affect expert reports?",
@@ -27,9 +27,9 @@ export const siteFaqs: FAQ[] = [
       "The Adam Pipe expert report guide (October 2025) provides tribunal expectations on report structure, identifying assumptions and limitations, distinguishing expert opinion from assumed facts, and ensuring reports address the specific issues in the appeal.",
   },
   {
-    question: "Expert witness vs immigration expert report — what's the difference?",
+    question: "Expert witness vs immigration expert report: what's the difference?",
     answer:
-      "immigrationexpertwitnesses.com covers the witness role — qualifications, oral evidence, tribunal appearance, and CPR Part 35 duties. immigrationexpertreports.com covers report standards, report types, and CPIN framework. Witnesses may produce reports but also attend hearings and face cross-examination.",
+      "immigrationexpertwitnesses.com covers the witness role, qualifications, oral evidence, tribunal appearance, and CPR Part 35 duties. immigrationexpertreports.com covers report standards, report types, and CPIN framework. Witnesses may produce reports but also attend hearings and face cross-examination.",
   },
   {
     question: "When is oral evidence required at tribunal?",
@@ -44,12 +44,12 @@ export const siteFaqs: FAQ[] = [
   {
     question: "Country condition witness vs persecution witness?",
     answer:
-      "Country condition witnesses assess conditions on the ground — security, human rights, state protection. Persecution witnesses apply Refugee Convention methodology — nexus, well-founded fear, Convention grounds. Many cases require both.",
+      "Country condition witnesses assess conditions on the ground, security, human rights, state protection. Persecution witnesses apply Refugee Convention methodology: nexus, well-founded fear, Convention grounds. Many cases require both.",
   },
   {
     question: "How do I find the right country expert witness?",
     answer:
-      "Use the network directory to match the appellant's country and profile to jurisdiction-specific witness sites — Somalia Expert, Nigeria Expert, Pakistan Country Expert, Afghanistan Country Expert, and others.",
+      "Use the network directory to match the appellant's country and profile to jurisdiction-specific witness sites, Somalia Expert, Nigeria Expert, Pakistan Country Expert, Afghanistan Country Expert, and others.",
   },
   {
     question: "Can expert witnesses challenge Home Office CPINs?",

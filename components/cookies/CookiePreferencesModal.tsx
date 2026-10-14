@@ -23,13 +23,13 @@ function CategoryToggle({
   const meta = CATEGORY_META[category];
 
   return (
-    <li className="rounded-[8px] border border-[#e2e8f0] bg-white p-4 shadow-sm">
+    <li className="rounded-[8px] border border-[#e3ddd2] bg-white p-4 shadow-sm">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
-          <p className="font-semibold text-[#18181b]">{meta.label}</p>
-          <p className="mt-1 text-sm leading-relaxed text-[#3f4654]">{meta.description}</p>
+          <p className="font-semibold text-[#141a16]">{meta.label}</p>
+          <p className="mt-1 text-sm leading-relaxed text-[#474843]">{meta.description}</p>
           {meta.required && (
-            <p className="mt-2 text-xs font-medium uppercase tracking-wide text-[#0284c7]">
+            <p className="mt-2 text-xs font-medium uppercase tracking-wide text-[#725865]">
               Always active
             </p>
           )}
@@ -46,8 +46,8 @@ function CategoryToggle({
           <span
             className={`relative block h-7 w-12 rounded-full transition-colors duration-200 ${
               meta.required
-                ? "bg-[#18181b]/35"
-                : "bg-[#e2e8f0] peer-focus-visible:ring-2 peer-focus-visible:ring-[#0284c7] peer-focus-visible:ring-offset-2 peer-checked:bg-[#0284c7]"
+                ? "bg-[#141a16]/35"
+                : "bg-[#e3ddd2] peer-focus-visible:ring-2 peer-focus-visible:ring-[#725865] peer-focus-visible:ring-offset-2 peer-checked:bg-[#725865]"
             }`}
             aria-hidden
           >
@@ -133,7 +133,7 @@ export function CookiePreferencesModal() {
     >
       <button
         type="button"
-        className="absolute inset-0 bg-[#18181b]/60 backdrop-blur-[3px] animate-[fadeIn_0.2s_ease-out]"
+        className="absolute inset-0 bg-[#141a16]/60 backdrop-blur-[3px] animate-[fadeIn_0.2s_ease-out]"
         aria-label="Close cookie preferences"
         onClick={closePreferences}
       />
@@ -142,10 +142,10 @@ export function CookiePreferencesModal() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-prefs-title"
-        className="relative z-10 flex max-h-[min(90vh,640px)] w-full max-w-lg flex-col overflow-hidden rounded-t-[8px] border border-[#e2e8f0] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:rounded-[8px] animate-[slideUp_0.35s_cubic-bezier(0.16,1,0.3,1)] sm:animate-[fadeIn_0.25s_ease-out]"
+        className="relative z-10 flex max-h-[min(90vh,640px)] w-full max-w-lg flex-col overflow-hidden rounded-t-[8px] border border-[#e3ddd2] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:rounded-[8px] animate-[slideUp_0.35s_cubic-bezier(0.16,1,0.3,1)] sm:animate-[fadeIn_0.25s_ease-out]"
       >
-        <div className="border-b border-[#e2e8f0] bg-[#18181b] px-5 py-4 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#0284c7]">
+        <div className="border-b border-[#e3ddd2] bg-[#141a16] px-5 py-4 sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#B79FAB]">
             Cookie settings
           </p>
           <h2 id="cookie-prefs-title" className="mt-1 text-lg font-bold text-white">
@@ -153,17 +153,17 @@ export function CookiePreferencesModal() {
           </h2>
           <p className="mt-1 text-sm text-white/75">
             Choose which cookies we may use.{" "}
-            <Link href="/cookie-policy" className="text-[#0284c7] hover:underline" onClick={closePreferences}>
+            <Link href="/cookie-policy" className="text-[#D8C6CF] hover:underline" onClick={closePreferences}>
               Cookie Policy
             </Link>
             {" · "}
-            <Link href="/privacy" className="text-[#0284c7] hover:underline" onClick={closePreferences}>
+            <Link href="/privacy" className="text-[#D8C6CF] hover:underline" onClick={closePreferences}>
               Privacy Policy
             </Link>
           </p>
         </div>
 
-        <div className="flex-1 overflow-y-auto bg-[#f4f6f8] px-5 py-4 sm:px-6">
+        <div className="flex-1 overflow-y-auto bg-[#f9f6f1] px-5 py-4 sm:px-6">
           <ul className="space-y-3">
             {CATEGORIES.map((key) => (
               <CategoryToggle
@@ -176,33 +176,33 @@ export function CookiePreferencesModal() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-[#e2e8f0] bg-white p-4 sm:flex-row sm:flex-wrap sm:justify-end">
+        <div className="flex flex-col gap-2 border-t border-[#e3ddd2] bg-white p-4 sm:flex-row sm:flex-wrap sm:justify-end">
           <button
             type="button"
             ref={closeBtnRef}
             onClick={closePreferences}
-            className="min-h-[44px] rounded-[4px] border border-[#e2e8f0] px-4 py-2 text-sm font-medium text-[#3f4654] transition hover:bg-[#f4f6f8]"
+            className="min-h-[44px] rounded-[4px] border border-[#e3ddd2] px-4 py-2 text-sm font-medium text-[#474843] transition hover:bg-[#f9f6f1]"
           >
             Cancel
           </button>
           <button
             type="button"
             onClick={rejectNonEssential}
-            className="min-h-[44px] rounded-[4px] border border-[#18181b] px-4 py-2 text-sm font-semibold text-[#18181b] transition hover:bg-[#f4f6f8]"
+            className="min-h-[44px] rounded-[4px] border border-[#141a16] px-4 py-2 text-sm font-semibold text-[#141a16] transition hover:bg-[#f9f6f1]"
           >
             Reject Non-Essential
           </button>
           <button
             type="button"
             onClick={() => savePreferences(draft)}
-            className="min-h-[44px] rounded-[4px] bg-[#18181b] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#27272a]"
+            className="min-h-[44px] rounded-[4px] bg-[#141a16] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#2c3f31]"
           >
             Save Preferences
           </button>
           <button
             type="button"
             onClick={acceptAll}
-            className="min-h-[44px] rounded-[4px] bg-[#0284c7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#0369a1]"
+            className="min-h-[44px] rounded-[4px] bg-[#725865] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#5d4752]"
           >
             Accept All
           </button>

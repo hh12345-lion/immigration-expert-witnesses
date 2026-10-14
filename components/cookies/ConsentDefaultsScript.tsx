@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 /**
- * Google Consent Mode v2 defaults — must run before any Google tag (beforeInteractive).
+ * Google Consent Mode v2 defaults: must run before any Google tag (beforeInteractive).
  * Non-essential storage denied until user grants consent via our banner.
  */
 export function ConsentDefaultsScript() {

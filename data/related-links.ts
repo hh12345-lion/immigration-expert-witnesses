@@ -42,7 +42,7 @@ export const CORE_LINKS = {
   } satisfies RelatedLink,
 };
 
-/** Appendix C — homepage required internal link targets */
+/** Appendix C: homepage required internal link targets */
 export const HOMEPAGE_REQUIRED_PATHS = [
   "/contact",
   "/how-to-instruct",
@@ -55,7 +55,7 @@ export const HOMEPAGE_REQUIRED_PATHS = [
   "/witness-types/oral-evidence-witness",
 ] as const;
 
-/** Section 5 Rule B — network hub required internal links */
+/** Section 5 Rule B: network hub required internal links */
 export const NETWORK_REQUIRED_PATHS = [
   "/expert-witness-framework",
   "/witness-types",
@@ -64,7 +64,7 @@ export const NETWORK_REQUIRED_PATHS = [
   "/contact",
 ] as const;
 
-/** Section 5 Rule A — indexable hub pages */
+/** Section 5 Rule A: indexable hub pages */
 export const HUB_PAGES_RULE_A = [
   "/witness-types",
   "/tribunal-evidence",

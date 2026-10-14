@@ -1,6 +1,6 @@
 import type { CookieCategory } from "./types";
 
-/** localStorage key — versioned to allow migration */
+/** localStorage key, versioned to allow migration */
 export const CONSENT_STORAGE_KEY = "iew_cookie_consent_v1";
 
 /** Increment to invalidate stored consent and show banner again */
@@ -16,7 +16,7 @@ export const CATEGORY_META: Record<
   necessary: {
     label: "Necessary Cookies",
     description:
-      "Required for the site to function securely — consent storage, load balancing, and fraud prevention. Cannot be disabled.",
+      "Required for the site to function securely, consent storage, load balancing, and fraud prevention. Cannot be disabled.",
     required: true,
   },
   analytics: {

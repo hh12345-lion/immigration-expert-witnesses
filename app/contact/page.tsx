@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
+import { sectionPhotos } from "@/lib/page-photos";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { createMetadata } from "@/lib/metadata";
@@ -20,16 +21,16 @@ export default function ContactPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.contact}
         title="Request a witness"
-        subtitle="Four fields. We route confidentially to the right witness within one business day."
+        subtitle="Four fields. We route your brief confidentially to the right specialist witness."
         breadcrumbs={crumbs}
       >
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_14rem]">
           <ContactForm />
-          <aside className="space-y-4 rounded-2xl border border-line bg-surface p-6 text-sm text-body">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky">Or email</p>
-            <a href={`mailto:${SITE_EMAIL}`} className="block break-all font-medium text-sky hover:text-sky-deep">
+          <aside className="tile-cut space-y-4 self-start bg-sage p-6 text-sm text-body">
+            <p className="eyebrow">Or email</p>
+            <a href={`mailto:${SITE_EMAIL}`} className="block break-all font-semibold text-forest hover:text-mauve">
               {SITE_EMAIL}
             </a>
             <p className="leading-relaxed">

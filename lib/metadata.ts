@@ -25,7 +25,7 @@ export function absoluteUrl(path = ""): string {
 }
 
 export const OPEN_GRAPH_IMAGE = {
-  url: "/opengraph-image",
+  url: "/brand/og.png",
   width: 1200,
   height: 630,
   alt: OG_IMAGE_ALT,
@@ -50,7 +50,7 @@ export function createMetadata({
   const blockIndexing = noindex || !isProductionSite();
   const ogImage = {
     ...OPEN_GRAPH_IMAGE,
-    url: absoluteUrl("/opengraph-image"),
+    url: absoluteUrl("/brand/og.png"),
   };
 
   return {

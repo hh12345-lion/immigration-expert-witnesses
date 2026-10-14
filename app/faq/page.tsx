@@ -1,4 +1,5 @@
 import { PageShell } from "@/components/layout/PageShell";
+import { sectionPhotos } from "@/lib/page-photos";
 import { FAQSection } from "@/components/ui/FAQSection";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
@@ -7,7 +8,7 @@ import { siteFaqs } from "@/data/faq";
 export const metadata = createMetadata({
   title: "Immigration Expert Witness FAQ",
   description:
-    "FAQ on immigration expert witnesses — CPR Part 35, oral evidence, Legal Aid, witness types, and CPIN challenge for tribunal cases.",
+    "FAQ on immigration expert witnesses: CPR Part 35, oral evidence, Legal Aid, witness types, and CPIN challenge for tribunal cases.",
   path: "/faq",
 });
 
@@ -17,7 +18,7 @@ export default function FaqPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} faqs={siteFaqs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.faq}
         title="Immigration Expert Witness FAQ"
         subtitle="Common questions from immigration solicitors about expert witness instruction and tribunal evidence."
         breadcrumbs={crumbs}

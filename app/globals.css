@@ -1,31 +1,52 @@
 @import "tailwindcss";
 
+/* Brand palette: forest #2C3F31, moss #53674D, mauve #725865, charcoal #2F3030, stone #999A92, cream #F9F6F1. */
 @theme inline {
-  --color-ink: #18181b;
-  --color-paper: #f4f6f8;
-  --color-surface: #ffffff;
-  --color-sky: #0284c7;
-  --color-sky-deep: #0369a1;
-  --color-slate: #64748b;
-  --color-line: #e2e8f0;
-  --color-body: #3f4654;
-  --color-primary: #18181b;
-  --color-accent: #0284c7;
-  --color-gold: #0284c7;
-  --color-section-alt: #eef2f6;
-  --color-border: #e2e8f0;
-  --color-oxblood: #0284c7;
-  --color-oxblood-deep: #0369a1;
-  --color-moss: #0284c7;
-  --color-brass: #64748b;
-  --color-chalk: #ffffff;
-  --color-rule: #e2e8f0;
+  --color-forest: #2c3f31;
+  --color-forest-deep: #1f2d23;
+  --color-night: #141a16;
+  --color-moss: #53674d;
+  --color-mauve: #725865;
+  --color-mauve-soft: #efe7ea;
+  --color-charcoal: #2f3030;
+  --color-stone: #999a92;
+  --color-cream: #f9f6f1;
+  --color-sage: #e9ece4;
+
+  --color-ink: #2f3030;
+  --color-paper: #f9f6f1;
+  --color-surface: #fffdf9;
+  --color-sky: #2c3f31;
+  --color-sky-deep: #1f2d23;
+  --color-slate: #66675f;
+  --color-line: #e3ddd2;
+  --color-body: #474843;
+  --color-primary: #2c3f31;
+  --color-accent: #725865;
+  --color-gold: #725865;
+  --color-section-alt: #f1ede5;
+  --color-border: #e3ddd2;
+  --color-oxblood: #725865;
+  --color-oxblood-deep: #5d4752;
+  --color-brass: #999a92;
+  --color-chalk: #fffdf9;
+  --color-rule: #e3ddd2;
+
   --font-sans: var(--font-karla);
   --font-display: var(--font-syne);
-  --radius-card: 12px;
+  --radius-card: 18px;
   --radius-sm: 10px;
-  --shadow-card: 0 12px 32px rgba(24, 24, 27, 0.08);
+  --shadow-card: 0 18px 40px rgba(20, 26, 22, 0.08);
   --breakpoint-xs: 375px;
+}
+
+@layer base {
+  img,
+  video,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 html {
@@ -34,11 +55,8 @@ html {
 }
 
 body {
-  background-color: #f4f6f8;
-  background-image:
-    radial-gradient(ellipse 90% 50% at 100% 0%, rgba(2, 132, 199, 0.08), transparent 50%),
-    linear-gradient(180deg, #f7f8fa 0%, #f4f6f8 100%);
-  color: #3f4654;
+  background-color: #f9f6f1;
+  color: #474843;
   font-family: var(--font-karla), system-ui, sans-serif;
   overflow-x: hidden;
   min-width: 320px;
@@ -47,15 +65,8 @@ body {
 }
 
 ::selection {
-  background: rgba(2, 132, 199, 0.18);
-  color: #18181b;
-}
-
-img,
-video,
-svg {
-  max-width: 100%;
-  height: auto;
+  background: rgba(114, 88, 101, 0.22);
+  color: #2f3030;
 }
 
 a {
@@ -70,7 +81,26 @@ section {
 
 .font-display {
   font-family: var(--font-syne), system-ui, sans-serif;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
+}
+
+/* Small caps label in the spaced style of the logo lettering. */
+.eyebrow {
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #725865;
+}
+
+/* The monogram tile: a rounded document whose lower corner is opened by the road. */
+.tile-cut {
+  border-radius: 1.75rem 1.75rem 1.75rem 0.4rem;
+}
+
+.tile-cut-sm {
+  border-radius: 1.1rem 1.1rem 1.1rem 0.3rem;
 }
 
 .table-scroll {
@@ -90,6 +120,7 @@ section {
   }
 }
 
+/* Header: CSS only menus so the whole header renders on the server. */
 #mobile-nav-toggle:checked ~ .header-bar .icon-open {
   display: none;
 }
@@ -99,7 +130,7 @@ section {
 }
 
 #mobile-menu {
-  max-height: min(80vh, 34rem);
+  max-height: min(80vh, 36rem);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -115,11 +146,29 @@ section {
     visibility 160ms;
 }
 
-.nav-panel-open .nav-panel {
+.nav-item:hover .nav-panel,
+.nav-item:focus-within .nav-panel {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.nav-item:hover .nav-chevron,
+.nav-item:focus-within .nav-chevron {
+  transform: rotate(180deg);
+}
+
+details.mobile-group > summary {
+  list-style: none;
+}
+
+details.mobile-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.mobile-group[open] .group-chevron {
+  transform: rotate(180deg);
 }
 
 @keyframes slideUp {
@@ -145,18 +194,18 @@ section {
 .form-line {
   width: 100%;
   min-height: 44px;
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
+  border: 1px solid #d9d2c5;
+  background: #fffdf9;
   border-radius: 10px;
   padding: 0.7rem 0.9rem;
-  color: #18181b;
+  color: #2f3030;
   font-size: 1rem;
 }
 
 .form-line:focus {
   outline: none;
-  border-color: #0284c7;
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  border-color: #53674d;
+  box-shadow: 0 0 0 3px rgba(83, 103, 77, 0.2);
 }
 
 .form-line-area {
@@ -165,48 +214,58 @@ section {
 }
 
 .tile-card {
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
-  border-radius: 12px;
+  border: 1px solid #e3ddd2;
+  background: #fffdf9;
+  border-radius: 1.1rem 1.1rem 1.1rem 0.3rem;
   transition:
     border-color 160ms ease,
-    box-shadow 160ms ease;
+    box-shadow 160ms ease,
+    transform 160ms ease;
 }
 
 .tile-card:hover {
-  border-color: #0284c7;
-  box-shadow: 0 12px 32px rgba(24, 24, 27, 0.08);
+  border-color: #53674d;
+  box-shadow: 0 18px 40px rgba(20, 26, 22, 0.08);
 }
 
 .prose-content h2 {
-  color: #18181b;
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 2rem;
+  color: #2c3f31;
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2.25rem;
   margin-bottom: 1rem;
 }
 
 .prose-content h3 {
-  color: #18181b;
-  font-family: var(--font-display), Georgia, serif;
+  color: #2c3f31;
+  font-family: var(--font-syne), system-ui, sans-serif;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
 .prose-content p {
   margin-bottom: 1rem;
-  line-height: 1.75;
-  color: #3f3f46;
+  line-height: 1.8;
+  color: #474843;
 }
 
 .prose-content ul,
 .prose-content ol {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
-  color: #3f3f46;
+  color: #474843;
+}
+
+.prose-content ul {
+  list-style: disc;
+}
+
+.prose-content ol {
+  list-style: decimal;
 }
 
 .prose-content li {
@@ -214,17 +273,31 @@ section {
   line-height: 1.75;
 }
 
+.prose-content li::marker {
+  color: #725865;
+}
+
 .prose-content a {
-  color: #0284c7;
+  color: #2c3f31;
+  font-weight: 600;
   text-decoration: underline;
+  text-decoration-color: #725865;
   text-underline-offset: 3px;
 }
 
 .prose-content a:hover {
-  color: #0369a1;
+  color: #725865;
 }
 
 .prose-content strong {
-  color: #18181b;
-  font-weight: 600;
+  color: #2f3030;
+  font-weight: 700;
+}
+
+.prose-content blockquote {
+  border-left: 3px solid #725865;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #2f3030;
+  font-style: italic;
 }

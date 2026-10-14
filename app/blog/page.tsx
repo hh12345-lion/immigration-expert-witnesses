@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
+import { Road } from "@/components/brand/Brand";
+import { sectionPhotos } from "@/lib/page-photos";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { getAllBlogPosts } from "@/lib/blog";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
@@ -40,68 +42,47 @@ export default function BlogIndexPage() {
       />
       <PageShell
         title="Immigration Expert Witnesses Blog"
-        subtitle="Practitioner-facing articles on country conditions evidence, tribunal practice, and instructing immigration expert witnesses."
+        subtitle="Practitioner-facing articles on country conditions evidence, tribunal practice and instructing immigration expert witnesses."
         breadcrumbs={crumbs}
+        photo={sectionPhotos.blog}
       >
-        <div className="mb-10 flex flex-wrap gap-3">
-          <Link
-            href="/contact"
-            className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-sky px-7 text-sm font-semibold text-white hover:bg-sky-deep"
-          >
-            Request a witness
-          </Link>
-          <Link
-            href="/guides"
-            className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-line bg-surface px-7 text-sm font-semibold text-ink hover:border-sky hover:text-sky"
-          >
-            Browse guides
-          </Link>
-        </div>
-
         {posts.length === 0 ? (
           <p className="text-body">Articles will appear here shortly.</p>
         ) : (
-          <ul className="grid gap-8 md:grid-cols-2">
+          <ul className="grid gap-x-8 gap-y-14 md:grid-cols-2">
             {posts.map((post) => (
-              <li key={post.slug} className="overflow-hidden rounded-xl border border-line bg-white">
-                {post.image ? (
-                  <Link href={`/blog/${post.slug}`} className="relative block h-52 w-full">
+              <li key={post.slug} className="min-w-0">
+                <Link href={`/blog/${post.slug}`} className="group block">
+                  <div className="tile-cut relative aspect-[16/10] overflow-hidden bg-forest">
                     <Image
-                      src={post.image}
-                      alt={post.imageAlt || post.title}
+                      src={post.image || sectionPhotos.blog.src}
+                      alt={post.image ? post.imageAlt || post.title : sectionPhotos.blog.alt}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
+                      sizes="(max-width: 768px) 92vw, 540px"
+                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
                     />
-                  </Link>
-                ) : null}
-                <div className="p-6">
-                  <p className="text-[11px] font-semibold uppercase tracking-widest text-slate">
-                    <time dateTime={post.updated || post.date}>
+                    <Road surface="#FFFDF9" width={12} />
+                  </div>
+                  <p className="mt-5 flex flex-wrap items-center gap-x-3 text-sm text-slate">
+                    <time dateTime={post.updated || post.date} className="font-semibold text-mauve">
                       {new Date(post.updated || post.date).toLocaleDateString("en-GB", {
                         day: "numeric",
                         month: "long",
                         year: "numeric",
                       })}
                     </time>
-                    <span className="mx-2">·</span>
-                    <span className="normal-case tracking-normal">{post.readingTime}</span>
+                    <span aria-hidden className="h-1 w-1 rounded-full bg-stone" />
+                    <span>{post.readingTime}</span>
                   </p>
-                  <h2 className="mt-3 font-display text-xl font-semibold text-ink">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-sky">
-                      {post.title}
-                    </Link>
-                  </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-body">{post.description}</p>
-                  <p className="mt-5">
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="text-sm font-semibold text-sky hover:text-sky-deep"
-                    >
-                      Read article →
-                    </Link>
-                  </p>
-                </div>
+                  <h2 className="font-display mt-3 text-2xl font-bold leading-snug text-forest group-hover:text-mauve">{post.title}</h2>
+                  <p className="mt-3 leading-relaxed text-body">{post.description}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-mauve">
+                    Read article
+                    <svg aria-hidden viewBox="0 0 16 10" className="h-2.5 w-4 transition-transform group-hover:translate-x-1">
+                      <path d="M0 5 H14 M10 1 L14 5 L10 9" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                    </svg>
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>

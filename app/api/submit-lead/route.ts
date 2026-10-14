@@ -17,6 +17,42 @@ function sanitize(str: string): string {
   return str.replace(/<[^>]*>/g, "").trim();
 }
 
+/** Free-text field names used across the sites, mapped to the universal `message`. */
+const MESSAGE_KEYS = [
+  "message",
+  "Message",
+  "description",
+  "enquiry",
+  "details",
+  "summary",
+  "notes",
+  "matter",
+  "caseSummary",
+  "additionalInfo",
+  "additional_info",
+  "caseDetails",
+  "enquiryDetails",
+  "caseBrief",
+  "case_summary",
+  "matterDescription",
+  "additionalNotes",
+  "caseBackground",
+  "specificQuestions",
+  "briefSummary",
+  "conflict_info",
+  "brief",
+];
+
+function resolveLeadMessage(body: unknown): string {
+  if (!body || typeof body !== "object") return "";
+  const record = body as Record<string, unknown>;
+  for (const key of MESSAGE_KEYS) {
+    const value = record[key];
+    if (value != null && String(value).trim()) return sanitize(String(value));
+  }
+  return "";
+}
+
 function sheetsErrorMessage(error: unknown): string {
   const err = error as {
     message?: string;
@@ -33,13 +69,13 @@ function sheetsErrorMessage(error: unknown): string {
 
   // Common Netlify / permissions hints
   if (/permission|forbidden|403/i.test(apiMessage)) {
-    return `${apiMessage} — share the spreadsheet with the service account email as Editor.`;
+    return `${apiMessage}, share the spreadsheet with the service account email as Editor.`;
   }
   if (/DECODER|PEM|private key|invalid_grant/i.test(apiMessage)) {
-    return `${apiMessage} — fix GOOGLE_PRIVATE_KEY (use \\n escapes, or set GOOGLE_PRIVATE_KEY_B64).`;
+    return `${apiMessage}, fix GOOGLE_PRIVATE_KEY (use \\n escapes, or set GOOGLE_PRIVATE_KEY_B64).`;
   }
   if (/not found|404|Unable to parse range/i.test(apiMessage)) {
-    return `${apiMessage} — check GOOGLE_SHEET_ID and GOOGLE_SHEET_TAB_NAME (exact tab name).`;
+    return `${apiMessage}, check GOOGLE_SHEET_ID and GOOGLE_SHEET_TAB_NAME (exact tab name).`;
   }
 
   return apiMessage;
@@ -98,6 +134,7 @@ export async function POST(request: Request) {
   const fullName = sanitize(body.fullName ?? "");
   const email = (body.email ?? "").toLowerCase().trim();
   const phone = sanitize(typeof body.phone === "string" ? body.phone : "");
+  const message = resolveLeadMessage(body);
 
   if (!fullName || !email) {
     return NextResponse.json({ error: "fullName and email are required" }, { status: 400 });
@@ -117,7 +154,7 @@ export async function POST(request: Request) {
     sanitize(body.country ?? ""),
     sanitize(body.caseType ?? ""),
     sanitize(body.funding ?? ""),
-    sanitize(body.summary ?? ""),
+    message,
     LEAD_BRAND_NAME,
   ];
 
@@ -154,10 +191,7 @@ export async function POST(request: Request) {
         fullName,
         email,
         phone,
-        message: sanitize(
-          (typeof body.message === "string" ? body.message : "") ||
-            (typeof body.summary === "string" ? body.summary : "")
-        ),
+        message,
       });
       const res = await withTimeout(
         fetch(webhookUrl, {
@@ -184,7 +218,7 @@ export async function POST(request: Request) {
     }
   }
 
-  // If Sheets is configured, it MUST succeed — webhook success must not hide a Sheets failure
+  // If Sheets is configured, it MUST succeed, webhook success must not hide a Sheets failure
   if (sheetsConfigured && !sheetsOk) {
     return NextResponse.json(
       {

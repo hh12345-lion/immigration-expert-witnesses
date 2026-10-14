@@ -35,6 +35,7 @@ export const NON_INDEXABLE_PATHS = [
   "/thank-you",
   "/privacy",
   "/terms",
+  "/image-credits",
   "/cookie-policy",
 ] as const;
 

@@ -16,14 +16,14 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Ikarian Reefer",
     definition:
-      "Ikarian Reefer [1993] 2 Lloyd's Rep 68 — foundational authority establishing that expert witnesses owe a paramount duty to the tribunal to provide independent, objective evidence regardless of who instructs them.",
+      "Ikarian Reefer [1993] 2 Lloyd's Rep 68, foundational authority establishing that expert witnesses owe a paramount duty to the tribunal to provide independent, objective evidence regardless of who instructs them.",
     link: "/expert-witness-framework",
   },
   {
     term: "Practice Direction 2024 (Expert Evidence)",
     anchorId: "practice-direction-2024",
     definition:
-      "The Immigration Tribunal Practice Direction on expert evidence (2024) sets mandatory requirements for expert reports in asylum and immigration appeals — including default 20-page limit, structure, and independence standards.",
+      "The Immigration Tribunal Practice Direction on expert evidence (2024) sets mandatory requirements for expert reports in asylum and immigration appeals, including default 20-page limit, structure, and independence standards.",
     link: "/expert-witness-framework",
   },
   {
@@ -59,7 +59,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Linguistic Expert Witness",
     definition:
-      "An expert witness assessing dialect, clan membership, cultural knowledge, and nationality claims — critical in clan-based asylum jurisdictions.",
+      "An expert witness assessing dialect, clan membership, cultural knowledge, and nationality claims, critical in clan-based asylum jurisdictions.",
     link: "/witness-types/linguistic-identity-expert-witness",
   },
   {
@@ -89,7 +89,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Country Guidance Case",
     definition:
-      "An Upper Tribunal decision providing tribunal-wide guidance on country conditions — binding on FTT decisions unless distinguished on materially different facts.",
+      "An Upper Tribunal decision providing tribunal-wide guidance on country conditions, binding on FTT decisions unless distinguished on materially different facts.",
     link: "/case-types/country-guidance-challenges",
   },
   {
@@ -101,123 +101,123 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "State Protection",
     definition:
-      "The availability of effective state protection against persecution — a key element of Refugee Convention analysis assessed by persecution and country condition experts.",
+      "The availability of effective state protection against persecution, a key element of Refugee Convention analysis assessed by persecution and country condition experts.",
     link: "/witness-types/persecution-expert-witness",
   },
   {
     term: "Internal Relocation",
     definition:
-      "Whether the appellant could reasonably relocate within their country of origin to avoid persecution — assessed under the Reasonableness test.",
+      "Whether the appellant could reasonably relocate within their country of origin to avoid persecution, assessed under the Reasonableness test.",
     link: "/witness-types/internal-relocation-expert-witness",
   },
   {
     term: "Well-Founded Fear",
     definition:
-      "The Refugee Convention standard requiring a real risk of persecution for a Convention reason — assessed through persecution methodology and country evidence.",
+      "The Refugee Convention standard requiring a real risk of persecution for a Convention reason, assessed through persecution methodology and country evidence.",
     link: "/witness-types/persecution-expert-witness",
   },
   {
     term: "Refugee Convention 1951",
     definition:
-      "The international treaty defining refugee status and persecution grounds — the primary legal framework for asylum claims assessed by persecution expert witnesses.",
+      "The international treaty defining refugee status and persecution grounds, the primary legal framework for asylum claims assessed by persecution expert witnesses.",
     link: "/witness-types/persecution-expert-witness",
   },
   {
     term: "Article 3 ECHR",
     definition:
-      "European Convention on Human Rights Article 3 prohibits torture, inhuman or degrading treatment — central to deportation and removal expert evidence.",
+      "European Convention on Human Rights Article 3 prohibits torture, inhuman or degrading treatment, central to deportation and removal expert evidence.",
     link: "/witness-types/human-rights-expert-witness",
   },
   {
     term: "Article 8 ECHR",
     definition:
-      "European Convention on Human Rights Article 8 protects family and private life — relevant to deportation proportionality and human rights claims.",
+      "European Convention on Human Rights Article 8 protects family and private life, relevant to deportation proportionality and human rights claims.",
     link: "/case-types/human-rights-claims",
   },
   {
     term: "Legal Aid",
     anchorId: "legal-aid",
     definition:
-      "Public funding for immigration and asylum cases through the Legal Aid Agency — prior authority is required before instructing expert witnesses in legally aided proceedings.",
+      "Public funding for immigration and asylum cases through the Legal Aid Agency, prior authority is required before instructing expert witnesses in legally aided proceedings.",
     link: "/guides/legal-aid-expert-witness-guide",
   },
   {
     term: "Legal Aid Prior Authority",
     definition:
-      "LAA approval required before instructing expert witnesses in legally aided immigration cases — must be obtained before the expert begins work.",
+      "LAA approval required before instructing expert witnesses in legally aided immigration cases, must be obtained before the expert begins work.",
     link: "/guides/legal-aid-expert-witness-guide",
   },
   {
     term: "FTT (First-tier Tribunal)",
     anchorId: "first-tier-tribunal-ftt",
     definition:
-      "The First-tier Tribunal (Immigration and Asylum Chamber) — the primary forum for asylum appeals and most immigration judicial review matters.",
+      "The First-tier Tribunal (Immigration and Asylum Chamber): the primary forum for asylum appeals and most immigration judicial review matters.",
     link: "/case-types/ftt-asylum-appeal",
   },
   {
     term: "UT (Upper Tribunal)",
     definition:
-      "The Upper Tribunal (Immigration and Asylum Chamber) — hears permission appeals and substantive appeals on errors of law, including country guidance challenges.",
+      "The Upper Tribunal (Immigration and Asylum Chamber): hears permission appeals and substantive appeals on errors of law, including country guidance challenges.",
     link: "/case-types/upper-tribunal-appeal",
   },
   {
     term: "MOJ and Others [2014]",
     definition:
-      "MOJ and Others (Somalia) [2014] UKUT 00442 — leading Country Guidance on Somalia clan structure, risk profiles, and internal relocation.",
+      "MOJ and Others (Somalia) [2014] UKUT 00442: leading Country Guidance on Somalia clan structure, risk profiles, and internal relocation.",
     link: "/witness-types/cpin-challenge-expert-witness",
   },
   {
     term: "HJ (Iran) [2010]",
     definition:
-      "HJ (Iran) [2010] UKSC 31 — Supreme Court authority on persecution of gay men, requiring assessment of whether the appellant would conceal identity on return.",
+      "HJ (Iran) [2010] UKSC 31: Supreme Court authority on persecution of gay men, requiring assessment of whether the appellant would conceal identity on return.",
     link: "/witness-types/persecution-expert-witness",
   },
   {
     term: "RT (Zimbabwe) [2012]",
     definition:
-      "RT (Zimbabwe) [2012] UKSC 38 — Supreme Court authority on imputed political opinion and the methodology for assessing well-founded fear.",
+      "RT (Zimbabwe) [2012] UKSC 38: Supreme Court authority on imputed political opinion and the methodology for assessing well-founded fear.",
     link: "/witness-types/persecution-expert-witness",
   },
   {
     term: "AAA (Somalia) [2011]",
     definition:
-      "AAA (Somalia) [2011] UKUT 00444 — Country Guidance on risk to Somali nationals returned to Mogadishu and southern and central Somalia.",
+      "AAA (Somalia) [2011] UKUT 00444: Country Guidance on risk to Somali nationals returned to Mogadishu and southern and central Somalia.",
     link: "/network",
   },
   {
     term: "DD (Afghanistan)",
     definition:
-      "DD (Afghanistan) [2020] UKUT 00230 — Country Guidance on risk to civilians in Afghanistan following the Taliban takeover framework.",
+      "DD (Afghanistan) [2020] UKUT 00230: Country Guidance on risk to civilians in Afghanistan following the Taliban takeover framework.",
     link: "/network",
   },
   {
     term: "EUAA Country Guidance",
     definition:
-      "European Union Agency for Asylum country guidance increasingly cited in appeals — expert witnesses must address EUAA alongside Country Guidance and CPIN.",
+      "European Union Agency for Asylum country guidance increasingly cited in appeals, expert witnesses must address EUAA alongside Country Guidance and CPIN.",
     link: "/witness-types/cpin-challenge-expert-witness",
   },
   {
     term: "Independence (Expert Witness)",
     definition:
-      "The expert's paramount duty to provide objective evidence to the tribunal regardless of instructing party — the core principle from Ikarian Reefer and CPR Part 35.",
+      "The expert's paramount duty to provide objective evidence to the tribunal regardless of instructing party, the core principle from Ikarian Reefer and CPR Part 35.",
     link: "/expert-witness-framework",
   },
   {
     term: "Assumed Facts",
     definition:
-      "Facts assumed by the expert for the purpose of analysis, which must be clearly distinguished from the expert's independent opinion — required by Adam Pipe 2025.",
+      "Facts assumed by the expert for the purpose of analysis, which must be clearly distinguished from the expert's independent opinion, required by Adam Pipe 2025.",
     link: "/expert-witness-framework",
   },
   {
     term: "Report Exchange Deadline",
     definition:
-      "The tribunal-directed deadline for exchanging expert reports — non-compliance risks refusal of evidence under Practice Direction 2024.",
+      "The tribunal-directed deadline for exchanging expert reports, non-compliance risks refusal of evidence under Practice Direction 2024.",
     link: "/tribunal-evidence/expert-report-submission-deadlines",
   },
   {
     term: "Single Joint Expert",
     definition:
-      "One expert instructed jointly by both parties or directed by the tribunal — preferred under Practice Direction 2024 to avoid duplication.",
+      "One expert instructed jointly by both parties or directed by the tribunal, preferred under Practice Direction 2024 to avoid duplication.",
     link: "/tribunal-evidence/joint-statement-meetings",
   },
   {

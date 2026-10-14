@@ -1,15 +1,17 @@
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
+import { sectionPhotos } from "@/lib/page-photos";
 import { CardGrid } from "@/components/ui/CardGrid";
 import { FAQSection } from "@/components/ui/FAQSection";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 import { witnessTypes } from "@/data/witness-types";
+import { excerpt } from "@/lib/excerpt";
 
 export const metadata = createMetadata({
   title: "Immigration Expert Witness Types",
   description:
-    "Eight immigration expert witness disciplines — country condition, persecution, human rights, linguistic identity, relocation, CPIN challenge, and oral evidence.",
+    "Eight immigration expert witness disciplines: country condition, persecution, human rights, linguistic identity, relocation, CPIN challenge, and oral evidence.",
   path: "/witness-types",
 });
 
@@ -68,12 +70,12 @@ const witnessHubFaqs = [
   {
     question: "How many immigration expert witness disciplines are there?",
     answer:
-      "Our witness taxonomy covers eight disciplines: country condition, persecution, human rights, linguistic identity, internal relocation, CPIN challenge, medical/psychiatric, and oral evidence — each with distinct tribunal methodology.",
+      "Our witness taxonomy covers eight disciplines: country condition, persecution, human rights, linguistic identity, internal relocation, CPIN challenge, medical/psychiatric, and oral evidence, each with distinct tribunal methodology.",
   },
   {
     question: "What is the difference between a country condition and persecution witness?",
     answer:
-      "Country condition witnesses assess conditions on the ground. Persecution witnesses apply Refugee Convention methodology — nexus, well-founded fear, and Convention grounds. Many asylum appeals require both disciplines.",
+      "Country condition witnesses assess conditions on the ground. Persecution witnesses apply Refugee Convention methodology: nexus, well-founded fear, and Convention grounds. Many asylum appeals require both disciplines.",
   },
   {
     question: "When do I need an oral evidence witness?",
@@ -88,39 +90,39 @@ export default function WitnessTypesPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} faqs={witnessHubFaqs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.witnessTypes}
         title="Immigration Expert Witness Types"
         subtitle="Eight witness disciplines for asylum appeals, deportation, country guidance challenges, and Upper Tribunal proceedings."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#3f4654] leading-relaxed">
-          An immigration expert witness provides independent tribunal evidence within a defined discipline — country
+        <p className="mb-8 text-[#474843] leading-relaxed">
+          An immigration expert witness provides independent tribunal evidence within a defined discipline, country
           conditions, persecution methodology, human rights standards, linguistic identity, or oral testimony. Use the
           comparison matrix below to select the right witness discipline for your case type.
         </p>
 
-        <h2 className="text-lg font-bold text-[#18181b]">Witness Discipline Comparison Matrix</h2>
+        <h2 className="text-lg font-bold text-[#141a16]">Witness Discipline Comparison Matrix</h2>
         <div className="table-scroll mt-6 overflow-x-auto">
           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
-            <caption className="mb-3 text-left text-sm text-[#3f4654]">
+            <caption className="mb-3 text-left text-sm text-[#474843]">
               Immigration expert witness discipline comparison for tribunal proceedings
             </caption>
             <thead>
-              <tr className="border-b border-[#e2e8f0] bg-[#f4f6f8]">
-                <th className="p-3 font-semibold text-[#18181b]">Discipline</th>
-                <th className="p-3 font-semibold text-[#18181b]">Primary focus</th>
-                <th className="p-3 font-semibold text-[#18181b]">Typical case type</th>
-                <th className="p-3 font-semibold text-[#18181b]">Detail page</th>
+              <tr className="border-b border-[#e3ddd2] bg-[#f9f6f1]">
+                <th className="p-3 font-semibold text-[#141a16]">Discipline</th>
+                <th className="p-3 font-semibold text-[#141a16]">Primary focus</th>
+                <th className="p-3 font-semibold text-[#141a16]">Typical case type</th>
+                <th className="p-3 font-semibold text-[#141a16]">Detail page</th>
               </tr>
             </thead>
             <tbody>
               {witnessComparison.map((row) => (
-                <tr key={row.discipline} className="border-b border-[#e2e8f0]">
-                  <td className="p-3 font-medium text-[#18181b]">{row.discipline}</td>
-                  <td className="p-3 text-[#3f4654]">{row.focus}</td>
-                  <td className="p-3 text-[#3f4654]">{row.typicalCase}</td>
+                <tr key={row.discipline} className="border-b border-[#e3ddd2]">
+                  <td className="p-3 font-medium text-[#141a16]">{row.discipline}</td>
+                  <td className="p-3 text-[#474843]">{row.focus}</td>
+                  <td className="p-3 text-[#474843]">{row.typicalCase}</td>
                   <td className="p-3">
-                    <Link href={row.href} className="text-[#0284c7] hover:underline">
+                    <Link href={row.href} className="text-[#725865] hover:underline">
                       View discipline →
                     </Link>
                   </td>
@@ -134,22 +136,22 @@ export default function WitnessTypesPage() {
           <CardGrid
             items={witnessTypes.map((w) => ({
               title: w.title,
-              description: w.metaDescription,
+              description: excerpt(w.content),
               href: `/witness-types/${w.slug}`,
             }))}
           />
         </div>
 
-        <FAQSection faqs={witnessHubFaqs} title="Witness Types — FAQs" />
+        <FAQSection faqs={witnessHubFaqs} title="Witness Types: FAQs" />
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/network" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/network" className="font-semibold text-[#725865] hover:underline">
             Network directory
           </Link>
-          <Link href="/expert-witness-framework" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/expert-witness-framework" className="font-semibold text-[#725865] hover:underline">
             Expert witness framework
           </Link>
-          <Link href="/qualifications" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/qualifications" className="font-semibold text-[#725865] hover:underline">
             Qualifications
           </Link>
         </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
+import { sectionPhotos } from "@/lib/page-photos";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { createMetadata } from "@/lib/metadata";
 import { articleSchema } from "@/lib/schema";
@@ -9,7 +10,7 @@ import { SISTER_HUB_URL } from "@/lib/constants";
 export const metadata = createMetadata({
   title: "Immigration Expert Witness Network",
   description:
-    "Directory of immigration expert witness sites — country and thematic specialists for asylum and deportation cases across the UK.",
+    "Directory of immigration expert witness sites: country and thematic specialists for asylum and deportation cases across the UK.",
   path: "/network",
 });
 
@@ -22,32 +23,32 @@ export default function NetworkPage() {
   return (
     <>
       <PageJsonLd breadcrumbs={crumbs} />
-      <PageShell
+      <PageShell photo={sectionPhotos.network}
         title="Immigration Expert Witness Network Directory"
-        subtitle="Country-specific and thematic expert witness sites — the master hub connecting solicitors to specialist witnesses."
+        subtitle="Country-specific and thematic expert witness sites: the master hub connecting solicitors to specialist witnesses."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#3f4654] leading-relaxed">
+        <p className="mb-8 text-[#474843] leading-relaxed">
           immigrationexpertwitnesses.com is the network master hub for expert witnesses. It owns witness role,
           qualifications, oral evidence, CPR Part 35 duties, tribunal appearance, and this directory. Use the sites
           below to find jurisdiction-specific and thematic expert witnesses for your case.
         </p>
 
-        <h2 className="text-lg font-bold text-[#18181b]">Country Witness Sites</h2>
+        <h2 className="text-lg font-bold text-[#141a16]">Country Witness Sites</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           {countrySites.map((site) => (
             <article
               key={site.url}
-              className="flex min-w-0 flex-col rounded-[8px] border border-[#e2e8f0] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
+              className="flex min-w-0 flex-col rounded-[8px] border border-[#e3ddd2] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             >
-              <h3 className="text-lg font-bold text-[#18181b]">{site.name}</h3>
-              <p className="mt-1 text-xs font-medium text-[#0284c7]">{site.role}</p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#3f4654]">{site.description}</p>
+              <h3 className="text-lg font-bold text-[#141a16]">{site.name}</h3>
+              <p className="mt-1 text-xs font-medium text-[#725865]">{site.role}</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#474843]">{site.description}</p>
               <a
                 href={site.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#0284c7] hover:underline"
+                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#725865] hover:underline"
               >
                 {site.anchorText} →
               </a>
@@ -55,21 +56,21 @@ export default function NetworkPage() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-lg font-bold text-[#18181b]">Thematic Witness Sites</h2>
+        <h2 className="mt-12 text-lg font-bold text-[#141a16]">Thematic Witness Sites</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           {thematicSites.map((site) => (
             <article
               key={site.url}
-              className="flex min-w-0 flex-col rounded-[8px] border border-[#e2e8f0] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
+              className="flex min-w-0 flex-col rounded-[8px] border border-[#e3ddd2] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             >
-              <h3 className="text-lg font-bold text-[#18181b]">{site.name}</h3>
-              <p className="mt-1 text-xs font-medium text-[#0284c7]">{site.role}</p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#3f4654]">{site.description}</p>
+              <h3 className="text-lg font-bold text-[#141a16]">{site.name}</h3>
+              <p className="mt-1 text-xs font-medium text-[#725865]">{site.role}</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#474843]">{site.description}</p>
               <a
                 href={site.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#0284c7] hover:underline"
+                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#725865] hover:underline"
               >
                 {site.anchorText} →
               </a>
@@ -77,21 +78,21 @@ export default function NetworkPage() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-lg font-bold text-[#18181b]">Sister Hub</h2>
+        <h2 className="mt-12 text-lg font-bold text-[#141a16]">Sister Hub</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           {sisterSites.map((site) => (
             <article
               key={site.url}
-              className="flex min-w-0 flex-col rounded-[8px] border border-[#e2e8f0] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
+              className="flex min-w-0 flex-col rounded-[8px] border border-[#e3ddd2] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             >
-              <h3 className="text-lg font-bold text-[#18181b]">{site.name}</h3>
-              <p className="mt-1 text-xs font-medium text-[#0284c7]">{site.role}</p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#3f4654]">{site.description}</p>
+              <h3 className="text-lg font-bold text-[#141a16]">{site.name}</h3>
+              <p className="mt-1 text-xs font-medium text-[#725865]">{site.role}</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#474843]">{site.description}</p>
               <a
                 href={site.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#0284c7] hover:underline"
+                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#725865] hover:underline"
               >
                 {site.anchorText} →
               </a>
@@ -100,22 +101,22 @@ export default function NetworkPage() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-4">
-          <Link href="/witness-types" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/witness-types" className="font-semibold text-[#725865] hover:underline">
             Witness types hub
           </Link>
-          <Link href="/expert-witness-framework" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/expert-witness-framework" className="font-semibold text-[#725865] hover:underline">
             Expert witness framework
           </Link>
-          <Link href="/guides/choosing-right-expert-witness" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/guides/choosing-right-expert-witness" className="font-semibold text-[#725865] hover:underline">
             Choosing the right expert witness
           </Link>
-          <Link href="/how-to-instruct" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/how-to-instruct" className="font-semibold text-[#725865] hover:underline">
             How to instruct
           </Link>
-          <Link href="/contact" className="font-semibold text-[#0284c7] hover:underline">
+          <Link href="/contact" className="font-semibold text-[#725865] hover:underline">
             Contact us
           </Link>
-          <a href={SISTER_HUB_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0284c7] hover:underline">
+          <a href={SISTER_HUB_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#725865] hover:underline">
             Report standards hub
           </a>
         </div>

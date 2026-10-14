@@ -16,7 +16,7 @@ async function main() {
     return;
   }
   if (!existsSync(KEY_PATH) || !existsSync(SITEMAP_PATH)) {
-    console.warn("[indexnow] missing key or sitemap — skip");
+    console.warn("[indexnow] missing key or sitemap, skip");
     return;
   }
 
@@ -24,7 +24,7 @@ async function main() {
   const sitemap = readFileSync(SITEMAP_PATH, "utf8");
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
   if (!urls.length) {
-    console.warn("[indexnow] no URLs — skip");
+    console.warn("[indexnow] no URLs, skip");
     return;
   }
 

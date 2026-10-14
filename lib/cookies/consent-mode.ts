@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-/** Google Consent Mode v2 — call before any Google tag loads */
+/** Google Consent Mode v2: call before any Google tag loads */
 export function initGoogleConsentDefaults(): void {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];

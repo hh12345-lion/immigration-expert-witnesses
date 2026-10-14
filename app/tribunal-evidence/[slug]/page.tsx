@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
-import { tribunalEvidence, getTribunalEvidence } from "@/data/tribunal-evidence";
+import { getTribunalEvidence } from "@/data/tribunal-evidence";
 import { ContentPageView } from "@/components/content/ContentPageView";
-
-export function generateStaticParams() {
-  return tribunalEvidence.map((t) => ({ slug: t.slug }));
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
