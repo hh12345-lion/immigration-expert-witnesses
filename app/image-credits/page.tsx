@@ -9,6 +9,8 @@ export const metadata = createMetadata({
   title: "Image Credits | Immigration Expert Witnesses",
   description: "Sources, authors and licences for the photographs used on this website.",
   path: "/image-credits",
+  // Listed as non-indexable in lib/seo/publicUrlInventory.ts (and left out of the sitemap); match it here.
+  noindex: true,
 });
 
 export default function ImageCreditsPage() {

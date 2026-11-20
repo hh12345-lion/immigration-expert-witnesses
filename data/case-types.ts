@@ -5,8 +5,8 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "ftt-asylum-appeal",
     title: "FTT Asylum Appeal",
-    metaTitle: "Expert Witnesses for FTT Asylum Appeals | First-tier Trib...",
-    metaDescription: "Qualified immigration expert witnesses for First-tier Tribunal asylum appeals, country condition, persecution, human rights, and linguistic identity ev...",
+    metaTitle: "Expert Witnesses for First-tier Tribunal Asylum Appeals",
+    metaDescription: "Qualified immigration expert witnesses for First-tier Tribunal asylum appeals, country condition, persecution, human rights.",
     h1: "Expert Witnesses for FTT Asylum Appeals",
     content: [
       "First-tier Tribunal (FTT) asylum appeals are the primary forum for refugee protection claims. Expert witness evidence on country conditions, persecution methodology, human rights standards, and linguistic identity is frequently decisive, particularly where the Home Office relies on generic CPIN analysis.",
@@ -36,7 +36,7 @@ export const caseTypes: ContentPage[] = [
     slug: "upper-tribunal-appeal",
     title: "Upper Tribunal Appeal",
     metaTitle: "Expert Witnesses for Upper Tribunal Appeals | UT Immigration",
-    metaDescription: "Immigration expert witnesses for Upper Tribunal permission and substantive appeals, country guidance challenges, error of law cases, and complex multi-...",
+    metaDescription: "Immigration expert witnesses for Upper Tribunal permission and substantive appeals, country guidance challenges, error of law cases.",
     h1: "Expert Witnesses for Upper Tribunal Appeals",
     content: [
       "Upper Tribunal (UT) immigration appeals involve permission applications and substantive hearings on errors of law identified by the First-tier Tribunal. Expert witness evidence at UT level often addresses complex country guidance questions, methodological challenges to FTT findings, and fresh expert analysis where the FTT failed to engage with relevant evidence.",
@@ -65,8 +65,8 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "deportation-removal",
     title: "Deportation & Removal",
-    metaTitle: "Expert Witnesses for Deportation & Removal | Article 3 Ev...",
-    metaDescription: "Immigration expert witnesses for deportation and removal proceedings, ECHR Article 3, human rights on return, torture survivors, and medical-psychiatri...",
+    metaTitle: "Expert Witnesses for Deportation & Removal Appeals",
+    metaDescription: "Immigration expert witnesses for deportation and removal proceedings, ECHR Article 3, human rights on return, torture survivors.",
     h1: "Expert Witnesses for Deportation & Removal Proceedings",
     content: [
       "Deportation and removal proceedings engage ECHR Article 3 where return would expose the appellant to torture, inhuman or degrading treatment. Human rights expert witnesses apply treaty and ECHR standards alongside country condition evidence on return risk.",
@@ -96,7 +96,7 @@ export const caseTypes: ContentPage[] = [
     slug: "fresh-claims",
     title: "Fresh Claims",
     metaTitle: "Expert Witnesses for Fresh Claims | New Asylum Evidence",
-    metaDescription: "Immigration expert witnesses for fresh asylum claims, new country evidence, changed conditions, and supplementary expert analysis for Home Office fresh...",
+    metaDescription: "Immigration expert witnesses for fresh asylum claims, new country evidence, changed conditions.",
     h1: "Expert Witnesses for Fresh Claims",
     content: [
       "Fresh claims arise where new evidence: not previously considered, would create a realistic prospect of success. Expert witness evidence frequently forms the basis of fresh claims, particularly where country conditions have deteriorated since the original refusal or where new expert analysis addresses profile-specific risks not covered by the original CPIN.",
@@ -155,8 +155,8 @@ export const caseTypes: ContentPage[] = [
   {
     slug: "country-guidance-challenges",
     title: "Country Guidance Challenges",
-    metaTitle: "Expert Witnesses for Country Guidance Challenges | Upper...",
-    metaDescription: "Expert witnesses for Upper Tribunal country guidance challenges, MOJ Somalia, HJ Iran, RT Zimbabwe, AAA Somalia, DD Afghanistan, and CG precedent analy...",
+    metaTitle: "Expert Witnesses for Country Guidance Challenges",
+    metaDescription: "Expert witnesses for Upper Tribunal country guidance challenges, MOJ Somalia, HJ Iran, RT Zimbabwe, AAA Somalia, DD Afghanistan.",
     h1: "Expert Witnesses for Country Guidance Challenges",
     content: [
       "Country guidance (CG) challenges at the Upper Tribunal seek to establish or modify tribunal-wide guidance on country conditions. Expert witness evidence is central to CG proceedings, tribunals rely on independent expert analysis to determine whether conditions in a country meet the threshold for CG designation.",
@@ -186,7 +186,7 @@ export const caseTypes: ContentPage[] = [
     slug: "judicial-review",
     title: "Judicial Review",
     metaTitle: "Expert Witnesses for Immigration Judicial Review",
-    metaDescription: "Immigration expert witnesses for judicial review proceedings, fresh evidence, CPIN challenge, and supplementary expert analysis for High Court immigrat...",
+    metaDescription: "Immigration expert witnesses for judicial review proceedings, fresh evidence, CPIN challenge.",
     h1: "Expert Witnesses for Immigration Judicial Review",
     content: [
       "Judicial review of immigration decisions may be supported by expert witness evidence where fresh material demonstrates unlawfulness, for example, where the decision-maker failed to engage with relevant country evidence, applied outdated CPIN analysis, or ignored expert evidence in the bundle.",
@@ -216,7 +216,7 @@ export const caseTypes: ContentPage[] = [
     slug: "administrative-review",
     title: "Administrative Review",
     metaTitle: "Expert Witnesses for Administrative Review | Immigration",
-    metaDescription: "Expert witness evidence for immigration administrative review, supplementary country analysis and fresh evidence for in-country administrative review a...",
+    metaDescription: "Expert witness evidence for immigration administrative review.",
     h1: "Expert Witnesses for Administrative Review",
     content: [
       "Administrative review (AR) is an internal Home Office review mechanism for eligible immigration decisions. While AR has limited scope compared to tribunal appeals, expert evidence may support AR applications where the decision involved a caseworking error in applying country evidence or CPIN analysis.",

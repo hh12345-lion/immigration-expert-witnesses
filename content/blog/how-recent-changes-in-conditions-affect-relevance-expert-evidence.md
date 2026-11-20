@@ -1,4 +1,5 @@
 ---
+seoTitle: "Recent Changes in Country Conditions and Evidence"
 title: "How Recent Changes in Country Conditions Can Affect the Relevance of Earlier Expert Evidence"
 description: "When later country developments may affect earlier immigration expert evidence, and how solicitors can review report date, scope, and sources before a hearing."
 date: "2026-09-25"

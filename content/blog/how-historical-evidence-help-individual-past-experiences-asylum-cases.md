@@ -1,4 +1,5 @@
 ---
+seoTitle: "How Historical Evidence Explains Past Experiences"
 title: "How Historical Country Evidence Can Help Explain an Individual's Past Experiences in an Asylum Case"
 description: "How historical country evidence can help explain the context of past events in an asylum case, how older sources are assessed, and where the role of a country expert ends."
 date: "2026-10-12"

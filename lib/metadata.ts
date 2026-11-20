@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitDescription, fitTitle } from "./fit";
 import { SITE_NAME, getPublicSiteUrl } from "./constants";
 import { isProductionSite } from "./seo/is-production";
 
@@ -45,8 +46,11 @@ export function createMetadata({
   follow?: boolean;
 }): Metadata {
   const url = absoluteUrl(path);
-  const metaTitle = trimTitle(title);
-  const metaDescription = trimDescription(description);
+  // Shortened at a natural break instead of cut mid-word with "...". Previously:
+  // const metaTitle = trimTitle(title);
+  // const metaDescription = trimDescription(description);
+  const metaTitle = fitTitle(title, "fit");
+  const metaDescription = fitDescription(description);
   const blockIndexing = noindex || !isProductionSite();
   const ogImage = {
     ...OPEN_GRAPH_IMAGE,

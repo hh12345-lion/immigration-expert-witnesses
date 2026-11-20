@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { fitDescription, fitTitle } from "@/lib/fit";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/ui/CTASection";
@@ -19,7 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const base = createMetadata({
-    title: `${post.title} | ${SITE_NAME}`,
+    // Shorter search title where the headline is too long to fit (the on-page headline is unchanged).
+    title: `${post.seoTitle ?? post.title} | ${SITE_NAME}`,
     description: post.description,
     path: `/blog/${post.slug}`,
   });

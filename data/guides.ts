@@ -6,7 +6,7 @@ export const guides: ContentPage[] = [
     slug: "cpr-part-35-immigration-guide",
     title: "CPR Part 35 Immigration Guide",
     metaTitle: "CPR Part 35 for Immigration Expert Witnesses: Complete Guide",
-    metaDescription: "CPR Part 35 rules applied to immigration expert witnesses, Ikarian Reefer independence, tribunal duties, report requirements, and expert obligations in...",
+    metaDescription: "CPR Part 35 rules applied to immigration expert witnesses, Ikarian Reefer independence, tribunal duties, report requirements.",
     h1: "CPR Part 35 for Immigration Expert Witnesses: Complete Guide",
     content: [
       "CPR Part 35 governs expert evidence in civil proceedings and is applied by analogy in immigration tribunal proceedings. The rules establish the expert's paramount duty to the tribunal, requirements for expert reports, and procedures for joint experts and oral evidence.",
@@ -66,7 +66,7 @@ export const guides: ContentPage[] = [
     slug: "oral-evidence-tribunal-guide",
     title: "Oral Evidence Tribunal Guide",
     metaTitle: "Oral Evidence at Immigration Tribunal: Expert Witness Guide",
-    metaDescription: "When tribunals direct oral expert evidence, preparation standards, cross-examination, hearing procedure, and supplementary oral testimony at FTT and UT...",
+    metaDescription: "When tribunals direct oral expert evidence, preparation standards, cross-examination, hearing procedure.",
     h1: "Oral Evidence at Immigration Tribunal: Expert Witness Guide",
     content: [
       "Oral evidence by expert witnesses is directed where the tribunal needs to test expert methodology, credibility, or specific findings through cross-examination. Not all expert reports require oral evidence, but experts should be prepared to attend unless specifically excused.",
@@ -96,7 +96,7 @@ export const guides: ContentPage[] = [
     slug: "choosing-right-expert-witness",
     title: "Choosing the Right Expert Witness",
     metaTitle: "Choosing the Right Immigration Expert Witness for Your Case",
-    metaDescription: "How to select the right immigration expert witness, country vs persecution vs human rights, network directory use, and witness type matching for tribun...",
+    metaDescription: "How to select the right immigration expert witness, country vs persecution vs human rights, network directory use.",
     h1: "Choosing the Right Immigration Expert Witness for Your Case",
     content: [
       "Selecting the correct expert witness discipline is the first critical decision. Country condition witnesses assess conditions on the ground. Persecution witnesses apply Refugee Convention methodology. Human rights witnesses apply ECHR and treaty standards. Linguistic identity witnesses address nationality and clan disputes.",
@@ -126,7 +126,7 @@ export const guides: ContentPage[] = [
     slug: "legal-aid-expert-witness-guide",
     title: "Legal Aid Expert Witness Guide",
     metaTitle: "Legal Aid Expert Witness Instruction Guide",
-    metaDescription: "Legal Aid Agency prior authority for immigration expert witnesses, rates, timing, instruction bundles, and LAA-compatible expert evidence for tribunal...",
+    metaDescription: "Legal Aid Agency prior authority for immigration expert witnesses, rates, timing, instruction bundles.",
     h1: "Legal Aid Expert Witness Instruction Guide",
     content: [
       "Legal Aid practitioners must obtain LAA prior authority before instructing expert witnesses. The application must demonstrate that expert evidence is necessary, the proposed fee is reasonable, and the instruction timeline allows fair proceedings.",
@@ -156,7 +156,7 @@ export const guides: ContentPage[] = [
     slug: "witness-vs-report-expert-guide",
     title: "Witness vs Report Expert Guide",
     metaTitle: "Expert Witness vs Expert Report: What's the Difference?",
-    metaDescription: "Difference between immigration expert witnesses (oral evidence, qualifications, tribunal appearance) and immigration expert reports (report standards, C...",
+    metaDescription: "Difference between immigration expert witnesses (oral evidence, qualifications, tribunal appearance) and immigration expert reports, including report standards.",
     h1: "Expert Witness vs Expert Report: What's the Difference?",
     content: [
       "immigrationexpertwitnesses.com is the network master hub for expert WITNESSES, qualifications, oral evidence, CPR Part 35 duties, tribunal appearance, and the witness directory connecting solicitors to country-specific and thematic expert witness sites.",

@@ -5,8 +5,8 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "country-condition-expert-witness",
     title: "Country Condition Expert Witness",
-    metaTitle: "Country Condition Expert Witness | Immigration Tribunal E...",
-    metaDescription: "Independent country condition expert witnesses for immigration tribunals, security, human rights, state protection, and profile-specific risks beyond H...",
+    metaTitle: "Country Condition Expert Witness | Immigration Tribunal",
+    metaDescription: "Independent country condition expert witnesses for immigration tribunals, security, human rights, state protection.",
     h1: "Country Condition Expert Witness | Immigration Tribunal Evidence",
     content: [
       "A country condition expert witness provides independent evidence on conditions in the appellant's country of origin, security, human rights, state protection, internal relocation viability, and profile-specific risks. Unlike generic Home Office Country Policy Information Notes (CPINs), country condition witnesses address the individual appellant's circumstances, region, and claimed fear with dated primary sources and field expertise.",
@@ -50,8 +50,8 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "persecution-expert-witness",
     title: "Persecution Expert Witness",
-    metaTitle: "Persecution Expert Witness | Refugee Convention Asylum Ev...",
-    metaDescription: "Persecution expert witnesses for asylum appeals: Refugee Convention grounds, nexus assessment, HJ/RT standards, state protection, and non-state actor p...",
+    metaTitle: "Persecution Expert Witness | Refugee Convention Claims",
+    metaDescription: "Persecution expert witnesses for asylum appeals: Refugee Convention grounds, nexus assessment, HJ/RT standards, state protection.",
     h1: "Persecution Expert Witness | Refugee Convention Asylum Evidence",
     content: [
       "A persecution expert witness analyses whether the appellant faces a well-founded fear of persecution for a Refugee Convention reason. This includes assessing nexus between the feared harm and a Convention ground, state protection availability, non-state actor persecution, and internal relocation viability in the context of country conditions.",
@@ -95,8 +95,8 @@ export const witnessTypes: ContentPage[] = [
   {
     slug: "human-rights-expert-witness",
     title: "Human Rights Expert Witness",
-    metaTitle: "Human Rights Expert Witness | ECHR Article 3 Deportation...",
-    metaDescription: "Human rights expert witnesses for deportation and removal cases, ECHR Article 3, ICCPR, CAT, CEDAW standards, torture survivors, and human rights defen...",
+    metaTitle: "Human Rights Expert Witness | ECHR Article 3 Cases",
+    metaDescription: "Human rights expert witnesses for deportation and removal cases, ECHR Article 3, ICCPR, CAT, CEDAW standards, torture survivors.",
     h1: "Human Rights Expert Witness | ECHR Article 3 Deportation Evidence",
     content: [
       "Human rights expert witnesses apply international human rights treaty standards and ECHR jurisprudence to immigration tribunal proceedings. They are particularly critical in deportation and removal cases engaging ECHR Article 3 (prohibition of torture, inhuman or degrading treatment), Article 8 (family and private life), and complementary treaty frameworks including ICCPR, CAT, and CEDAW.",
@@ -141,7 +141,7 @@ export const witnessTypes: ContentPage[] = [
     slug: "linguistic-identity-expert-witness",
     title: "Linguistic & Identity Expert Witness",
     metaTitle: "Linguistic & Identity Expert Witness | Immigration Tribunal",
-    metaDescription: "Linguistic and identity expert witnesses for asylum appeals, dialect analysis, clan membership, cultural knowledge, nationality claims, and credibility...",
+    metaDescription: "Linguistic and identity expert witnesses for asylum appeals, dialect analysis, clan membership, cultural knowledge, nationality claims.",
     h1: "Linguistic & Identity Expert Witness | Immigration Tribunal",
     content: [
       "Linguistic and identity expert witnesses assess whether the appellant's claimed nationality, clan membership, dialect, and cultural knowledge are consistent with their account. This evidence is critical in clan-based asylum jurisdictions where identity determines protection, including Somalia (MOJ framework), Afghanistan (ethnicity and Hazara claims), and parts of Africa and South Asia.",
@@ -186,7 +186,7 @@ export const witnessTypes: ContentPage[] = [
     slug: "internal-relocation-expert-witness",
     title: "Internal Relocation Expert Witness",
     metaTitle: "Internal Relocation Expert Witness | Asylum Tribunal",
-    metaDescription: "Internal relocation expert witnesses for asylum tribunals, viability assessment, Reasonableness test, unduly harsh analysis, and regional security diff...",
+    metaDescription: "Internal relocation expert witnesses for asylum tribunals, viability assessment, Reasonableness test, unduly harsh analysis.",
     h1: "Internal Relocation Expert Witness | Asylum Tribunal",
     content: [
       "An internal relocation expert witness assesses whether the appellant could reasonably relocate within their country of origin to avoid the feared persecution. This involves evaluating regional security conditions, clan or family connections at the proposed relocation destination, economic viability, and whether relocation would be unduly harsh.",
@@ -231,7 +231,7 @@ export const witnessTypes: ContentPage[] = [
     slug: "cpin-challenge-expert-witness",
     title: "CPIN Challenge Expert Witness",
     metaTitle: "CPIN Challenge Expert Witness | Immigration Tribunal",
-    metaDescription: "Expert witnesses challenging Home Office CPINs with dated primary sources, addressing leading Country Guidance cases and EUAA guidance in immigration ap...",
+    metaDescription: "Expert witnesses challenging Home Office CPINs with dated primary sources.",
     h1: "CPIN Challenge Expert Witness | Immigration Tribunal",
     content: [
       "CPIN and country guidance expert witnesses provide independent analysis that challenges, supplements, or contextualises Home Office Country Policy Information Notes. CPINs provide generic country policy; expert witnesses address the appellant's specific profile, region, and claimed fear with dated primary sources that may post-date or contradict CPIN findings.",
@@ -276,7 +276,7 @@ export const witnessTypes: ContentPage[] = [
     slug: "medical-psychiatric-expert-witness",
     title: "Medical & Psychiatric Expert Witness",
     metaTitle: "Medical & Psychiatric Expert Witness | Immigration Tribunals",
-    metaDescription: "Coordinating medical and psychiatric expert evidence with country condition witnesses, torture survivors, Istanbul Protocol, PTSD, scarring, and mental...",
+    metaDescription: "Coordinating medical and psychiatric expert evidence with country condition witnesses, torture survivors, Istanbul Protocol, PTSD, scarring.",
     h1: "Medical & Psychiatric Expert Witness | Immigration Tribunals",
     content: [
       "Complex immigration appeals often require coordinated expert evidence from medical, psychiatric, and country condition witnesses. Medical experts assess physical injuries, scarring, and torture documentation; psychiatric experts assess PTSD, depression, and mental health prognosis; country witnesses assess return risk, all three may be required in Article 3 cases.",
@@ -321,7 +321,7 @@ export const witnessTypes: ContentPage[] = [
     slug: "oral-evidence-witness",
     title: "Oral Evidence Expert Witness",
     metaTitle: "Oral Evidence Expert Witness | Immigration Tribunal Hearings",
-    metaDescription: "Expert witnesses giving oral evidence at FTT and Upper Tribunal hearings, cross-examination preparation, consistency with written reports, and joint ex...",
+    metaDescription: "Expert witnesses giving oral evidence at FTT and Upper Tribunal hearings, cross-examination preparation, consistency with written reports.",
     h1: "Oral Evidence Expert Witness | Immigration Tribunal Hearings",
     content: [
       "Expert witnesses may be required to attend First-tier Tribunal (FTT) or Upper Tribunal (UT) hearings to give oral evidence and face cross-examination. The tribunal may direct oral evidence where the expert's credibility, methodology, or specific findings are in dispute.",
